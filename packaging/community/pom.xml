@@ -132,8 +132,6 @@
                 <!-- Add Sites Explorer and Editor pages -->
                 <copy file="${project.basedir}/src/main/resources/pages.xml" tofile="${tomcat.webapps.dir}/plf/WEB-INF/conf/portal/group/platform/web-contributors/pages.xml" overwrite="true" />
                 <copy file="${project.basedir}/src/main/resources/navigation.xml" tofile="${tomcat.webapps.dir}/plf/WEB-INF/conf/portal/group/platform/web-contributors/navigation.xml" overwrite="true" />
-                <!-- Replace application-registry-configuration.xml without gadget-pack and IDE -->
-                <copy file="${project.basedir}/src/main/resources/application-registry-configuration.xml" tofile="${tomcat.webapps.dir}/plf/WEB-INF/conf/platform/application-registry-configuration.xml" overwrite="true" />
                 <!-- Zip new platform-extension.war -->
                 <zip destfile="${tomcat.webapps.dir}/platform-extension.war" basedir="${tomcat.webapps.dir}/plf" />
                 <delete dir="${tomcat.webapps.dir}/plf" />
@@ -288,6 +286,16 @@
 				  <replacetoken><![CDATA[response.setHeader("Location", "/portal");]]></replacetoken>
 				  <replacevalue><![CDATA[response.setHeader("Location", "/portal/intranet");]]></replacevalue>
 				</replace -->
+              
+                <!-- Remove profile 'enterprise' to not registry gadget-pack and IDE -->
+                <replace file="${project.build.directory}/community/tomcat-bundle/start_eXo.sh">
+				          <replacetoken><![CDATA[,enterprise]]></replacetoken>
+				          <replacevalue><![CDATA[]]></replacevalue>
+                </replace> 
+                <replace file="${project.build.directory}/community/tomcat-bundle/start_eXo.bat">
+				          <replacetoken><![CDATA[,enterprise]]></replacetoken>
+				          <replacevalue><![CDATA[]]></replacevalue>
+                </replace> 
               </target>
             </configuration>
             <goals>

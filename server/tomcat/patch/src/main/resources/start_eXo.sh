@@ -55,19 +55,19 @@ DEBUG_MODE="-Dexo.product.developing=true"
 ########################
 
 if [ "$1" = "" ] ; then 
-	EXO_PROFILES="-Dexo.profiles=default"
+	EXO_PROFILES="-Dexo.profiles=default,enterprise"
 	CATALINA_OPTS="$CATALINA_OPTS $EXO_PROFILES"
 else
         if [ "$1" = "-debug" ]; then
                 if [ "$2" = "" ]; then
-        	        EXO_PROFILES="-Dexo.profiles=default"        
+        	        EXO_PROFILES="-Dexo.profiles=default,enterprise"        
 	        else
-	                EXO_PROFILES="-Dexo.profiles=$2"
+	                EXO_PROFILES="-Dexo.profiles=$2,enterprise"
 	        fi
         	CATALINA_OPTS="$CATALINA_OPTS $EXO_PROFILES $DEBUG_MODE $EXO_CONFIG $REMOTE_DEBUG"  
                 echo This is debug mode        	      
 	else
-	        EXO_PROFILES="-Dexo.profiles=$*"
+	        EXO_PROFILES="-Dexo.profiles=$*,enterprise"
         	CATALINA_OPTS="$CATALINA_OPTS $EXO_PROFILES"
 	fi
 fi

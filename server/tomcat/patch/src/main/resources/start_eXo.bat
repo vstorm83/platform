@@ -40,18 +40,18 @@ set profiles=%*
 set profiles=%profiles:~7%
  
 if "%1" == "" (
-    set EXO_PROFILES=-Dexo.profiles=default
+    set EXO_PROFILES=-Dexo.profiles=default,enterprise
     set CATALINA_OPTS=%CATALINA_OPTS% %EXO_PROFILES%
 ) else (
         if "%1" == "-debug" (
                 if "%2" == "" (
-                    set EXO_PROFILES=-Dexo.profiles=default
+                    set EXO_PROFILES=-Dexo.profiles=default,enterprise
                 ) else (
-                    set EXO_PROFILES=-Dexo.profiles=%profiles%
+                    set EXO_PROFILES=-Dexo.profiles=%profiles%,enterprise
                 )
                 set CATALINA_OPTS=%CATALINA_OPTS% %EXO_PROFILES% %DEBUG_MODE% %EXO_CONFIG% %REMOTE_DEBUG%
         ) else (       
-            set EXO_PROFILES=-Dexo.profiles=%*
+            set EXO_PROFILES=-Dexo.profiles=%*,enterprise
             set CATALINA_OPTS=%CATALINA_OPTS% %EXO_PROFILES%
         )
 )

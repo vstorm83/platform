@@ -160,7 +160,7 @@
                 </collection>
               </field>
             </object>
-          </object-param><object-param>
+          </object-param><object-param profiles="enterprise">
             <name>development</name>
             <description>description</description>
             <object type="org.exoplatform.application.registry.ApplicationCategory">
@@ -290,7 +290,7 @@
                         </collection>
                       </field>
                     </object>
-                  </value><value>
+                  </value><value profiles="enterprise">
                     <object type="org.exoplatform.application.registry.Application">
                       <field name="applicationName"><string>CalendarGadget</string></field>
                       <field name="categoryName"><string>collaboration</string></field>
@@ -696,7 +696,7 @@
                 </collection>
               </field>
             </object>
-          </object-param><object-param>
+          </object-param><object-param profiles="enterprise">
             <name>monitoring</name>
             <description>description</description>
             <object type="org.exoplatform.application.registry.ApplicationCategory">
@@ -784,7 +784,7 @@
                 </collection>
               </field>
             </object>
-          </object-param><object-param>
+          </object-param><object-param profiles="enterprise">
             <name>adoption</name>
             <description>description</description>
             <object type="org.exoplatform.application.registry.ApplicationCategory">
@@ -928,7 +928,7 @@
                         </collection>
                       </field>
                     </object>
-                  </value><value>
+                  </value><value profiles="enterprise">
                     <object type="org.exoplatform.application.registry.Application">
                       <field name="applicationName"><string>FriendSuggestion</string></field>
                       <field name="categoryName"><string>social</string></field>

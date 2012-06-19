@@ -20,7 +20,7 @@ import org.exoplatform.webui.event.Event;
 import org.exoplatform.webui.event.EventListener;
 import org.exoplatform.webui.event.Event.Phase;
 import org.exoplatform.webui.form.UIForm;
-import org.exoplatform.webui.form.UIFormCheckBoxInput;
+import org.exoplatform.webui.form.input.UICheckBoxInput;
 import org.exoplatform.webui.form.UIFormStringInput;
 import org.exoplatform.webui.form.ext.UIFormInputSetWithAction;
 import org.exoplatform.webui.form.validator.NumberFormatValidator;
@@ -198,16 +198,16 @@ public class UINavigationForm extends UIForm implements UIPopupComponent, UISele
 
 		/** node field */
 		UIFormStringInput uiFormNameValueStringInput = new UIFormStringInput(NODE, NODE, nameValue_);
-		uiFormNameValueStringInput.setEditable(false);
+		uiFormNameValueStringInput.setReadOnly(false);
 
 		/** visible field */
-		UIFormCheckBoxInput<Boolean> uiFormVisibleValueCheckBoxInput = new UIFormCheckBoxInput<Boolean>(IS_VISIBLE, IS_VISIBLE, false);
+		UICheckBoxInput uiFormVisibleValueCheckBoxInput = new UICheckBoxInput(IS_VISIBLE, IS_VISIBLE, false);
 		uiFormVisibleValueCheckBoxInput.setChecked(isVisible);
 
 		/** navigation node field */
 		UIFormStringInput uiFormNavigationNodeValueStringInput = new UIFormStringInput(NAVIGATION_NODE_STRING_INPUT, NAVIGATION_NODE_STRING_INPUT,
 				navigationNode_);
-		uiFormNavigationNodeValueStringInput.setEditable(false);
+		uiFormNavigationNodeValueStringInput.setReadOnly(false);
 
 		UIFormInputSetWithAction navigationNodeInputSet = new UIFormInputSetWithAction(NAVIGATION_NODE_INPUT_SET);
 		navigationNodeInputSet.setActionInfo(NAVIGATION_NODE_STRING_INPUT, new String[] { "SelectNavigationNode", "RemoveNavigationNode" });
@@ -218,13 +218,13 @@ public class UINavigationForm extends UIForm implements UIPopupComponent, UISele
 		uiFormIndexValueStringInput.addValidator(NumberFormatValidator.class);
 
 		/** clickable field */
-		UIFormCheckBoxInput<Boolean> uiFormClickableValueCheckBoxInput = new UIFormCheckBoxInput<Boolean>(IS_CLICKABLE, IS_CLICKABLE, false);
+		UICheckBoxInput uiFormClickableValueCheckBoxInput = new UICheckBoxInput(IS_CLICKABLE, IS_CLICKABLE, false);
 		uiFormClickableValueCheckBoxInput.setChecked(isClickable);
 
 		/** TARGET PAGE */
 		UIFormStringInput uiFormTargetPageValueStringInput = new UIFormStringInput(LIST_TARGET_PAGE_STRING_INPUT, LIST_TARGET_PAGE_STRING_INPUT,
 				listTargetPage_);
-		uiFormTargetPageValueStringInput.setEditable(false);
+		uiFormTargetPageValueStringInput.setReadOnly(false);
 
 		UIFormInputSetWithAction targetPageInputSet = new UIFormInputSetWithAction(LIST_TARGET_PAGE_INPUT_SET);
 
@@ -235,7 +235,7 @@ public class UINavigationForm extends UIForm implements UIPopupComponent, UISele
 
 		UIFormStringInput uiFormDetailTargetPageValueStringInput = new UIFormStringInput(DETAIL_TARGET_PAGE_STRING_INPUT,
 				DETAIL_TARGET_PAGE_STRING_INPUT, detailTargetPage_);
-		uiFormDetailTargetPageValueStringInput.setEditable(false);
+		uiFormDetailTargetPageValueStringInput.setReadOnly(false);
 		UIFormInputSetWithAction detailTargetPageInputSet = new UIFormInputSetWithAction(DETAIL_TARGET_PAGE_INPUT_SET);
 		detailTargetPageInputSet.setActionInfo(DETAIL_TARGET_PAGE_STRING_INPUT, new String[] { "SelectDetailTargetPage", "RemoveDetailTargetPage" });
 		detailTargetPageInputSet.addUIFormInput(uiFormDetailTargetPageValueStringInput);
@@ -297,7 +297,7 @@ public class UINavigationForm extends UIForm implements UIPopupComponent, UISele
 			}
 
 			
-			boolean isVisible = (Boolean) uiNavigationForm.<UIFormCheckBoxInput<Boolean>> getUIInput(IS_VISIBLE).getValue();
+			boolean isVisible = (Boolean) uiNavigationForm.<UICheckBoxInput> getUIInput(IS_VISIBLE).getValue();
 			
 			boolean hasNavigableMixinType = node.isNodeType("exo:navigable");
 			if (isVisible) {
@@ -321,11 +321,11 @@ public class UINavigationForm extends UIForm implements UIPopupComponent, UISele
 				boolean isClickable = false;
 				String listTargetPage = uiNavigationForm.getUIStringInput(LIST_TARGET_PAGE_STRING_INPUT).getValue();
 
-				if (navigationNode.equals("")) {
+				if ("".equals(navigationNode)) {
 				  if(uiNavigationForm.getUIStringInput(INDEX) != null){
 				    index = Long.parseLong(uiNavigationForm.getUIStringInput(INDEX).getValue());
 				    }
-					isClickable = (Boolean)uiNavigationForm.<UIFormCheckBoxInput<Boolean>> getUIInput(IS_CLICKABLE).getValue();
+					isClickable = (Boolean)uiNavigationForm.<UICheckBoxInput> getUIInput(IS_CLICKABLE).getValue();
 				}
 
 				node.setProperty("exo:index", index);
@@ -385,9 +385,9 @@ public class UINavigationForm extends UIForm implements UIPopupComponent, UISele
 							childNode.setProperty("exo:navigationNode", "");
 							childNode.setProperty("exo:index", 1000);
 							childNode.setProperty("exo:clickable", true);
-							childNode.setProperty("exo:page", "");
+							childNode.setProperty("exo:page", "catalog");
 							childNode.setProperty("exo:pageParamId", "");
-							childNode.setProperty("exo:childrenPage", "");
+							childNode.setProperty("exo:childrenPage", "detail");
 							childNode.setProperty("exo:childrenPageParamId", "");
 							
 							childNode.save();

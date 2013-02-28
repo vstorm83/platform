@@ -16,7 +16,7 @@
    <external-component-plugins>
       <target-component>org.exoplatform.commons.upgrade.UpgradeProductService</target-component>
       <component-plugin>
-         <name>Upgrade-Navigations</name>
+         <name>Upgrade-Portal Data</name>
          <set-method>addUpgradePlugin</set-method>
          <type>org.exoplatform.platform.upgrade.plugins.UpgradePortalDataPlugin</type>
          <description>Navigations Upgrade Plugin</description>

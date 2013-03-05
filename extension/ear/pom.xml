@@ -953,13 +953,13 @@
               <contextRoot>exo-gadget-resources</contextRoot>
               <bundleFileName>exo-gadget-resources.war</bundleFileName>
             </webModule>
-            <!-- WAI portal template-->
+            <!-- WAI portal template
             <webModule>
               <groupId>org.exoplatform.ecms</groupId>
               <artifactId>ecms-apps-wai-template</artifactId>
               <contextRoot>exo-ecms-wai-template</contextRoot>
               <bundleFileName>ecm-template-waiportal.war</bundleFileName>
-            </webModule>
+            </webModule>-->
           </modules>
         </configuration>
       </plugin>

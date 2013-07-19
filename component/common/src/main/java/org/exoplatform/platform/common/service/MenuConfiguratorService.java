@@ -1,17 +1,8 @@
 package org.exoplatform.platform.common.service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import org.exoplatform.container.configuration.ConfigurationManager;
 import org.exoplatform.container.xml.InitParams;
-import org.exoplatform.portal.config.model.ModelUnmarshaller;
-import org.exoplatform.portal.config.model.NavigationFragment;
-import org.exoplatform.portal.config.model.PageNavigation;
-import org.exoplatform.portal.config.model.PageNode;
-import org.exoplatform.portal.config.model.PortalConfig;
-import org.exoplatform.portal.config.model.UnmarshalledObject;
+import org.exoplatform.portal.config.model.*;
 import org.exoplatform.portal.mop.SiteKey;
 import org.exoplatform.portal.mop.Visibility;
 import org.exoplatform.portal.mop.navigation.Scope;
@@ -23,12 +14,18 @@ import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
 import org.picocontainer.Startable;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
 public class MenuConfiguratorService implements Startable {
 
   private static final Log LOG = ExoLogger.getLogger(MenuConfiguratorService.class);
   private ConfigurationManager configurationManager;
   private String setupNavigationFilePath;
-  private List<PageNode> setupPageNodes = new ArrayList<PageNode>();
+  private List<PageNode> setupPageNodes = new LinkedList<PageNode>();
+  private List<MenuConfiguratorPlugin> menuConfiguratorPlugins = new ArrayList<MenuConfiguratorPlugin>();
   private UserNodeFilterConfig myGroupsFilterConfig;
 
   public MenuConfiguratorService(InitParams initParams, ConfigurationManager configurationManager) {
@@ -60,6 +57,14 @@ public class MenuConfiguratorService implements Startable {
     return this.myGroupsFilterConfig;
   }
 
+    /**
+     * Allows to add new configuration paths
+     */
+    public void addNavigation(MenuConfiguratorPlugin plugin)
+    {
+        menuConfiguratorPlugins.add(plugin);
+    }
+
   @Override
   public void start() {
     try {
@@ -74,15 +79,84 @@ public class MenuConfiguratorService implements Startable {
       PageNavigation pageNavigation = obj.getObject();
       NavigationFragment fragment = pageNavigation.getFragment();
       setupPageNodes = fragment.getNodes();
+
+      for (MenuConfiguratorPlugin menuConfiguratorPlugin : menuConfiguratorPlugins) {
+
+        PageNode targetNavigation = menuConfiguratorPlugin.getTargetNav();
+        String isChild = menuConfiguratorPlugin.getIsChild();
+        if(isChild == null || isChild.isEmpty())
+          isChild = "false";
+        String extendedNavPath =  menuConfiguratorPlugin.getNavPath();
+        if(extendedNavPath != null && !extendedNavPath.isEmpty()){
+          UnmarshalledObject<PageNavigation> extendedObj = ModelUnmarshaller.unmarshall(PageNavigation.class,
+                    configurationManager.getInputStream(extendedNavPath));
+          PageNavigation extendedPageNav = extendedObj.getObject();
+          NavigationFragment extendedFragment = extendedPageNav.getFragment();
+          if (targetNavigation == null) {
+            for (PageNode pageNode1 : extendedFragment.getNodes()){
+              setupPageNodes.add(pageNode1);
+            }
+          } else {
+            if(!(targetNavigation.getName() == null || targetNavigation.getPageReference() == null
+                    || targetNavigation.getName().isEmpty() || targetNavigation.getPageReference().isEmpty())) {
+              boolean addedNav = insertExtendedNodes(setupPageNodes, targetNavigation,isChild,extendedFragment);
+              if(addedNav == false)
+                LOG.warn("Navigation with path " +extendedNavPath+ " not added : target node not found");
+            } else
+              LOG.warn("Navigation with path " +extendedNavPath+ " not added : Both name and pageReference should be specified for the target node");
+          }
+        } else {
+          LOG.warn("Path for extended setup navigation file not mentioned for the plugin "+menuConfiguratorPlugin.getName());
+        }
+      }
+
       for (PageNode pageNode : setupPageNodes) {
         fixOwnerName(pageNode);
       }
+
     } catch (Exception e) {
       throw new IllegalStateException("Unkown error occured when setting Setup menu items.", e);
     }
   }
 
-  @Override
+    private boolean insertExtendedNodes(List<PageNode> setupPageNodes, PageNode targetNavigation, String isChild, NavigationFragment frag) {
+        boolean isFound = false;
+        for (PageNode pageNode : setupPageNodes) {
+
+            if(pageNode.getName().equals(targetNavigation.getName())
+                    && pageNode.getPageReference().equals(targetNavigation.getPageReference())) {
+
+                if(isChild.equals("false")){
+
+                    int i = setupPageNodes.indexOf(pageNode);
+
+                    for (PageNode pageNode1 : frag.getNodes()){
+                        i++;
+                        setupPageNodes.add(i,pageNode1);
+                    }
+
+                } else {
+                    List<PageNode> L =  pageNode.getChildren();
+                    if (L == null)
+                        L = new ArrayList();
+                        for (PageNode pageNode1 : frag.getNodes()){
+                            L.add(pageNode1);
+                        }
+                        pageNode.setChildren((ArrayList<PageNode>) L);
+                    }
+                isFound = true;
+                break;
+            }
+            List<PageNode> L =  pageNode.getChildren();
+            if (L != null) {
+                isFound = insertExtendedNodes(L,targetNavigation,isChild,frag);
+                if (isFound) break;
+            }
+        }
+        return isFound;
+    }
+
+    @Override
   public void stop() {}
 
   private void getPageReferences(List<String> pageReferences, List<PageNode> pageNodes) {

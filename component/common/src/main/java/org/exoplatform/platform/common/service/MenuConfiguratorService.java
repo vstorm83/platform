@@ -26,6 +26,7 @@ public class MenuConfiguratorService implements Startable {
   private String setupNavigationFilePath;
   private List<PageNode> setupPageNodes = new LinkedList<PageNode>();
   private List<MenuConfiguratorPlugin> menuConfiguratorPlugins = new ArrayList<MenuConfiguratorPlugin>();
+  private List<MenuConfiguratorRemovePlugin> menuConfiguratorRemovePlugins = new ArrayList<MenuConfiguratorRemovePlugin>();
   private UserNodeFilterConfig myGroupsFilterConfig;
 
   public MenuConfiguratorService(InitParams initParams, ConfigurationManager configurationManager) {
@@ -65,6 +66,14 @@ public class MenuConfiguratorService implements Startable {
         menuConfiguratorPlugins.add(plugin);
     }
 
+    /**
+     * Allows to remove a target navigation
+     */
+    public void removeNavigation(MenuConfiguratorRemovePlugin plugin)
+    {
+        menuConfiguratorRemovePlugins.add(plugin);
+    }
+
   @Override
   public void start() {
     try {
@@ -82,6 +91,10 @@ public class MenuConfiguratorService implements Startable {
 
       for (MenuConfiguratorPlugin menuConfiguratorPlugin : menuConfiguratorPlugins) {
           menuConfiguratorPlugin.execute();
+      }
+
+      for (MenuConfiguratorRemovePlugin menuConfiguratorRemovePlugin : menuConfiguratorRemovePlugins) {
+          menuConfiguratorRemovePlugin.execute();
       }
 
       for (PageNode pageNode : setupPageNodes) {

@@ -61,7 +61,7 @@ public class MenuConfiguratorPlugin extends BaseComponentPlugin {
     }
 
 
-    public void execute() throws Exception {
+    public void execute() {
         NavigationFragment extendedFragment = null;
         List<PageNode> setupPageNodes = menuConfiguratorService.getSetupMenuOriginalPageNodes();
         if (isChild == null || isChild.isEmpty()) {

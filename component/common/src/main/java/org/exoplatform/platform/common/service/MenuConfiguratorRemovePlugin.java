@@ -51,8 +51,8 @@ public class MenuConfiguratorRemovePlugin extends BaseComponentPlugin {
     }
 
     public void execute() {
-        List<PageNode> setupPageNodes = menuConfiguratorService.getSetupMenuOriginalPageNodes();
         if (targetNode!=null) {
+            List<PageNode> setupPageNodes = menuConfiguratorService.getSetupMenuOriginalPageNodes();
             if (!(targetNode.getName() == null || targetNode.getPageReference() == null
                     || targetNode.getName().isEmpty() || targetNode.getPageReference().isEmpty())) {
                 boolean isRemoved = removeTargetNode(targetNode, setupPageNodes);

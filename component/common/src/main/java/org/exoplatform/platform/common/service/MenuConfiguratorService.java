@@ -81,33 +81,7 @@ public class MenuConfiguratorService implements Startable {
       setupPageNodes = fragment.getNodes();
 
       for (MenuConfiguratorPlugin menuConfiguratorPlugin : menuConfiguratorPlugins) {
-
-        PageNode targetNavigation = menuConfiguratorPlugin.getTargetNav();
-        String isChild = menuConfiguratorPlugin.getIsChild();
-        if(isChild == null || isChild.isEmpty())
-          isChild = "false";
-        String extendedNavPath =  menuConfiguratorPlugin.getNavPath();
-        if(extendedNavPath != null && !extendedNavPath.isEmpty()){
-          UnmarshalledObject<PageNavigation> extendedObj = ModelUnmarshaller.unmarshall(PageNavigation.class,
-                    configurationManager.getInputStream(extendedNavPath));
-          PageNavigation extendedPageNav = extendedObj.getObject();
-          NavigationFragment extendedFragment = extendedPageNav.getFragment();
-          if (targetNavigation == null) {
-            for (PageNode pageNode1 : extendedFragment.getNodes()){
-              setupPageNodes.add(pageNode1);
-            }
-          } else {
-            if(!(targetNavigation.getName() == null || targetNavigation.getPageReference() == null
-                    || targetNavigation.getName().isEmpty() || targetNavigation.getPageReference().isEmpty())) {
-              boolean addedNav = insertExtendedNodes(setupPageNodes, targetNavigation,isChild,extendedFragment);
-              if(addedNav == false)
-                LOG.warn("Navigation with path " +extendedNavPath+ " not added : target node not found");
-            } else
-              LOG.warn("Navigation with path " +extendedNavPath+ " not added : Both name and pageReference should be specified for the target node");
-          }
-        } else {
-          LOG.warn("Path for extended setup navigation file not mentioned for the plugin "+menuConfiguratorPlugin.getName());
-        }
+          menuConfiguratorPlugin.execute();
       }
 
       for (PageNode pageNode : setupPageNodes) {
@@ -119,42 +93,7 @@ public class MenuConfiguratorService implements Startable {
     }
   }
 
-    private boolean insertExtendedNodes(List<PageNode> setupPageNodes, PageNode targetNavigation, String isChild, NavigationFragment frag) {
-        boolean isFound = false;
-        for (PageNode pageNode : setupPageNodes) {
 
-            if(pageNode.getName().equals(targetNavigation.getName())
-                    && pageNode.getPageReference().equals(targetNavigation.getPageReference())) {
-
-                if(isChild.equals("false")){
-
-                    int i = setupPageNodes.indexOf(pageNode);
-
-                    for (PageNode pageNode1 : frag.getNodes()){
-                        i++;
-                        setupPageNodes.add(i,pageNode1);
-                    }
-
-                } else {
-                    List<PageNode> L =  pageNode.getChildren();
-                    if (L == null)
-                        L = new ArrayList();
-                        for (PageNode pageNode1 : frag.getNodes()){
-                            L.add(pageNode1);
-                        }
-                        pageNode.setChildren((ArrayList<PageNode>) L);
-                    }
-                isFound = true;
-                break;
-            }
-            List<PageNode> L =  pageNode.getChildren();
-            if (L != null) {
-                isFound = insertExtendedNodes(L,targetNavigation,isChild,frag);
-                if (isFound) break;
-            }
-        }
-        return isFound;
-    }
 
     @Override
   public void stop() {}

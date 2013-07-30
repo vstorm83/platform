@@ -19,8 +19,14 @@
 package org.exoplatform.platform.common.service;
 
 import org.exoplatform.container.component.BaseComponentPlugin;
+import org.exoplatform.container.configuration.ConfigurationManager;
 import org.exoplatform.container.xml.InitParams;
-import org.exoplatform.portal.config.model.PageNode;
+import org.exoplatform.portal.config.model.*;
+import org.exoplatform.services.log.ExoLogger;
+import org.exoplatform.services.log.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author <a href="hzekri@exoplatform.com">hzekri</a>
@@ -29,33 +35,108 @@ import org.exoplatform.portal.config.model.PageNode;
 
 public class MenuConfiguratorPlugin extends BaseComponentPlugin {
 
+    private ConfigurationManager configurationManager;
+    private MenuConfiguratorService menuConfiguratorService;
     private String navPath;
     private PageNode targetNav;
     private String isChild;
+    private static final String EXTENDED_SETUP_NAVIGATION_FILE = "extended.setup.navigation.file";
+    private static final String TARGET_NODE_CONFIG = "target.node.config";
+    private static final String IS_CHILD = "isChild";
 
+    private static final Log LOG = ExoLogger.getLogger(MenuConfiguratorService.class);
 
-    public MenuConfiguratorPlugin(InitParams initParams) {
-        if(initParams.containsKey("extended.setup.navigation.file"))
-        navPath = initParams.getValueParam("extended.setup.navigation.file").getValue();
-        if(initParams.containsKey("target.node.config"))
-        targetNav = (PageNode) initParams.getObjectParam("target.node.config").getObject();
-        if(initParams.containsKey("isChild"))
-        isChild = initParams.getValueParam("isChild").getValue();
+    public MenuConfiguratorPlugin(InitParams initParams, ConfigurationManager configurationManager, MenuConfiguratorService menuConfiguratorService) {
+        this.configurationManager = configurationManager;
+        this.menuConfiguratorService = menuConfiguratorService;
+        if (initParams.containsKey(EXTENDED_SETUP_NAVIGATION_FILE)) {
+            navPath = initParams.getValueParam(EXTENDED_SETUP_NAVIGATION_FILE).getValue();
+        }
+        if (initParams.containsKey(TARGET_NODE_CONFIG)) {
+            targetNav = (PageNode) initParams.getObjectParam(TARGET_NODE_CONFIG).getObject();
+        }
+        if (initParams.containsKey(IS_CHILD)) {
+            isChild = initParams.getValueParam(IS_CHILD).getValue();
+        }
     }
 
 
-    public String getNavPath()
-    {
-        return navPath;
+    public void execute() throws Exception {
+        NavigationFragment extendedFragment = null;
+        List<PageNode> setupPageNodes = menuConfiguratorService.getSetupMenuOriginalPageNodes();
+        if (isChild == null || isChild.isEmpty()) {
+            isChild = "false";
+            LOG.info("isChild param is not set, default value will be used");
+        }
+        if (navPath != null && !navPath.isEmpty()) {
+            try {
+                UnmarshalledObject<PageNavigation> extendedObj = ModelUnmarshaller.unmarshall(PageNavigation.class,
+                        configurationManager.getInputStream(navPath));
+                PageNavigation extendedPageNav = extendedObj.getObject();
+                extendedFragment = extendedPageNav.getFragment();
+                if (targetNav == null) {
+                    for (PageNode pageNode1 : extendedFragment.getNodes()) {
+                        setupPageNodes.add(pageNode1);
+                    }
+                } else {
+                    if (!(targetNav.getName() == null || targetNav.getPageReference() == null
+                            || targetNav.getName().isEmpty() || targetNav.getPageReference().isEmpty())) {
+                        boolean addedNav = insertExtendedNodes(setupPageNodes, targetNav, isChild, extendedFragment);
+                        if (addedNav == false) {
+                            LOG.warn("Navigation with path " + navPath + " not added : target node not found");
+                        }
+                    } else {
+                        LOG.warn("Navigation with path " + navPath + " not added : Both name and pageReference should be specified for the target node" );
+                    }
+                }
+            } catch (Exception e) {
+                LOG.error("Can not load or read the file with path " + navPath + " Please check the path or the file structure " + e);
+            }
+        } else {
+            LOG.warn("Path for extended setup navigation file not mentioned");
+        }
     }
 
-    public PageNode getTargetNav()
-    {
-        return targetNav;
-    }
+    private boolean insertExtendedNodes(List<PageNode> setupPageNodes, PageNode targetNavigation, String isChild, NavigationFragment frag) {
+        boolean isFound = false;
+        for (PageNode pageNode : setupPageNodes) {
 
-    public String getIsChild()
-    {
-        return isChild;
+            if (pageNode.getName().equals(targetNavigation.getName())
+                    && pageNode.getPageReference().equals(targetNavigation.getPageReference())) {
+
+                if (isChild.equals("true")) {
+                    List<PageNode> L = pageNode.getChildren();
+                    if (L == null) {
+                        L = new ArrayList();
+                    }
+                    for (PageNode pageNode1 : frag.getNodes()) {
+                        L.add(pageNode1);
+                    }
+                    pageNode.setChildren((ArrayList<PageNode>) L);
+
+                } else {
+                    if (!(isChild.equals("false"))) {
+                        LOG.warn("isChild param should be set to true or false");
+                    }
+                    int i = setupPageNodes.indexOf(pageNode);
+
+                    for (PageNode pageNode1 : frag.getNodes()) {
+                        i++;
+                        setupPageNodes.add(i, pageNode1);
+                    }
+                }
+                isFound = true;
+                break;
+            }
+            List<PageNode> L = pageNode.getChildren();
+            if (L != null) {
+                isFound = insertExtendedNodes(L, targetNavigation, isChild, frag);
+                if (isFound) {
+                    break;
+                }
+            }
+        }
+        return isFound;
     }
 }
+

@@ -33,7 +33,7 @@ import java.util.List;
  * @date 18/07/13
  */
 
-public class MenuConfiguratorPlugin extends BaseComponentPlugin {
+public class MenuConfiguratorAddNodePlugin extends BaseComponentPlugin {
 
     private ConfigurationManager configurationManager;
     private MenuConfiguratorService menuConfiguratorService;
@@ -44,9 +44,9 @@ public class MenuConfiguratorPlugin extends BaseComponentPlugin {
     private static final String TARGET_NODE_CONFIG = "target.node.config";
     private static final String IS_CHILD = "isChild";
 
-    private static final Log LOG = ExoLogger.getLogger(MenuConfiguratorService.class);
+    private static final Log LOG = ExoLogger.getLogger(MenuConfiguratorAddNodePlugin.class);
 
-    public MenuConfiguratorPlugin(InitParams initParams, ConfigurationManager configurationManager, MenuConfiguratorService menuConfiguratorService) {
+    public MenuConfiguratorAddNodePlugin(InitParams initParams, ConfigurationManager configurationManager, MenuConfiguratorService menuConfiguratorService) {
         this.configurationManager = configurationManager;
         this.menuConfiguratorService = menuConfiguratorService;
         if (initParams.containsKey(EXTENDED_SETUP_NAVIGATION_FILE)) {

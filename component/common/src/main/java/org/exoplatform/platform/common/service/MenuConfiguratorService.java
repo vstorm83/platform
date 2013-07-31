@@ -25,8 +25,8 @@ public class MenuConfiguratorService implements Startable {
   private ConfigurationManager configurationManager;
   private String setupNavigationFilePath;
   private List<PageNode> setupPageNodes = new LinkedList<PageNode>();
-  private List<MenuConfiguratorPlugin> menuConfiguratorPlugins = new ArrayList<MenuConfiguratorPlugin>();
-  private List<MenuConfiguratorRemovePlugin> menuConfiguratorRemovePlugins = new ArrayList<MenuConfiguratorRemovePlugin>();
+  private List<MenuConfiguratorAddNodePlugin> menuConfiguratorAddNodePlugins = new ArrayList<MenuConfiguratorAddNodePlugin>();
+  private List<MenuConfiguratorRemoveNodePlugin> menuConfiguratorRemoveNodePlugins = new ArrayList<MenuConfiguratorRemoveNodePlugin>();
   private UserNodeFilterConfig myGroupsFilterConfig;
 
   public MenuConfiguratorService(InitParams initParams, ConfigurationManager configurationManager) {
@@ -61,17 +61,17 @@ public class MenuConfiguratorService implements Startable {
     /**
      * Allows to add new configuration paths
      */
-    public void addNavigation(MenuConfiguratorPlugin plugin)
+    public void addNavigation(MenuConfiguratorAddNodePlugin plugin)
     {
-        menuConfiguratorPlugins.add(plugin);
+        menuConfiguratorAddNodePlugins.add(plugin);
     }
 
     /**
      * Allows to remove a target navigation
      */
-    public void removeNavigation(MenuConfiguratorRemovePlugin plugin)
+    public void removeNavigation(MenuConfiguratorRemoveNodePlugin plugin)
     {
-        menuConfiguratorRemovePlugins.add(plugin);
+        menuConfiguratorRemoveNodePlugins.add(plugin);
     }
 
   @Override
@@ -89,12 +89,12 @@ public class MenuConfiguratorService implements Startable {
       NavigationFragment fragment = pageNavigation.getFragment();
       setupPageNodes = fragment.getNodes();
 
-      for (MenuConfiguratorPlugin menuConfiguratorPlugin : menuConfiguratorPlugins) {
-          menuConfiguratorPlugin.execute();
+      for (MenuConfiguratorAddNodePlugin menuConfiguratorAddNodePlugin : menuConfiguratorAddNodePlugins) {
+          menuConfiguratorAddNodePlugin.execute();
       }
 
-      for (MenuConfiguratorRemovePlugin menuConfiguratorRemovePlugin : menuConfiguratorRemovePlugins) {
-          menuConfiguratorRemovePlugin.execute();
+      for (MenuConfiguratorRemoveNodePlugin menuConfiguratorRemoveNodePlugin : menuConfiguratorRemoveNodePlugins) {
+          menuConfiguratorRemoveNodePlugin.execute();
       }
 
       for (PageNode pageNode : setupPageNodes) {

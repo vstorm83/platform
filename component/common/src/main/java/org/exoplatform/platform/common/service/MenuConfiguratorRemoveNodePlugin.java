@@ -31,7 +31,7 @@ import java.util.List;
  * @date 30/07/13
  */
 
-public class MenuConfiguratorRemovePlugin extends BaseComponentPlugin {
+public class MenuConfiguratorRemoveNodePlugin extends BaseComponentPlugin {
 
     private MenuConfiguratorService menuConfiguratorService;
 
@@ -39,10 +39,10 @@ public class MenuConfiguratorRemovePlugin extends BaseComponentPlugin {
 
     private static final String TARGET_NODE = "node.config";
 
-    private static final Log LOG = ExoLogger.getLogger(MenuConfiguratorRemovePlugin.class);
+    private static final Log LOG = ExoLogger.getLogger(MenuConfiguratorRemoveNodePlugin.class);
 
 
-    public MenuConfiguratorRemovePlugin(MenuConfiguratorService menuConfiguratorService, InitParams initParams) {
+    public MenuConfiguratorRemoveNodePlugin(MenuConfiguratorService menuConfiguratorService, InitParams initParams) {
         this.menuConfiguratorService = menuConfiguratorService;
         if (initParams.containsKey(TARGET_NODE)) {
             targetNode = (PageNode) initParams.getObjectParam(TARGET_NODE).getObject();

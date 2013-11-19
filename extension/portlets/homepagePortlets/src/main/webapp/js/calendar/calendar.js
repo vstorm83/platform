@@ -110,7 +110,9 @@
             });
 
             setTimeout(function(){
-                $('div.CalendarPortletContainer').jzLoad("CalendarPortletController.calendarHome()");
+                $('div.CalendarPortletContainer').jzLoad("CalendarPortletController.calendarHome()", function() {
+                	$('*[rel="tooltip"]').tooltip();
+                });
             },100);
         }
     };

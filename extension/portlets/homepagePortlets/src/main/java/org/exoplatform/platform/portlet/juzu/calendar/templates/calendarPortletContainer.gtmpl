@@ -25,8 +25,14 @@
       def pcontext = Util.getPortalRequestContext();
       def jsManager = pcontext.getJavascriptManager();
       jsManager.require("SHARED/jQueryCalendar", "cal").addScripts("cal.initCalendar();");
-%>
+
+        %>
 
 <div class="CalendarPortletContainer">
 
 </div>
+
+
+ <script>
+   window.require(["SHARED/jquery", "SHARED/bts_tooltip"], function(jq) { jq('*[rel=\"tooltip\"]').tooltip();  });
+   </script>

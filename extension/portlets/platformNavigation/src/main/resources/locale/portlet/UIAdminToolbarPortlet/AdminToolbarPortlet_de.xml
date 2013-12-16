@@ -12,7 +12,7 @@
          <siteLayout>Layout</siteLayout>
          <ManagePages>Seiten verwalten</ManagePages>
          <GroupSite>Gruppenseite</GroupSite>
-         <Properties>SEO</Properties>
+         <Properties>#{UISEOToolbarForm.label.seo}</Properties>
          <AddSite>Seite hinzufügen</AddSite>
       </action>
 <ManageSites>Seiten verwalten</ManageSites>
@@ -44,8 +44,8 @@
     </label>
  
     <action>
-      <Save>Speichern</Save>
-      <Cancel>Abbrechen</Cancel>
+      <Save>#{word.save}</Save>
+      <Cancel>#{word.cancel}</Cancel>
     </action>
     <msg>
       <repository-exception>Es ist ein unerwarteter Fehler aufgetreten. Seiten-Metadaten können nicht gespeichert werden.</repository-exception>
@@ -62,7 +62,7 @@
   </UISEOForm>
   <UISEOPopupWindow>
   <title>
-      <UISEOForm>SEO Management</UISEOForm>
+      <UISEOForm>#{UISEOToolbarForm.title.seo}</UISEOForm>
   </title>
   </UISEOPopupWindow>    
   <UISEOToolbarForm>

@@ -12,7 +12,7 @@
          <siteLayout>تخطيط</siteLayout>
          <ManagePages>إدارة الصفحات</ManagePages>
          <GroupSite>موقع المجموعة</GroupSite>
-         <Properties>إدارة تحسين محرك البحث (SEO)</Properties>
+         <Properties>#{UISEOToolbarForm.label.seo}</Properties>
          <AddSite>إضافة موقع</AddSite>
       </action>
 <ManageSites>إدارة المواقع</ManageSites>
@@ -44,8 +44,8 @@
     </label>
  
     <action>
-      <Save>حفظ</Save>
-      <Cancel>الغاء</Cancel>
+      <Save>#{word.save}</Save>
+      <Cancel>#{word.cancel}</Cancel>
     </action>
     <msg>
       <repository-exception>حدث خطأ غير متوقع. لا يمكن حفظ البيانات الوصفية للصفحة.</repository-exception>
@@ -62,7 +62,7 @@
   </UISEOForm>
   <UISEOPopupWindow>
   <title>
-      <UISEOForm>إدارة تحسين محرك البحث (SEO)</UISEOForm>
+      <UISEOForm>#{UISEOToolbarForm.title.seo}</UISEOForm>
   </title>
   </UISEOPopupWindow>    
   <UISEOToolbarForm>
@@ -75,7 +75,7 @@
   </UISEOToolbarForm>  
   <FloatNumberValidator>
     <msg>
-      <Invalid-number>Priority field has an invalid value. Please enter a number between 0.0 and 1.0.</Invalid-number>
+      <Invalid-number>صيغة المجال "أولوية" غير صحيحة. الرجاء إدخال رقم بين 0.0 و 1.0.</Invalid-number>
     </msg>
   </FloatNumberValidator>
   

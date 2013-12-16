@@ -12,7 +12,7 @@
          <siteLayout>Bố cục</siteLayout>
          <ManagePages>Quản lý Trang</ManagePages>
          <GroupSite>Nhóm Site</GroupSite>
-         <Properties>SEO</Properties>
+         <Properties>#{UISEOToolbarForm.label.seo}</Properties>
          <AddSite>Tạo Site</AddSite>
       </action>
 <ManageSites>Quản lý Site</ManageSites>
@@ -44,8 +44,8 @@
     </label>
  
     <action>
-      <Save>Lưu</Save>
-      <Cancel>Hủy bỏ</Cancel>
+      <Save>#{word.save}</Save>
+      <Cancel>#{word.cancel}</Cancel>
     </action>
     <msg>
       <repository-exception>Lỗi bất ngờ xảy ra. Không thể lưu trang siêu dữ liệu.</repository-exception>
@@ -62,7 +62,7 @@
   </UISEOForm>
   <UISEOPopupWindow>
   <title>
-      <UISEOForm>Quản lý SEO</UISEOForm>
+      <UISEOForm>#{UISEOToolbarForm.title.seo}</UISEOForm>
   </title>
   </UISEOPopupWindow>    
   <UISEOToolbarForm>

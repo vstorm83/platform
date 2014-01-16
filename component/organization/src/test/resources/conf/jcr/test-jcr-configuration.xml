@@ -25,10 +25,10 @@
 		<key>org.exoplatform.services.jcr.RepositoryService</key>
 		<type>org.exoplatform.services.jcr.impl.RepositoryServiceImpl</type>
 	</component>
-    <component>
-      <key>org.exoplatform.services.jcr.ext.distribution.DataDistributionManager</key>
-      <type>org.exoplatform.services.jcr.ext.distribution.impl.DataDistributionManagerImpl</type>
-    </component>
+	<component>
+		<key>org.exoplatform.services.jcr.ext.distribution.DataDistributionManager</key>
+		<type>org.exoplatform.services.jcr.ext.distribution.impl.DataDistributionManagerImpl</type>     
+	</component>
 	<component>
 		<key>org.exoplatform.services.jcr.ext.hierarchy.NodeHierarchyCreator</key>
 		<type>org.exoplatform.services.jcr.ext.hierarchy.impl.NodeHierarchyCreatorImpl</type>
@@ -36,6 +36,21 @@
 	<component>
 		<type>org.exoplatform.services.jcr.impl.ext.action.SessionActionCatalog</type>
 	</component>
+	<external-component-plugins>
+		<target-component>org.exoplatform.services.jcr.RepositoryService</target-component>
+		<component-plugin>
+			<name>add.nodeType</name>
+			<set-method>addPlugin</set-method>
+			<type>org.exoplatform.services.jcr.impl.AddNodeTypePlugin</type>
+			<init-params>
+				<values-param>
+					<name>autoCreatedInNewRepository</name>
+					<description>Node types configuration file</description>
+					<value>classpath:/conf/jcr/test-nodetypes-config.xml</value>
+				</values-param>
+			</init-params>
+		</component-plugin>
+	</external-component-plugins>
 	<external-component-plugins>
 		<target-component>org.exoplatform.services.naming.InitialContextInitializer</target-component>
 		<component-plugin>

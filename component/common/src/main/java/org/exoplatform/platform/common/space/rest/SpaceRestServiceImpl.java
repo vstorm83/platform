@@ -62,6 +62,7 @@ public class SpaceRestServiceImpl implements ResourceContainer {
     @Path("/user/searchSpace/")
     public Response searchSpaces(@QueryParam("keyword") String keyword,@Context SecurityContext sc) {
         StringBuffer baseSpaceURL = null;
+        List<Space> spaces = new ArrayList<Space>();
         try {
 
             List<Space> alphabeticallySort = new ArrayList<Space>();
@@ -75,7 +76,8 @@ public class SpaceRestServiceImpl implements ResourceContainer {
                 listAccess = spaceService.getMemberSpacesByFilter(userId, new SpaceFilter(keyword));
             }
             List<Space> spacesSearched = Arrays.asList(listAccess.load(0, MAX_LOADED_SPACES_BY_REQUEST));
-            List<Space> spaces = spaceService.getLastAccessedSpace(userId, null, 0, MAX_LOADED_SPACES_BY_REQUEST);
+            ListAccess<Space> spacesLisAcces = spaceService.getVisitedSpaces(userId, null);
+            spaces = Arrays.asList(spacesLisAcces.load(0,MAX_LOADED_SPACES_BY_REQUEST));
             List<Space> removedSpaces = new ArrayList<Space>();
             for (Space space : spaces) {
                 baseSpaceURL = new StringBuffer();

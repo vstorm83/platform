@@ -8,6 +8,7 @@
 	<component>
 		<type>org.exoplatform.platform.organization.injector.JMXDataInjector</type>
 	</component>
+    <!-- This config is not mandatory -->
 	<component>
 		<type>org.exoplatform.platform.organization.injector.DataInjectorService</type>
 	</component>

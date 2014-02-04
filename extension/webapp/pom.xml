@@ -50,6 +50,9 @@
       <groupId>org.exoplatform.core</groupId>
       <artifactId>exo.core.component.security.core</artifactId>
     </dependency>
+    <dependency><groupId>org.exoplatform.kernel</groupId>
+        <artifactId>exo.kernel.component.ext.cache.impl.infinispan.v5</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.exoplatform.kernel</groupId>
       <artifactId>exo.kernel.commons</artifactId>
@@ -181,6 +184,10 @@
       <artifactId>exo.jcr.component.core</artifactId>
       <scope>runtime</scope>
     </dependency>
+      <dependency>
+          <groupId>org.exoplatform.jcr</groupId>
+          <artifactId>exo.jcr.component.core.impl.infinispan.v5</artifactId>
+      </dependency>
     <dependency>
       <groupId>org.exoplatform.jcr</groupId>
       <artifactId>exo.jcr.component.ext</artifactId>

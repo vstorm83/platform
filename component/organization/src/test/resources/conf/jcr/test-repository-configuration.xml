@@ -43,7 +43,7 @@
                            class="org.exoplatform.services.jcr.impl.dataflow.persistent.infinispan.ISPNCacheWorkspaceStorageCache">
                         <properties>
                             <property name="infinispan-configuration"
-                                      value="jcr/infinispan/cache-config.xml"/>
+                                      value="conf/exo.portal.component.test.jcr-infinispan-config.xml"/>
                         </properties>
                     </cache>
                     <query-handler class="org.exoplatform.services.jcr.impl.core.query.lucene.SearchIndex">
@@ -56,7 +56,7 @@
                             <property name="time-out" value="15m"/>
                             <property name="infinispan-cl-cache.jdbc.datasource" value="jdbcexo" />
                             <property name="infinispan-configuration"
-                                      value="jcr/infinispan/lock-config.xml"/>
+                                      value="conf/exo.portal.component.test.jcr-infinispan-lock.xml"/>
                         </properties>
                     </lock-manager>
                 </workspace>

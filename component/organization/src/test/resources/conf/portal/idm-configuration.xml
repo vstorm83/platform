@@ -58,7 +58,7 @@
         </value-param>
         <value-param>
             <name>apiCacheConfig</name>
-            <value>classpath:/conf/exo.portal.component.test.jcr-infinispan-config.xml</value>
+            <value>classpath:/conf/cache/infinispan.xml</value>
         </value-param>
         <value-param>
             <name>skipExpirationOfStructureCacheEntries</name>

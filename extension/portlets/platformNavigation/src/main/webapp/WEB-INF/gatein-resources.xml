@@ -171,7 +171,8 @@
         </module>
     </portlet>
     <module>
-        <name>navigation-spaces-search</name>
+       <name>navigation-spaces-search</name>
+       <as>navigationSpacesSearch</as>
        <load-group>plf_navigation</load-group>
         <script>
             <path>/javascript/eXo/platform/navigation/UISpaceNavigationPortlet/UISpaceNavigation.js</path>
@@ -184,6 +185,7 @@
 
    <module>
       <name>navigation-toolbar</name>
+       <as>navigationToolbar</as>
       <load-group>plf_navigation</load-group>
       <script>
          <path>/javascript/eXo/platform/navigation/ToolBarNavigation/UIToolBarNavigation.js</path>

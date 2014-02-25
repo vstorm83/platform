@@ -11,7 +11,7 @@
                 <workspace name="collaboration">
                     <!--
                     <container class="org.exoplatform.services.jcr.impl.storage.jdbc.JDBCWorkspaceDataContainer">
-                    -->
+                     -->
                     <container class="org.exoplatform.services.jcr.impl.storage.jdbc.optimisation.CQJDBCWorkspaceDataContainer">
                         <properties>
                             <property name="source-name" value="jdbcexo"/>

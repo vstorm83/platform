@@ -50,7 +50,7 @@
     <org.gatein.wci.version>2.4.0.Beta01</org.gatein.wci.version>
     <org.gatein.pc.version>2.5.0.Beta01</org.gatein.pc.version>
     <org.gatein.sso.version>1.4.0.Beta01</org.gatein.sso.version>
-    <org.gatein.portal.version>3.7.0.Alpha02-SNAPSHOT</org.gatein.portal.version>
+    <org.gatein.portal.version>3.7.0.Beta01</org.gatein.portal.version>
     <!-- Platform Project Dependencies -->
     <org.exoplatform.commons.version>4.1.x-commons-upgrade-gatein-3.7.x-SNAPSHOT</org.exoplatform.commons.version>
     <org.exoplatform.ecms.version>4.1.x-ecms-upgrade-gatein-3.7.x-SNAPSHOT</org.exoplatform.ecms.version>

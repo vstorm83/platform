@@ -255,13 +255,7 @@ public class PeopleRestServices implements ResourceContainer {
 
               //set mutual friend number
               json.put("number", suggestion.getValue());
-              User user = orgManager.getUserHandler().findUserByName(id.getRemoteId());
-              if(user != null && user.getCreatedDate() != null){
-                json.put("createdDate",user.getCreatedDate().getTime());
-              }
-              else{
-                json.put("createdDate",new Date().getTime());
-              }
+              json.put("createdDate",id.getProfile().getCreatedTime());
               jsonArray.put(json);
             }
             jsonGlobal.put("items",jsonArray);

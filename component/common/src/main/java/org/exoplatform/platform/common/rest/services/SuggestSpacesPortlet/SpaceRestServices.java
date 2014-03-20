@@ -13,6 +13,7 @@ import org.exoplatform.social.core.manager.IdentityManager;
 import org.exoplatform.social.core.space.model.Space;
 import org.exoplatform.social.core.space.spi.SpaceService;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.ws.rs.GET;
@@ -22,8 +23,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.*;
 import javax.ws.rs.ext.RuntimeDelegate;
 import java.net.URI;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.locks.ReentrantLock;
 
 
 @Path("/homepage/intranet/spaces/")
@@ -31,7 +34,6 @@ import java.util.List;
 public class SpaceRestServices implements ResourceContainer {
 
     private static Log log = ExoLogger.getLogger(SpaceRestServices.class);
-
     private static final CacheControl cacheControl;
 
     static {
@@ -44,9 +46,11 @@ public class SpaceRestServices implements ResourceContainer {
     @GET
     @Path("suggestions")
     public Response getSuggestions(@Context SecurityContext sc, @Context UriInfo uriInfo) {
-
+        
         try {
-
+            JSONArray jsonArray = new JSONArray();
+            JSONObject jsonGlobal = new JSONObject();
+            
             String userId = getUserId(sc, uriInfo);
             if (userId == null) {
                 return Response.status(HTTPStatus.INTERNAL_ERROR).cacheControl(cacheControl).build();
@@ -54,62 +58,94 @@ public class SpaceRestServices implements ResourceContainer {
 
             SpaceService spaceService = (SpaceService) ExoContainerContext.getCurrentContainer().getComponentInstanceOfType(SpaceService.class);
             List<Space> suggestedSpaces = spaceService.getPublicSpaces(userId);
-            IdentityManager identityManager = (IdentityManager) ExoContainerContext.getCurrentContainer().getComponentInstanceOfType(IdentityManager.class);
-            Identity identity = identityManager.getOrCreateIdentity(OrganizationIdentityProvider.NAME, userId);
-            List<Identity> connections = identityManager.getConnections(identity);
-
-            JSONArray jsonArray = new JSONArray();
-            JSONObject jsonGlobal = new JSONObject();
-            for (Space space : suggestedSpaces) {
-
-                if (space.getVisibility().equals(Space.HIDDEN))
-                    continue;
-                if (space.getRegistration().equals(Space.CLOSE))
-                    continue;
-                List<Identity> identityListMember = new ArrayList<Identity>();
-                String avatar = space.getAvatarUrl();
-                if (avatar == null) {
-                    avatar = "/social-resources/skin/images/ShareImages/UserAvtDefault.png";
-                }
-                for (String mem : space.getMembers()) {
-                    Identity identityMem = identityManager.getOrCreateIdentity(OrganizationIdentityProvider.NAME, mem);
-                    identityListMember.add(identityMem);
-                }
-                int k = 0;
-                for (Identity i : identityListMember) {
-                    for (Identity j : connections) {
-                        if (j.equals(i)) {
-                            k++;
-                        }
-                    }
-                }
-                String spaceType = "";
-                if (space.getRegistration().equals(Space.OPEN)) {
-                    spaceType = "Public";
-                } else {
-                    spaceType = "Private";
-                }
-                JSONObject json = new JSONObject();
-                json.put("name", space.getName());
-                json.put("spaceId", space.getId());
-                json.put("displayName", space.getDisplayName());
-                json.put("spaceUrl", space.getUrl());
-                json.put("avatarUrl", avatar);
-                json.put("registration", space.getRegistration());
-                json.put("members", space.getMembers().length);
-                json.put("privacy", spaceType);
-                json.put("number", k);
-                json.put("createdDate", space.getCreatedTime());
-                jsonArray.put(json);
+            
+            // new create system with no spaces
+            if (suggestedSpaces.size() == 0) {
+              return Response.ok(jsonGlobal.toString(), MediaType.APPLICATION_JSON).cacheControl(cacheControl).build();
             }
+            
+            IdentityManager identityManager = (IdentityManager) ExoContainerContext.getCurrentContainer().getComponentInstanceOfType(IdentityManager.class);
+            Identity identity = identityManager.getOrCreateIdentity(OrganizationIdentityProvider.NAME, userId, false);
+            List<Identity> connections = identityManager.getConnections(identity);
+            
+            final Map<Space, Integer> spacesWithMemberNum = new HashMap<Space, Integer>();
+            final ReentrantLock lock = new ReentrantLock();
+            
+            for (Identity connector : connections) {
+              for (Space space : suggestedSpaces) {
+                //
+                if (space.getVisibility().equals(Space.HIDDEN))
+                  continue;
+                if (space.getRegistration().equals(Space.CLOSE))
+                  continue;
+                if (!spaceService.isMember(space, connector.getRemoteId())) 
+                  continue;
+                
+                //
+                int value = 1;
+                
+                if (!spacesWithMemberNum.containsKey(space)) {
+                  spacesWithMemberNum.put(space, value);
+                } else {
+                  try {
+                    lock.lock();
+                    value = spacesWithMemberNum.get(space).intValue() + 1;
+                    spacesWithMemberNum.put(space, value);
+                  } finally {
+                    lock.unlock();
+                  }
+                }
+              }
+            }
+            
+            if (spacesWithMemberNum.size() != 0) {
+              //
+              for (Map.Entry<Space, Integer> entry : spacesWithMemberNum.entrySet()) {
+                JSONObject json = buildJSONObject(entry.getKey(), entry.getValue());
+                jsonArray.put(json);
+              }
+            } else {
+              for (int idx = 0; idx < suggestedSpaces.size(); idx++) {
+                JSONObject json = buildJSONObject(suggestedSpaces.get(idx), 0);
+                jsonArray.put(json);
+              }
+            }
+            
             jsonGlobal.put("items",jsonArray);
-            jsonGlobal.put("noConnections",connections.size());
+            jsonGlobal.put("noConnections", spacesWithMemberNum.size());
             return Response.ok(jsonGlobal.toString(), MediaType.APPLICATION_JSON).cacheControl(cacheControl).build();
 
         } catch (Exception e) {
             log.error("Error in space invitation rest service: " + e.getMessage(), e);
             return Response.ok("error").cacheControl(cacheControl).build();
         }
+    }
+
+    private JSONObject buildJSONObject(Space space, int k) throws JSONException {
+      String avatar = space.getAvatarUrl();
+      if (avatar == null) {
+          avatar = "/social-resources/skin/images/ShareImages/UserAvtDefault.png";
+      }
+      
+      String spaceType = "";
+      if (space.getRegistration().equals(Space.OPEN)) {
+          spaceType = "Public";
+      } else {
+          spaceType = "Private";
+      }
+      
+      JSONObject json = new JSONObject();
+      json.put("name", space.getName());
+      json.put("spaceId", space.getId());
+      json.put("displayName", space.getDisplayName());
+      json.put("spaceUrl", space.getUrl());
+      json.put("avatarUrl", avatar);
+      json.put("registration", space.getRegistration());
+      json.put("members", space.getMembers().length);
+      json.put("privacy", spaceType);
+      json.put("number", k);
+      json.put("createdDate", space.getCreatedTime());
+      return json;
     }
 
     @GET
@@ -298,5 +334,4 @@ public class SpaceRestServices implements ResourceContainer {
         }
         return null;
     }
-
 }

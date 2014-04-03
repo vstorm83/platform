@@ -3,19 +3,21 @@
   <ModulePrefs title="Bookmarks" description="Bookmarks list.">
     <Locale messages="locale/default.xml" />
     <Locale lang="fr" messages="locale/fr.xml" />
-    <Locale lang="es" messages="locale/es_ES.xml" />
+    <Locale lang="es_ES" messages="locale/es_ES.xml" />
     <Locale lang="vi" messages="locale/vi.xml" />
-    <Locale lang="sv" messages="locale/sv_SE.xml"/>
+    <Locale lang="sv_SE" messages="locale/sv_SE.xml"/>
     <Locale lang="ja" messages="locale/ja.xml"/>
     <Locale lang="ar" messages="locale/ar.xml"/>
     <Locale lang="de" messages="locale/de.xml"/>
-    <Locale lang="pt" messages="locale/pt_BR.xml"/>
+    <Locale lang="pt_BR" messages="locale/pt_BR.xml"/>
     <Locale lang="it" messages="locale/it.xml"/>
     <Locale lang="ru" messages="locale/ru.xml"/>
     <Locale lang="tr" messages="locale/tr.xml"/>
     <Locale lang="zh_CN" messages="locale/zh_CN.xml"/>
     <Locale lang="fi" messages="locale/fi.xml"/>
     <Locale lang="lt" messages="locale/lt.xml"/>
+    <Locale lang="no" messages="locale/no.xml"/>
+    <Locale lang="zh_TW" messages="locale/zh_TW.xml"/>    
     <Require feature="dynamic-height"/>
   </ModulePrefs>
   
@@ -130,7 +132,7 @@
             + '"/> \
                           </div> \
                        <button type="button" class="btn btn-primary pull-left save">__MSG_ok__</button> \
-                       <button type="button" class="btn pull-left cancel">Cancel</button> \
+                       <button type="button" class="btn pull-left cancel">__MSG_cancel__</button> \
                        </div> \
                        </li> ');
         $("#BookmarkList").append($(element));
@@ -291,8 +293,8 @@
                     <div class="editZone clearfix">  \
                       <div class="uiGrayLightBox pull-left" >     \
                              <div class="alert-error"></div> \
-                             <input type="text" class ="editName" placeholder="Title"/>    \
-                             <input type="text" class ="editLink" placeholder="URL"/> \
+                             <input type="text" class ="editName" placeholder="__MSG_title__"/>    \
+                             <input type="text" class ="editLink" placeholder="__MSG_url__"/> \
                         </div> \
                      <button type="button" class="btn btn-primary pull-left save">__MSG_add__</button> \
                      <button type="button" class="btn pull-left cancel">__MSG_cancel__</button> \
@@ -336,18 +338,17 @@
 
     </script>
   </head>
- 
      <div id="content" class="UIGadgetThemes bookmark uiBox">
        <h6 class="title left">          
          __MSG_title__
-             <a class="actionIcon pull-right" href="#" id="customize" ref="tooltip" data-placement="left" data-original-title="Add Bookmark">
+             <a class="actionIcon pull-right" href="#" id="customize" ref="tooltip" data-placement="left" data-original-title="__MSG_addBookmark__">
                  <i class="uiIconPlus uiIconLightGray"></i>
              </a>
        </h6>
        
       <div class="uiContentBox">
         <div id="emptyMsg" style="display:none;">
-           __MSG_emptyBookmarkPre__ <i class="uiIconPlus uiIconLightGray"></i> __MSG_emptyBookmarkSuf__
+           __MSG_emptyBookmarkPre__
         </div>
           <ul id="BookmarkList"></ul>
         </div>

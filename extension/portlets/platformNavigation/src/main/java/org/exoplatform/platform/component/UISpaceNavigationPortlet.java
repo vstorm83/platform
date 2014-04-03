@@ -1,7 +1,9 @@
 package org.exoplatform.platform.component;
 
+import org.apache.commons.lang.StringUtils;
 import org.exoplatform.commons.utils.ListAccess;
 import org.exoplatform.container.PortalContainer;
+import org.exoplatform.portal.application.PortalRequestContext;
 import org.exoplatform.portal.application.RequestNavigationData;
 import org.exoplatform.portal.webui.util.Util;
 import org.exoplatform.services.log.ExoLogger;
@@ -16,9 +18,8 @@ import org.exoplatform.webui.core.UIPortletApplication;
 import org.exoplatform.webui.core.lifecycle.UIApplicationLifecycle;
 import org.exoplatform.webui.event.Event;
 import org.exoplatform.webui.event.EventListener;
-import org.apache.commons.lang.StringUtils;
+
 import javax.servlet.http.HttpServletRequest;
-import org.exoplatform.portal.application.PortalRequestContext;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -191,20 +192,21 @@ public class UISpaceNavigationPortlet extends UIPortletApplication {
                 spaceURL = spaceURL.substring(portalContainerName.length()+2);
             }
             String fullUrl = ((HttpServletRequest) pContext.getRequest()).getRequestURL().toString();
-            String subUrl = fullUrl.substring(0, fullUrl.indexOf(portalContainerName) + portalContainerName.length());
+            String subUrl = StringUtils.substringBefore(fullUrl,Util.getPortalRequestContext().getRequest().getRequestURI());
+            subUrl +="/"+ portalContainerName;
             String applicationDisplayed = "";
             String constructURL = fullUrl.substring(subUrl.length()+1);
             if (fullUrl.contains(SPACE_URL_PATTERN)) {
                 int count = StringUtils.countMatches(constructURL, "/");
                 if(count == 2){
-                    subUrl +="/"+ spaceURL;
+                    subUrl =new StringBuffer(subUrl).append("/").append(spaceURL).toString();
                 } else {
                     applicationDisplayed = constructURL.substring(constructURL.lastIndexOf("/"));
-                    subUrl +="/"+ spaceURL+applicationDisplayed;
+                    subUrl =new StringBuffer(subUrl).append("/").append(spaceURL).append(applicationDisplayed).toString();
                 }
             }
             else {
-                subUrl +="/"+ spaceURL;
+                subUrl =new StringBuffer(subUrl).append("/").append(spaceURL).toString();
             }
 
 

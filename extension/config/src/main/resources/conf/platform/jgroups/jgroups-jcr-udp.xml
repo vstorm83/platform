@@ -90,6 +90,7 @@
   <pbcast.GMS
       print_local_addr="${exo.jcr.cluster.jgroups.pbcast.gms.print_local_addr:true}"
       join_timeout="${exo.jcr.cluster.jgroups.pbcast.gms.join_timeout:3000}"
+      shun="${exo.jcr.cluster.jgroups.pbcast.gms.shun:false}"
       view_bundling="${exo.jcr.cluster.jgroups.pbcast.gms.view_bundling:true}" />
   <UFC
       max_credits="${exo.jcr.cluster.jgroups.ufc.max_credits:2M}"

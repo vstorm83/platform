@@ -483,7 +483,6 @@
         <artifactId>exo.portal.component.management</artifactId>
         <version>${org.gatein.portal.version}</version>
       </dependency>
-
       <!-- DON'T REMOVE : needed for product packaging -->
       <dependency>
         <groupId>org.gatein.portal</groupId>
@@ -672,6 +671,12 @@
         <groupId>org.gatein.wci</groupId>
         <artifactId>wci-jboss7</artifactId>
         <version>${org.gatein.wci.version}</version>
+      </dependency>
+      <!-- Mobile site redirection -->
+      <dependency>
+        <groupId>org.gatein.web</groupId>
+        <artifactId>redirect</artifactId>
+        <version>${org.gatein.portal.version}</version>
       </dependency>
       <!-- Import versions from jcr project -->
       <dependency>

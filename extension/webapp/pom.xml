@@ -258,6 +258,8 @@
       <artifactId>exo.ws.rest.core</artifactId>
       <scope>runtime</scope>
     </dependency>
+    <!-- Add missing runtime deps from Gatein and JCR -->
+    <!-- This is just a simple workaround -->
     <dependency>
       <groupId>org.gatein.portal</groupId>
       <artifactId>exo.portal.component.application-registry</artifactId>
@@ -304,8 +306,12 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <!-- Add missing runtime deps from Gatein and JCR -->
-    <!-- This is just a simple workaround -->
+    <!-- Mobile site redirection -->
+    <dependency>
+      <groupId>org.gatein.web</groupId>
+      <artifactId>redirect</artifactId>
+      <scope>runtime</scope>
+    </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>

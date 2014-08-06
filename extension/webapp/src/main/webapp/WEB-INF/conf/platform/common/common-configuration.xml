@@ -25,7 +25,7 @@
 
   <component>
     <key>org.exoplatform.services.transaction.TransactionService</key>
-    <type>org.exoplatform.services.transaction.jbosscache.JBossTransactionsService</type>
+    <type>org.exoplatform.services.transaction.infinispan.JBossTransactionsService</type>
     <init-params>
       <value-param>
         <name>timeout</name>
@@ -36,7 +36,7 @@
   
   <component>
     <key>org.exoplatform.services.cache.ExoCacheFactory</key>
-    <type>org.exoplatform.services.cache.impl.jboss.ExoCacheFactoryImpl</type>
+    <type>org.exoplatform.services.cache.impl.infinispan.ExoCacheFactoryImpl</type>
     <init-params>
       <value-param>
         <name>cache.config.template</name>

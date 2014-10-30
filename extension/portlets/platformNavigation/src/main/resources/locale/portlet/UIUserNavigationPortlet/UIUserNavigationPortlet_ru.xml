@@ -2,16 +2,16 @@
 <bundle>
    <UIUserNavigationPortlet>
       <label>
-         <activities>Лента активности</activities>
+         <activities>Деятельность</activities>
          <profile>Профиль</profile>
          <connections>Список контактов</connections>
          <wiki>Вики</wiki>
-         <Myactivities>Моя лента активности</Myactivities>
+         <Myactivities>Моя деятельность</Myactivities>
          <Myprofile>Мой профиль</Myprofile>
          <Myconnections>Мои контакты</Myconnections>
          <Mywiki>Моя Вики-страница</Mywiki>
          <Mydashboard>Моя панель мониторинга</Mydashboard>
-         <NotificationSettingsPortlet>Уведомления</NotificationSettingsPortlet>
+         <NotificationSettingsPortlet>Мои уведомления</NotificationSettingsPortlet>
       </label>
    </UIUserNavigationPortlet>
 </bundle>

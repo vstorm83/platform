@@ -2,7 +2,7 @@
 <bundle>
    <UIUserNavigationPortlet>
       <label>
-         <activities>Flujo de Actividades</activities>
+         <activities>Actividades</activities>
          <profile>Perfil</profile>
          <connections>Conexiones</connections>
          <wiki>Wiki</wiki>
@@ -11,7 +11,7 @@
          <Myconnections>Mis Conexiones</Myconnections>
          <Mywiki>Mi Wiki</Mywiki>
          <Mydashboard>Mi Panel de Control</Mydashboard>
-         <NotificationSettingsPortlet>Notificaciones</NotificationSettingsPortlet>
+         <NotificationSettingsPortlet>Mis Notificaciones</NotificationSettingsPortlet>
       </label>
    </UIUserNavigationPortlet>
 </bundle>

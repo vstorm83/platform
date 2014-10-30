@@ -2,16 +2,16 @@
 <bundle>
    <UIUserNavigationPortlet>
       <label>
-         <activities>Etkinlik Akışı</activities>
+         <activities>Aktiviteler</activities>
          <profile>Profil</profile>
          <connections>Bağlantılar</connections>
          <wiki>Wiki</wiki>
-         <Myactivities>Etkinlik Akışım</Myactivities>
+         <Myactivities>Faliyetlerim</Myactivities>
          <Myprofile>Profilim</Myprofile>
          <Myconnections>Bağlantılarım</Myconnections>
          <Mywiki>Wikim</Mywiki>
          <Mydashboard>Panelim</Mydashboard>
-         <NotificationSettingsPortlet>Notifications</NotificationSettingsPortlet>
+         <NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
       </label>
    </UIUserNavigationPortlet>
 </bundle>

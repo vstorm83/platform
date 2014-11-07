@@ -108,25 +108,10 @@ public class BrandingController {
    * @return Response
    */
   @View
-  public Response index(ApplicationContext applicationContext, HttpContext httpContext, UserContext userContext) {
+  public Response index(HttpContext httpContext) {
     Map<String, Object> parameters = new HashMap<String, Object>();
     parameters.put("urlUploadFile", BrandingController_.uploadFile(null));
     parameters.put("imageUrl", getLogoUrl(httpContext, true));
-    ResourceBundle rs = applicationContext.resolveBundle(userContext.getLocale());
-    parameters.put("pagetitle", rs.getString("pagetitle.label"));
-    parameters.put("selectlogo", rs.getString("selectlogo.label"));
-    parameters.put("noteselectlogo", rs.getString("noteselectlogo.label"));
-    parameters.put("upload", rs.getString("upload.label"));
-    parameters.put("selectstyle", rs.getString("selectstyle.label"));
-    parameters.put("darkstyle",rs.getString("style.dark.label"));
-    parameters.put("lightstyle",rs.getString("style.light.label"));
-    parameters.put("preview", rs.getString("preview.label"));
-    parameters.put("save", rs.getString("save.label"));
-    parameters.put("cancel", rs.getString("cancel.label"));
-    parameters.put("saveok", rs.getString("info.saveok.label"));
-    parameters.put("savenotok", rs.getString("info.savenotok.label"));
-    parameters.put("cancelok", rs.getString("info.cancelok.label"));
-    parameters.put("mustpng", rs.getString("mustpng.label"));
     return index.ok(parameters);
   }
 

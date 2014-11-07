@@ -167,7 +167,6 @@ public class CalendarPortletController {
              date_act = new StringBuffer("0").append(date_act).toString();
                }
          Date comp = currentTime;
-        HashMap parameters = new HashMap();
         String defaultCalendarLabel = "Default";
         String dateLabel = "";
         try {

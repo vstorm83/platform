@@ -391,8 +391,8 @@
         <access-permissions>*:/platform/users</access-permissions>
         <container id="status-profile-container" template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
           <name>status-profile-container</name>
-            <access-permissions>*:/platform/users</access-permissions>
-            <factory-id>addonContainer</factory-id>
+          <access-permissions>*:/platform/users</access-permissions>
+          <factory-id>addonContainer</factory-id>
           <!-- 
           <portlet-application>
             <portlet>
@@ -404,7 +404,7 @@
             <show-info-bar>false</show-info-bar>
             <show-application-state>true</show-application-state>
           </portlet-application>
-          -->
+           -->
         </container>
         <container id="action-profile-container" template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
           <name>action-profile-container</name>
@@ -430,12 +430,12 @@
 
         <container id="left-column-container" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
           <access-permissions>*:/platform/users</access-permissions>
-          <container id="ProfilePortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+          <container id="BasicProfilePortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
             <access-permissions>*:/platform/users</access-permissions>
             <portlet-application>
               <portlet>
                 <application-ref>social-portlet</application-ref>
-                <portlet-ref>ProfilePortlet</portlet-ref>
+                <portlet-ref>BasicProfilePortlet</portlet-ref>
               </portlet>
               <title>Profile</title>
               <access-permissions>*:/platform/users</access-permissions>
@@ -454,7 +454,6 @@
           <access-permissions>*:/platform/users</access-permissions>
           <container id="ExperienceProfilePortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
             <access-permissions>*:/platform/users</access-permissions>
-            <!-- 
             <portlet-application>
               <portlet>
                 <application-ref>social-portlet</application-ref>
@@ -465,7 +464,6 @@
               <show-info-bar>false</show-info-bar>
               <show-application-state>true</show-application-state>
             </portlet-application>
-            -->
           </container>
 
           <container id="middle-profile-container" template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
@@ -476,7 +474,6 @@
           
           <container id="RecentActivitiesPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
             <access-permissions>*:/platform/users</access-permissions>
-            <!-- 
             <portlet-application>
               <portlet>
                 <application-ref>social-portlet</application-ref>
@@ -487,7 +484,6 @@
               <show-info-bar>false</show-info-bar>
               <show-application-state>true</show-application-state>
             </portlet-application>
-            -->
           </container>
         </container>
 
@@ -500,20 +496,18 @@
             <factory-id>addonContainer</factory-id>
           </container>
 
-          <container id="ConnectionsPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+          <container id="MiniConnectionsPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
             <access-permissions>*:/platform/users</access-permissions>
-            <!-- 
             <portlet-application>
               <portlet>
                 <application-ref>social-portlet</application-ref>
-                <portlet-ref>ConnectionsPortlet</portlet-ref>
+                <portlet-ref>MiniConnectionsPortlet</portlet-ref>
               </portlet>
-              <title>Connections Portlet</title>
+              <title>Connections User Portlet</title>
               <access-permissions>*:/platform/users</access-permissions>
               <show-info-bar>false</show-info-bar>
               <show-application-state>true</show-application-state>
             </portlet-application>
-            -->
           </container>
 
           <container id="rightbottom-profile-container" template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
@@ -564,20 +558,18 @@
 
         <container id="left-column-container" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
           <access-permissions>*:/platform/users</access-permissions>
-          <container id="EditProfilePortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+          <container id="EditUserProfilePortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
             <access-permissions>*:/platform/users</access-permissions>
-            <!--
-              <portlet-application>
-                <portlet>
-                  <application-ref>social-portlet</application-ref>
-                  <portlet-ref>EditProfilePortlet</portlet-ref>
-                </portlet>
-                <title>Edit Profile</title>
-                <access-permissions>*:/platform/users</access-permissions>
-                <show-info-bar>false</show-info-bar>
-                <show-application-state>true</show-application-state>
+            <portlet-application>
+              <portlet>
+                <application-ref>social-portlet</application-ref>
+                <portlet-ref>EditUserProfilePortlet</portlet-ref>
+              </portlet>
+              <title>Edit Profile</title>
+              <access-permissions>*:/platform/users</access-permissions>
+              <show-info-bar>false</show-info-bar>
+              <show-application-state>true</show-application-state>
             </portlet-application>
-            -->
           </container>
           <container id="left-editprofile-container" template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
             <name>left-profile-container</name>

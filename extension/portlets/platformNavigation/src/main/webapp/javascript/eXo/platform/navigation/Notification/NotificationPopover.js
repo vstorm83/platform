@@ -3,6 +3,7 @@
       popupId : 'NotificationPopup',
       maxItem : 13,
       popupItem : null,
+      defaultAvatar : '/social-resources/skin/images/ShareImages/UserAvtDefault.png',
       init : function() {
         $('#UICreatePlatformToolBarPortlet').find('.dropdown-toggle:first')
         .on('click', function() { console.log()});
@@ -28,9 +29,16 @@
         }
         //
         NotificationPopover.popupItem = $('#' + NotificationPopover.popupId).find('ul.displayItems:first');
+        NotificationPopover.template = $('#' + NotificationPopover.popupId).find('li.template:first')
+        
       },
       appendMessage : function(message) {
-        var newItem = $('<li></li>').text(message);
+        var newItem = NotificationPopover.template.clone();
+        newItem.find('img:first').attr('src', NotificationPopover.defaultAvatar);
+        newItem.find('.contentSmall:first').html(message);
+        newItem.find('.contentTime:first').html('2 minutes ago');
+        newItem.find('a.remove-item:first').attr('id', 'message' + (new Date().getTime()));
+        //
         var target = $('<ul></ul>').append(NotificationPopover.popupItem.find('li'));
         //
         NotificationPopover.popupItem.append(newItem);
@@ -42,11 +50,13 @@
         });
         target.remove();
         //
-        var badge = $('#' + NotificationPopover.popupId).parents('.uiNotificationPopoverToolbarPortlet:first').find('span.badgeDefault:first');
-        console.log(badge);
-        
+        var portlet = $('#' + NotificationPopover.popupId).parents('.uiNotificationPopoverToolbarPortlet:first');
+        var badge =portlet.find('span.badgeDefault:first');
         var current = parseInt(badge.text().trim());
-        badge.text((current + 1) + "");
+        badge.text((current + 1) + "").show();
+        //
+        portlet.find('.actionMark:first').show();
+        
       }
   };
   

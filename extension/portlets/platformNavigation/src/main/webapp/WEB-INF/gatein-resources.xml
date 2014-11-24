@@ -59,6 +59,14 @@
         <skin-name>Default</skin-name>
         <css-path>/skin/css/UIUserNavigationPortlet/Style.css</css-path>
     </portlet-skin>
+
+    <portlet-skin>
+        <application-name>platformNavigation</application-name>
+        <portlet-name>NotificationPopoverToolbarPortlet</portlet-name>
+        <skin-name>Default</skin-name>
+        <css-path>/skin/css/UIUserNavigationPortlet/Style.css</css-path>
+    </portlet-skin>
+
     <portlet>
         <name>PlatformAdminToolbarPortlet</name>
         <module>
@@ -170,6 +178,20 @@
             </depends>
         </module>
     </portlet>
+
+    <portlet>
+      <name>NotificationPopoverToolbarPortlet</name>
+      <module>
+        <script>
+          <path>/javascript/eXo/platform/navigation/Notification/NotificationPopover.js</path>
+        </script>
+        <depends>
+          <module>jquery</module>
+          <as>jQuery</as>
+        </depends>
+      </module>
+    </portlet>
+
     <module>
         <name>navigation-spaces-search</name>
        <load-group>plf_navigation</load-group>

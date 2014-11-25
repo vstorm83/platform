@@ -15,16 +15,18 @@
         NOK: $("span#msgSaveKO", localizeStatus).text()
       },
       init : function() {
-        var buttons = $("div.inputContainer");
-  	    buttons.on('click', function(e) {
-  		    var input = $(this).find('input.providerAction');
-  	      NotificationAdmin.switchStatus(input.attr('name'), input.hasClass("disable"));
-  	    });
+        $('input.providerAction').iphoneStyle({ 
+        	checkedLabel:'YES', 
+        	uncheckedLabel:'NO',
+        	onChange : function() {
+        		var input = $(this.elem);
+        		NotificationAdmin.switchStatus(input.attr('name'), input.hasClass("disable"));
+        	}
+        });
         //
         $("#btSetSender").click(function() {
           NotificationAdmin.saveSenderInfo($("input#senderName").val(), $("input#senderEmail").val());
         });
-
       },
       
       switchStatus : function(pluginId, isEnable) {

@@ -33,18 +33,18 @@
 	    </tr>  
 	    
 	    <% for (def provider : pluginInfos) {
-	         def pluginId = provider.getType();
-	         def status = (provider.isActive() ? "enable" : "disable");
-	         def statusNotify = (provider.isIntranetActive() ? "enable" : "disable");
+	      	 String pluginId = provider.getType();
+	         String status = (provider.isActive() ? "enable" : "disable");
+	         String statusNotify = (provider.isIntranetActive() ? "enable" : "disable");
 	    %>      
-      <tr id="${pluginId}" class="${status}">       
+      <tr id="${pluginId}">       
         <td class="left">
           <label for="${pluginId}">${_ctx.pluginRes(provider.getResourceBundleKey(), pluginId)}</label>
         </td>
         <td class="left">
           ${_ctx.pluginRes("UINotification.title." + pluginId, pluginId)}                    
         </td>
-        <td class="center">    
+        <td class="center ${status}">    
           <div class="inputContainer" style="width: 60px;">
         <% if (status == "enable")  { %>                   
            <input type="checkbox" class="providerAction yesno ${status}" checked="checked" name="${pluginId}">
@@ -54,9 +54,9 @@
           </div>
         </td>
         
-        <td class="center">    
+        <td class="center ${statusNotify}">    
           <div class="inputContainer" style="width: 60px;">
-        <% if (status == "enable")  { %>                   
+        <% if (statusNotify == "enable")  { %>                   
            <input type="checkbox" class="providerAction yesno ${statusNotify}" checked="checked" name="intranet${pluginId}">
         <% } else { %>
            <input type="checkbox" class="providerAction yesno ${statusNotify}" name="intranet${pluginId}">
@@ -94,22 +94,5 @@
 		<span id="msgSaveOK">${_ctx.appRes("NotificationAdmin.msg.saveOK")}</span>
 		<span id="msgSaveKO">${_ctx.appRes("NotificationAdmin.msg.saveKO")}</span>
 	</div>
-	
-	<script type="text/javascript">
-		require(["PORTLET/platform-notification/NotificationsAdminJuzuPortlet","SHARED/jquery", "SHARED/iphonePlugin"], function (notificationsAdmin, gj)
-		{
-			gj('input.providerAction').each(function()
-			{
-				gj(this).iphoneStyle({
-					checkedLabel:'YES',
-					uncheckedLabel:'NO'});
-
-				gj(this).change(function()
-				{
-					gj(this).trigger("click");
-				});
-			});
-		});
-  </script>
   
 </div>

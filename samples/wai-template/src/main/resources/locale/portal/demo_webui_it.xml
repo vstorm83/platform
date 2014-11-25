@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>Benvenuto</welcome>
+    <welcome>Welcome</welcome>
     <login>Login</login>
-    <logout>Uscire</logout>
+    <logout>Logout</logout>
     <language>
-      <en>Passare all'Inglese</en>
-      <fr>Passare al Francese</fr>
+      <en>Switch to English</en>
+      <fr>Switch to French</fr>
     </language>
-    <register>Registra</register>
+    <register>Register</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>Vai al contenuto</SkipToContent>
-    <SiteMap>Mappa sito</SiteMap>
-    <Accessibility>Accessibilità</Accessibility>
-    <NormalSize>Dimensioni Normali</NormalSize>
-    <MediumSize>Dimensioni Medie</MediumSize>
-    <LargeSize>Dimensioni Grandi</LargeSize>
-    <NormalContrast>Contrasto Normale</NormalContrast>
-    <HighContrast>Contrasto Alto</HighContrast>
-    <Search>Ricerca</Search>
+    <SkipToContent>Skip to content</SkipToContent>
+    <SiteMap>Site Map</SiteMap>
+    <Accessibility>Accessibility</Accessibility>
+    <NormalSize>Normal Size</NormalSize>
+    <MediumSize>Medium Size</MediumSize>
+    <LargeSize>Large Size</LargeSize>
+    <NormalContrast>Normal Contrast</NormalContrast>
+    <HighContrast>High Contrast</HighContrast>
+    <Search>Search</Search>
   </Toolbar>
   <Logo>
-    <GoHome>Vai alla HomePage</GoHome>
+    <GoHome>Go to Home</GoHome>
   </Logo>
   <acme>
-    <label>Template ACME</label>
+    <label>ACME Template</label>
   </acme>  
   <WAIPortal>
-    <label>Esempio di Sito Accessibile</label>
+    <label>Sample Accessible Website</label>
   </WAIPortal>
 </bundle>

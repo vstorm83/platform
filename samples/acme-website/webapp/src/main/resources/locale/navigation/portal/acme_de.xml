@@ -2,21 +2,21 @@
 <bundle>
   <portal>
     <acme>
-      <overview>Überblick</overview>
-      <products>Produkte</products>
-      <news>Neuigkeiten</news>
-      <contactus>Fragen?</contactus>
+      <overview>Overview</overview>
+      <products>Products</products>
+      <news>News</news>
+      <contactus>Questions?</contactus>
       <newsletters>Newsletters</newsletters>
-      <confirmation>Kontaktformular-Bestätigung</confirmation>
+      <confirmation>Contact Form Confirmation</confirmation>
       <detail>Details</detail>
-  <catalog>Katalog</catalog>
-      <printviewer>Seite drucken</printviewer>
-      <searchResult>Suche</searchResult>
-      <newAccount>Neues Konto</newAccount>
-      <groupnavigation>Gruppennavigation</groupnavigation>
-      <portalnavigation>Portalnavigation</portalnavigation>
-      <documents>Dokumente</documents>
-      <unifiedSearch>Suchen</unifiedSearch>
+  <catalog>Catalog</catalog>
+      <printviewer>Print page</printviewer>
+      <searchResult>Search</searchResult>
+      <newAccount>New Account</newAccount>
+      <groupnavigation>Group Navigation</groupnavigation>
+      <portalnavigation>Portal Navigation</portalnavigation>
+      <documents>Documents</documents>
+      <unifiedSearch>Search</unifiedSearch>
     </acme>
   </portal>
 </bundle>

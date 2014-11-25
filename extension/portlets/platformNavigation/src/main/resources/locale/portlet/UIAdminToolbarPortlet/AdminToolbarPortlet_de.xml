@@ -2,44 +2,44 @@
 <bundle>
    <UIAdminToolbarPortlet>
       <action>
-         <AddPage>Seite hinzufügen</AddPage>
+         <AddPage>Add Page</AddPage>
          <EditNavigation>Navigation</EditNavigation>
-         <Content>Inhalt</Content>
-         <Editor>Bearbeiten</Editor>
-         <Page>Seite</Page>
-         <Site>Seite</Site>
-         <Layout>Layout bearbeiten</Layout>
+         <Content>Content</Content>
+         <Editor>Edit</Editor>
+         <Page>Page</Page>
+         <Site>Site</Site>
+         <Layout>Edit Layout</Layout>
          <siteLayout>Layout</siteLayout>
-         <ManagePages>Seiten verwalten</ManagePages>
-         <GroupSite>Gruppenseite</GroupSite>
+         <ManagePages>Manage Pages</ManagePages>
+         <GroupSite>Group Site</GroupSite>
          <Properties>#{UISEOToolbarForm.label.seo}</Properties>
-         <AddSite>Seite hinzufügen</AddSite>
+         <AddSite>Add Site</AddSite>
       </action>
-<ManageSites>Seiten verwalten</ManageSites>
-<ManageGroupSites>Gruppenseiten verwalten</ManageGroupSites>
+<ManageSites>Manage Sites</ManageSites>
+<ManageGroupSites>Manage Group Sites</ManageGroupSites>
    </UIAdminToolbarPortlet>
 
   <UISEOForm>
     <label>
-      <title>Titel:</title>  
-      <description>Beschreibung:</description>
-      <keywords>Schlüsselwörter:</keywords>
-      <language>Sprache:</language>
+      <title>Title:</title>  
+      <description>Description:</description>
+      <keywords>Keywords:</keywords>
+      <language>Language:</language>
       <robots>Robots:</robots>
-      <sitemap>Seitenübersicht:</sitemap>
-      <sitemapvisible>Sichtbar in der Seitenübersicht</sitemapvisible>
-  <isInherited>Geerbt von übergeordneter Seite</isInherited>
-      <priority>Priorität:</priority>
-      <frequency>Häufigkeit:</frequency>
-      <select-language>Sprache auswählen</select-language>
+      <sitemap>Sitemap:</sitemap>
+      <sitemapvisible>Visible in sitemap</sitemapvisible>
+  <isInherited>Inherited from parent page</isInherited>
+      <priority>Priority:</priority>
+      <frequency>Frequency:</frequency>
+      <select-language>Select Language</select-language>
       <option>
-        <Always>Immer</Always>
-        <Hourly>Stündlich</Hourly>
-        <Daily>Täglich</Daily>
-        <Weekly>Wöchentlich</Weekly>
-        <Monthly>Monatlich</Monthly>
-        <Yearly>Jährlich</Yearly>
-        <Never>Niemals</Never>
+        <Always>Always</Always>
+        <Hourly>Hourly</Hourly>
+        <Daily>Daily</Daily>
+        <Weekly>Weekly</Weekly>
+        <Monthly>Monthly</Monthly>
+        <Yearly>Yearly</Yearly>
+        <Never>Never</Never>
       </option> 
     </label>
  
@@ -48,16 +48,16 @@
       <Cancel>#{word.cancel}</Cancel>
     </action>
     <msg>
-      <repository-exception>Es ist ein unerwarteter Fehler aufgetreten. Seiten-Metadaten können nicht gespeichert werden.</repository-exception>
-      <confirm-delete>Möchten Sie diese SEO-Daten wirklich löschen?</confirm-delete>
+      <repository-exception>An unexpected error occurred. Cannot save page metadata.</repository-exception>
+      <confirm-delete>Are you sure you want to delete these SEO data?</confirm-delete>
     </msg>
     <title>
-    <seo-delete>Löschen</seo-delete>
+    <seo-delete>Delete</seo-delete>
     </title>
 <help> 
-  <priority>Gültige Werte liegen zwischen 0.0 und 1.0.</priority>
-  <description>Hilfesuchende: Lassen Sie sie wissen, dass die folgende Seite einen Link mit dem was sie suchen enthält.</description>
-  <keywords>Die wichtigsten Begriffe auf der Seite sollen durch ein Komma getrennt werden.</keywords>  
+  <priority>Valid values range from 0.0 to 1.0.</priority>
+  <description>Help searchers: let them know that the following page has a link with what they are looking for.</description>
+  <keywords>Most important terms in the page must be separated by a comma.</keywords>  
     </help>  
   </UISEOForm>
   <UISEOPopupWindow>
@@ -75,15 +75,15 @@
   </UISEOToolbarForm>  
   <FloatNumberValidator>
     <msg>
-      <Invalid-number>Das Feld "Priorität" enthält einen ungültigen Wert. Bitte geben Sie eine Zahl zwischen 0,0 und 1,0 ein.</Invalid-number>
+      <Invalid-number>Priority field has an invalid value. Please enter a number between 0.0 and 1.0.</Invalid-number>
     </msg>
   </FloatNumberValidator>
   
   <Locale>
     <label>      
-      <it>Italienisch</it>      
-      <fr>Französisch</fr>
-      <en>Englisch</en>      
+      <it>Italian</it>      
+      <fr>French</fr>
+      <en>English</en>      
     </label>
   </Locale>
   

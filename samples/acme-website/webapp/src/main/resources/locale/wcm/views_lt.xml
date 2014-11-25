@@ -23,11 +23,11 @@
 <Product>
 <view>
 <label>
-<benefits>Nauda</benefits>
-<features>Funkcijos</features>
-<seeItInAction>Žiūrėti, kaip veikia</seeItInAction>
-<resources>Resursai</resources>
-<videos>Vaizdo įrašai</videos>
+<benefits>Benefits</benefits>
+<features>Features</features>
+<seeItInAction>See it in action</seeItInAction>
+<resources>Resources</resources>
+<videos>Videos</videos>
 </label>
 </view>
 </Product>

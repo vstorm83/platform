@@ -2,15 +2,15 @@
 <bundle>
    <UIUserNavigationPortlet>
       <label>
-         <activities>Veiklos</activities>
-         <profile>Profilis</profile>
-         <connections>Jungtys</connections>
+         <activities>Activities</activities>
+         <profile>Profile</profile>
+         <connections>Connections</connections>
          <wiki>Wiki</wiki>
-         <Myactivities>Mano veiklos</Myactivities>
-         <Myprofile>Mano profilis</Myprofile>
-         <Myconnections>Mano jungtys</Myconnections>
-         <Mywiki>Mano Wiki</Mywiki>
-         <Mydashboard>Mano prietaisų skydas</Mydashboard>
+         <Myactivities>My Activities</Myactivities>
+         <Myprofile>My Profile</Myprofile>
+         <Myconnections>My Connections</Myconnections>
+         <Mywiki>My Wiki</Mywiki>
+         <Mydashboard>My Dashboard</Mydashboard>
          <NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
       </label>
    </UIUserNavigationPortlet>

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>Hoş geldiniz</welcome>
-    <login>Uturum Aç</login>
-    <logout>Oturumu Kapat</logout>
+    <welcome>Welcome</welcome>
+    <login>Login</login>
+    <logout>Logout</logout>
     <language>
-      <en>İngilizce'ye geç</en>
-      <fr>Fransızca'ya geç</fr>
+      <en>Switch to English</en>
+      <fr>Switch to French</fr>
     </language>
-    <register>Kayıt Ol</register>
+    <register>Register</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>İçeriğe geç</SkipToContent>
-    <SiteMap>Site Haritası</SiteMap>
-    <Accessibility>Erişilebilirlik</Accessibility>
-    <NormalSize>Normal Boy</NormalSize>
-    <MediumSize>Orta Boy</MediumSize>
-    <LargeSize>Büyük Boy</LargeSize>
-    <NormalContrast>Normal kontrast</NormalContrast>
-    <HighContrast>Yüksek contrast</HighContrast>
-    <Search>Arama</Search>
+    <SkipToContent>Skip to content</SkipToContent>
+    <SiteMap>Site Map</SiteMap>
+    <Accessibility>Accessibility</Accessibility>
+    <NormalSize>Normal Size</NormalSize>
+    <MediumSize>Medium Size</MediumSize>
+    <LargeSize>Large Size</LargeSize>
+    <NormalContrast>Normal Contrast</NormalContrast>
+    <HighContrast>High Contrast</HighContrast>
+    <Search>Search</Search>
   </Toolbar>
   <Logo>
-    <GoHome>Ana sayfaya git</GoHome>
+    <GoHome>Go to Home</GoHome>
   </Logo>
   <acme>
-    <label>ACME şablonu</label>
+    <label>ACME Template</label>
   </acme>  
   <WAIPortal>
-    <label>Örnek erişilebilir Web site</label>
+    <label>Sample Accessible Website</label>
   </WAIPortal>
 </bundle>

@@ -2,25 +2,25 @@
 <bundle>
 <UISetupPlatformToolBarPortlet>
 <label>
-<applications>Program</applications>
-<content>Innehåll</content>
-<siteExplorer>utforskare för webbplatser</siteExplorer>
-<wcmAdmin>Innehållsadministration</wcmAdmin>
-<users>Användare</users>
-<newStaff>Lägg till användare</newStaff>
-<org-management>Grupper och roller</org-management>
+<applications>Applications</applications>
+<content>Content</content>
+<siteExplorer>Sites Explorer</siteExplorer>
+<wcmAdmin>Content Administration</wcmAdmin>
+<users>Users</users>
+<newStaff>Add Users</newStaff>
+<org-management>Groups and Roles</org-management>
 <portal>Portal</portal>
 <administration>Administration</administration>
-<groupnavigation>Grupp platser</groupnavigation>
-<pageManagement>Sidor</pageManagement>
-<portalnavigation>Platser</portalnavigation>
+<groupnavigation>Group Sites</groupnavigation>
+<pageManagement>Pages</pageManagement>
+<portalnavigation>Sites</portalnavigation>
 <servicesManagement>Management</servicesManagement>
-<monitoring>Övervakning</monitoring>
-<spaces>Webb-ytor</spaces>
+<monitoring>Monitoring</monitoring>
+<spaces>Spaces</spaces>
 <Branding>Branding</Branding>
       <Notification>Email Notifications</Notification>
 <ide>IDE</ide>
-<search>Sök</search>
+<search>Search</search>
 </label>
 </UISetupPlatformToolBarPortlet>
 </bundle>

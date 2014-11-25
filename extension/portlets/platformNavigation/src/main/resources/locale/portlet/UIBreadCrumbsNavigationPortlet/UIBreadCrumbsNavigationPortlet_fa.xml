@@ -2,13 +2,13 @@
 <bundle>
 <UIBreadCrumbsNavigationPortlet>
     <label>
-        <ChangePicture>تغییر صورتک</ChangePicture>
+        <ChangePicture>Change Avatar</ChangePicture>
     </label>
 </UIBreadCrumbsNavigationPortlet>
  <UIBreadCrumbPopupAvatarUploader>
       <title>
-         <UIAvatarUploader>آپلود صورتک</UIAvatarUploader>
-         <UIAvatarUploadContent>پیش نمایش صورتک</UIAvatarUploadContent>
+         <UIAvatarUploader>Upload an Avatar</UIAvatarUploader>
+         <UIAvatarUploadContent>Avatar Preview</UIAvatarUploadContent>
       </title>
  </UIBreadCrumbPopupAvatarUploader>
 </bundle>

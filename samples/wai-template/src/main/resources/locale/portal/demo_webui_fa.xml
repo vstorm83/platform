@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>خوش آمدید</welcome>
-    <login>ورود</login>
-    <logout>خروج</logout>
+    <welcome>Welcome</welcome>
+    <login>Login</login>
+    <logout>Logout</logout>
     <language>
-      <en>تعویض به انگلیسی</en>
-      <fr>تعویض به فرانسه</fr>
+      <en>Switch to English</en>
+      <fr>Switch to French</fr>
     </language>
-    <register>ثبت نام</register>
+    <register>Register</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>پرش به محتوا</SkipToContent>
-    <SiteMap>نقشه سایت</SiteMap>
-    <Accessibility>قابلیت دسترسی</Accessibility>
-    <NormalSize>اندازه عادی</NormalSize>
-    <MediumSize>اندازه متوسط</MediumSize>
-    <LargeSize>اندازه بزرگ</LargeSize>
-    <NormalContrast>کنتراست عادی</NormalContrast>
-    <HighContrast>کنتراست بالا</HighContrast>
-    <Search>جستجو</Search>
+    <SkipToContent>Skip to content</SkipToContent>
+    <SiteMap>Site Map</SiteMap>
+    <Accessibility>Accessibility</Accessibility>
+    <NormalSize>Normal Size</NormalSize>
+    <MediumSize>Medium Size</MediumSize>
+    <LargeSize>Large Size</LargeSize>
+    <NormalContrast>Normal Contrast</NormalContrast>
+    <HighContrast>High Contrast</HighContrast>
+    <Search>Search</Search>
   </Toolbar>
   <Logo>
-    <GoHome>رفتن به صفحه اصلی</GoHome>
+    <GoHome>Go to Home</GoHome>
   </Logo>
   <acme>
-    <label>الگوی ACME</label>
+    <label>ACME Template</label>
   </acme>  
   <WAIPortal>
-    <label>نمونه وب سایت قابل دسترس</label>
+    <label>Sample Accessible Website</label>
   </WAIPortal>
 </bundle>

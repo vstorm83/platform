@@ -2,51 +2,51 @@
 <bundle>
 <UIActionBar>
 <tooltip>
-<ContentNavigation>Navegació de contingut</ContentNavigation>
+<ContentNavigation>Content Navigation</ContentNavigation>
 </tooltip>
 </UIActionBar>
 <UIViewFormTabPane>
 <label>
-<contentNavigation>Navegació per continguts</contentNavigation>
+<contentNavigation>Navigation by Content</contentNavigation>
 </label>
 </UIViewFormTabPane>
 <UIPopupWindow>
 <title>
-<UINavigationForm>Formulari de navegació</UINavigationForm>
+<UINavigationForm>Navigation Form</UINavigationForm>
 </title>
 </UIPopupWindow>
 <PopulateToMenu>
 <dialog>
 <label>
 <id>ID:</id>
-<name>Nom:</name>
-<lifecycle>Cicle de vida:</lifecycle>
-<isDeep>Recursiu:</isDeep>
-<nodetypes>Tipus de node:</nodetypes>
-<description>Descripció:</description>
-<affectedNodeTypeNames>Tipus de Node afectats:</affectedNodeTypeNames>
-<navigationNode>Node de navegació:</navigationNode>
-<index>Índex:</index>
-<clickable>Clicable:</clickable>
-<page>Pàgina:</page>
-<childrenPage>Pàgina de secundaria:</childrenPage>
+<name>Name:</name>
+<lifecycle>Lifecycle:</lifecycle>
+<isDeep>Is Deep:</isDeep>
+<nodetypes>Node Types:</nodetypes>
+<description>Description:</description>
+<affectedNodeTypeNames>Affected Node Types:</affectedNodeTypeNames>
+<navigationNode>Navigation Node:</navigationNode>
+<index>Index:</index>
+<clickable>Clickable:</clickable>
+<page>Page:</page>
+<childrenPage>Children Page:</childrenPage>
 </label>
 </dialog>
 </PopulateToMenu>
 <UINavigationForm>
 <label>
-<Node>Carpeta principal:</Node>
+<Node>Parent's Folder:</Node>
 <Visible>Visible :</Visible>
-<NavigationNodeInputSet>L'objectiu de navegació principal:</NavigationNodeInputSet>
-<Index>Ordre de visualització:</Index>
-<Clickable>Clicable :</Clickable>
-<NavigationControls>Controls de navegació</NavigationControls>
-<ListTargetPageFormInputSet>Llista de Pàgines:</ListTargetPageFormInputSet>
-<ListShowCLVByStringInput>Nom del paràmetre:</ListShowCLVByStringInput>
-<DetailTargetPageInputSet>Pàgina de detall:</DetailTargetPageInputSet>
-<DetailShowCLVByStringInput>Nom del paràmetre:</DetailShowCLVByStringInput>
-<List>Llista</List>
-<Detail>Detall</Detail>
+<NavigationNodeInputSet>Target Parent Navigation:</NavigationNodeInputSet>
+<Index>Display Order:</Index>
+<Clickable>Clickable :</Clickable>
+<NavigationControls>Navigation Controls</NavigationControls>
+<ListTargetPageFormInputSet>Page for List:</ListTargetPageFormInputSet>
+<ListShowCLVByStringInput>Parameter Name:</ListShowCLVByStringInput>
+<DetailTargetPageInputSet>Page for Detail:</DetailTargetPageInputSet>
+<DetailShowCLVByStringInput>Parameter Name:</DetailShowCLVByStringInput>
+<List>List</List>
+<Detail>Detail</Detail>
 </label>
 <action>
 <Save>#{word.save}</Save>
@@ -55,47 +55,47 @@
 </UINavigationForm>
 <Visible>
 <label>
-<VisibleEnable>Sí</VisibleEnable>
+<VisibleEnable>Yes</VisibleEnable>
 <VisibleDisable>No</VisibleDisable>
 </label>
 </Visible>
 <Clickable>
 <label>
-<ClickableEnable>Sí</ClickableEnable>
+<ClickableEnable>Yes</ClickableEnable>
 <ClickableDisable>No</ClickableDisable>
 </label>
 </Clickable>
 <NavigationNodeInputSet>
 <title>
-<SelectNavigationNode>Selecciona un Node de Navegació</SelectNavigationNode>
-<RemoveNavigationNode>Restablir</RemoveNavigationNode>
+<SelectNavigationNode>Select Navigation Node</SelectNavigationNode>
+<RemoveNavigationNode>Reset</RemoveNavigationNode>
 </title>
 </NavigationNodeInputSet>
 <ListTargetPageFormInputSet>
 <title>
-<SelectListTargetPage>Selecciona la pàgina de destí</SelectListTargetPage>
-<RemoveListTargetPage>Restablir</RemoveListTargetPage>
+<SelectListTargetPage>Select Target Page</SelectListTargetPage>
+<RemoveListTargetPage>Reset</RemoveListTargetPage>
 </title>
 </ListTargetPageFormInputSet>
 <DetailTargetPageInputSet>
 <title>
-<SelectDetailTargetPage>Selecciona la pàgina de destí secundària</SelectDetailTargetPage>
-<RemoveDetailTargetPage>Restablir</RemoveDetailTargetPage>
+<SelectDetailTargetPage>Select Children Target Page</SelectDetailTargetPage>
+<RemoveDetailTargetPage>Reset</RemoveDetailTargetPage>
 </title>
 </DetailTargetPageInputSet>
 <NavigationSelectorPopupWindow>
 <title>
-<UINavigationSelector>Selector de Navegació</UINavigationSelector>
+<UINavigationSelector>Navigation Selector</UINavigationSelector>
 </title>
 </NavigationSelectorPopupWindow>
 <ListTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Selector de pàgina</UIPageSelector>
+<UIPageSelector>Page Selector</UIPageSelector>
 </title>
 </ListTargetPageSelectorPopupWindow>
 <DetailTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Selector de pàgina</UIPageSelector>
+<UIPageSelector>Page Selector</UIPageSelector>
 </title>
 </DetailTargetPageSelectorPopupWindow>
 </bundle>

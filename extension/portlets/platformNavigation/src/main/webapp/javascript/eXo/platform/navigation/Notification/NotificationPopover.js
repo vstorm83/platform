@@ -2,12 +2,11 @@
   var NotificationPopover = {
       popupId : 'NotificationPopup',
       maxItem : 13,
+      portlet : null,
       popupItem : null,
-      defaultAvatar : '/social-resources/skin/images/ShareImages/UserAvtDefault.png',
+      markReadLink : '',
+      removeLink : '',
       init : function() {
-        $('#UICreatePlatformToolBarPortlet').find('.dropdown-toggle:first')
-        .on('click', function() { console.log()});
-        
         //
         var socketUrl = 'ws://' + location.hostname + ':8181/channels/notification-web/' + window.eXo.env.portal.userName;
         var socket = new WebSocket(socketUrl);
@@ -17,27 +16,36 @@
         }
         socket.onopen = function(evt) {
           if (socket.readyState == WebSocket.OPEN) {
-            socket
-                .send('{"action": "subscribe", "identifier" : "notification-web"}');
+            socket.send('{"action": "subscribe", "identifier" : "notification-web"}');
           } else {
             window.console.log("The socket is not open.");
           }
         }
-  
         socket.onclose = function(evt) {
           window.console.log("Web Socket closed.");
         }
         //
-        NotificationPopover.popupItem = $('#' + NotificationPopover.popupId).find('ul.displayItems:first');
-        NotificationPopover.template = $('#' + NotificationPopover.popupId).find('li.template:first')
-        
+        NotificationPopover.portlet = $('#' + NotificationPopover.popupId).parents('.uiNotificationPopoverToolbarPortlet:first');
+        NotificationPopover.markReadLink = NotificationPopover.portlet.find('#MarkRead').text();
+        NotificationPopover.removeLink = NotificationPopover.portlet.find('#Remove').text();
+        //
+        NotificationPopover.popupItem = NotificationPopover.portlet.find('ul.displayItems:first');
+        NotificationPopover.popupItem.find('li').each(function(i) {
+          NotificationPopover.applyAction($(this));
+        });
+        //
+        var current = NotificationPopover.popupItem.find('li').length;
+        if(current > 0) {
+          NotificationPopover.portlet.find('span.badgeDefault:first').text(current).show();
+        }
+        // markAllRead
+        NotificationPopover.portlet.find('.actionMark:first').find('a').click(NotificationPopover.markAllRead);
+        //
+        NotificationPopover.portlet.find('.dropdown-toggle:first').on('click', function() { console.log('Show menu')});
       },
       appendMessage : function(message) {
-        var newItem = NotificationPopover.template.clone();
-        newItem.find('img:first').attr('src', NotificationPopover.defaultAvatar);
-        newItem.find('.contentSmall:first').html(message);
-        newItem.find('.contentTime:first').html('2 minutes ago');
-        newItem.find('a.remove-item:first').attr('id', 'message' + (new Date().getTime()));
+        var newItem = NotificationPopover.applyAction($('<li></li>').html(message));
+        
         //
         var target = $('<ul></ul>').append(NotificationPopover.popupItem.find('li'));
         //
@@ -50,17 +58,80 @@
         });
         target.remove();
         //
-        var portlet = $('#' + NotificationPopover.popupId).parents('.uiNotificationPopoverToolbarPortlet:first');
-        var badge =portlet.find('span.badgeDefault:first');
-        var current = parseInt(badge.text().trim());
-        badge.text((current + 1) + "").show();
+        var badge = NotificationPopover.portlet.find('span.badgeDefault:first');
+        var current = parseInt(badge.text());
+        if(current > NotificationPopover.maxItem) {
+          badge.text(NotificationPopover.maxItem + "+").show();
+        } else {
+          badge.text((current + 1) + "").show();
+        }
         //
-        portlet.find('.actionMark:first').show();
-        
+        NotificationPopover.portlet.find('.actionMark:first').show();
+      },
+      applyAction : function(item) {
+        item.find('.contentSmall:first').on('click', function(evt) {
+          evt.stopPropagation();
+          // mark read
+          NotificationPopover.markItemRead($(this).parents('li:first'));
+          //
+          var link = $(this).data('link');
+          if(link  && link.length > 0) {
+            window.location.href = link;
+          }
+        }).find('a').click(function(evt) {
+          evt.stopPropagation();
+          window.location.href= $(this).attr('href');
+        });
+        //
+        item.find('.remove-item').on('click', function(evt){
+          evt.stopPropagation();
+          //
+          var elm = $(this);
+          NotificationPopover.removeItem(elm.parents('li:first'));
+          //
+          var rest = elm.data('rest');
+          if(rest  && rest.length > 0) {
+            $.ajax('GET', rest);
+          }
+          //
+          var link = elm.data('link');
+          if(link  && link.length > 0) {
+            window.location.href = link;
+          }
+          //
+          elm.parents('li:first').remove();
+        });
+        //
+        return item;
+      },
+      downBadge : function() {
+        //
+        var badge = NotificationPopover.portlet.find('span.badgeDefault:first');
+        var current = parseInt(badge.text().trim());
+        if(current <= 1) {
+          badge.text("0").hide();
+        } else {
+          badge.text((current - 1) + "");
+        }
+      },
+      markAllRead : function(evt) {
+        NotificationPopover.portlet.find('ul.displayItems:first').find('li.unread').removeClass('unread');
+        NotificationPopover.portlet.find('span.badgeDefault:first').text('0').hide();
+      },
+      markItemRead : function(item) {
+        var action = NotificationPopover.markReadLink + item.data('id');
+        window.ajaxGet(action);
+        //
+        NotificationPopover.downBadge();
+      },
+      removeItem : function(item) {
+        var action = NotificationPopover.removeLink + item.data('id');
+        window.ajaxGet(action);
+        //
+        NotificationPopover.downBadge();
       }
   };
   
   NotificationPopover.init();
-  window.NotificationPopover = NotificationPopover;
   return NotificationPopover;
 })(jQuery);

@@ -1,24 +1,31 @@
 <div class="uiNotificationPopoverToolbarPortlet clearfix" id="$uicomponent.id">
+	<div style="display:none" class="all-actions">
+		<%
+			List actions = uicomponent.getActions();
+			for(action in actions) {
+				print("<div id=\"" + action + "\">" + uicomponent.getActionUrl(action) + "</div>");
+			}
+		%>
+	</div>
 	<div class="uiDropdownWithIcon dropdown pull-right">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			<i class="uiIconPLF24x24Bell">
 				<span class="badgeDefault badgeRed mini badgeNotification">0</span>
 			</i>
 		</a>
+		<%
+			List notifications = uicomponent.getNotifications();
+		%>
 		<ul class="dropdown-menu" id="NotificationPopup">
-			<li class="actionMark right"><a href="/portal/intranet/activities/">Mark all as read</a></li>
-			<li class="template clearfix">
-				<div class="avatarSmall pull-left">
-					<img src="AVATAR_URL"/>
-				</div>
-				<div class="pull-left">
-					<div class="contentSmall">THE_CONTENT</div>
-					<div class="contentTime">THE_TIME</div>
-				</div>
-				<a href="javascript:void(0)" class="remove-item" data-id="THE_ID"><i class="uiIconClose uiIconLightGray"></i></a>
-			</li>
+			<li class="actionMark right"><a href="javascript:void(0)" data-action="<%=uicomponent.event("MarkAllRead")%>">Mark all as read</a></li>
 			<li>
-				<ul class="displayItems"></ul>
+				<ul class="displayItems">
+				<%
+					for(notification in notifications) {
+						print(notification);
+					}
+				%>
+				</ul>
 			</li>
 			<li class="actionLink"><a class="btn btn-primary" href="/portal/intranet/activities/">View All</a></li>
 		</ul>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
 <employees>
-<workflowcontroller>Tareas de flujo de trabajo</workflowcontroller>
+<workflowcontroller>Workflow Tasks</workflowcontroller>
 </employees>
 </bundle>

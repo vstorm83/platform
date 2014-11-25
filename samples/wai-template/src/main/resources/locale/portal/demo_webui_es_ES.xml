@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>Bienvenido</welcome>
-    <login>Ingresar</login>
-    <logout>Desconectarse</logout>
+    <welcome>Welcome</welcome>
+    <login>Login</login>
+    <logout>Logout</logout>
     <language>
-      <en>Cambiar a inglés</en>
-      <fr>Cambiar a francés</fr>
+      <en>Switch to English</en>
+      <fr>Switch to French</fr>
     </language>
-    <register>Registro</register>
+    <register>Register</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>Saltar al contenido</SkipToContent>
-    <SiteMap>Mapa del Sitio</SiteMap>
-    <Accessibility>Accesibilidad</Accessibility>
-    <NormalSize>Tamaño normal</NormalSize>
-    <MediumSize>Tamaño mediano</MediumSize>
-    <LargeSize>Tamaño grande</LargeSize>
-    <NormalContrast>Contraste normal</NormalContrast>
-    <HighContrast>Contraste elevado</HighContrast>
-    <Search>Búsqueda</Search>
+    <SkipToContent>Skip to content</SkipToContent>
+    <SiteMap>Site Map</SiteMap>
+    <Accessibility>Accessibility</Accessibility>
+    <NormalSize>Normal Size</NormalSize>
+    <MediumSize>Medium Size</MediumSize>
+    <LargeSize>Large Size</LargeSize>
+    <NormalContrast>Normal Contrast</NormalContrast>
+    <HighContrast>High Contrast</HighContrast>
+    <Search>Search</Search>
   </Toolbar>
   <Logo>
-    <GoHome>Ir a la página de inicio</GoHome>
+    <GoHome>Go to Home</GoHome>
   </Logo>
   <acme>
-    <label>Plantilla ACME</label>
+    <label>ACME Template</label>
   </acme>  
   <WAIPortal>
-    <label>Muestra accesible del sitio web</label>
+    <label>Sample Accessible Website</label>
   </WAIPortal>
 </bundle>

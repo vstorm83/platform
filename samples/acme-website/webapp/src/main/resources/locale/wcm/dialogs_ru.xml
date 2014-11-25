@@ -23,12 +23,12 @@
 <Product>
 <dialog>
 <label>
-<name>Название</name>
-<title>Заголовок</title>
-<illustrationImage>Изображение иллюстрации</illustrationImage>
-<summary>Краткое описание</summary>
-<benefits>Преимущества</benefits>
-<features>Возможности</features>
+<name>Name</name>
+<title>Title</title>
+<illustrationImage>Illustration Image</illustrationImage>
+<summary>Summary</summary>
+<benefits>Benefits</benefits>
+<features>Features</features>
 </label>
 </dialog>
 </Product>

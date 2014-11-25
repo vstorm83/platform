@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>ようこそ</welcome>
-    <login>ログイン</login>
-    <logout>ログアウト</logout>
+    <welcome>Welcome</welcome>
+    <login>Login</login>
+    <logout>Logout</logout>
     <language>
-      <en>英語に切り替える</en>
-      <fr>フランス語に切り替える</fr>
+      <en>Switch to English</en>
+      <fr>Switch to French</fr>
     </language>
-    <register>登録</register>
+    <register>Register</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>コンテンツへ飛びます</SkipToContent>
-    <SiteMap>サイトマップ</SiteMap>
-    <Accessibility>アクセシビリティ</Accessibility>
-    <NormalSize>通常サイズ</NormalSize>
-    <MediumSize>中サイズ</MediumSize>
-    <LargeSize>大サイズ</LargeSize>
-    <NormalContrast>通常のコントラスト</NormalContrast>
-    <HighContrast>高コントラスト</HighContrast>
-    <Search>検索</Search>
+    <SkipToContent>Skip to content</SkipToContent>
+    <SiteMap>Site Map</SiteMap>
+    <Accessibility>Accessibility</Accessibility>
+    <NormalSize>Normal Size</NormalSize>
+    <MediumSize>Medium Size</MediumSize>
+    <LargeSize>Large Size</LargeSize>
+    <NormalContrast>Normal Contrast</NormalContrast>
+    <HighContrast>High Contrast</HighContrast>
+    <Search>Search</Search>
   </Toolbar>
   <Logo>
-    <GoHome>ホームへ飛ぶ</GoHome>
+    <GoHome>Go to Home</GoHome>
   </Logo>
   <acme>
-    <label>ACME テンプレート</label>
+    <label>ACME Template</label>
   </acme>  
   <WAIPortal>
-    <label>サンプル ウェブサイト</label>
+    <label>Sample Accessible Website</label>
   </WAIPortal>
 </bundle>

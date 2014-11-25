@@ -2,51 +2,51 @@
 <bundle>
 <UIActionBar>
 <tooltip>
-<ContentNavigation>Навігація по вмісту</ContentNavigation>
+<ContentNavigation>Content Navigation</ContentNavigation>
 </tooltip>
 </UIActionBar>
 <UIViewFormTabPane>
 <label>
-<contentNavigation>Навігація за вмістом</contentNavigation>
+<contentNavigation>Navigation by Content</contentNavigation>
 </label>
 </UIViewFormTabPane>
 <UIPopupWindow>
 <title>
-<UINavigationForm>Форма навігації</UINavigationForm>
+<UINavigationForm>Navigation Form</UINavigationForm>
 </title>
 </UIPopupWindow>
 <PopulateToMenu>
 <dialog>
 <label>
 <id>ID:</id>
-<name>Ім'я:</name>
-<lifecycle>Життєвий цикл:</lifecycle>
-<isDeep>Глибоке:</isDeep>
-<nodetypes>Типи вузла:</nodetypes>
-<description>Опис:</description>
-<affectedNodeTypeNames>Вражені типи вузла:</affectedNodeTypeNames>
-<navigationNode>Вузол навігації:</navigationNode>
-<index>Індекс:</index>
-<clickable>Клікабельне:</clickable>
-<page>Сторінка:</page>
-<childrenPage>Дочірня сторінка:</childrenPage>
+<name>Name:</name>
+<lifecycle>Lifecycle:</lifecycle>
+<isDeep>Is Deep:</isDeep>
+<nodetypes>Node Types:</nodetypes>
+<description>Description:</description>
+<affectedNodeTypeNames>Affected Node Types:</affectedNodeTypeNames>
+<navigationNode>Navigation Node:</navigationNode>
+<index>Index:</index>
+<clickable>Clickable:</clickable>
+<page>Page:</page>
+<childrenPage>Children Page:</childrenPage>
 </label>
 </dialog>
 </PopulateToMenu>
 <UINavigationForm>
 <label>
-<Node>Коренева папка:</Node>
-<Visible>Видимий :</Visible>
-<NavigationNodeInputSet>Цільова навігація батьківського об'єкта:</NavigationNodeInputSet>
-<Index>Порядок відображення:</Index>
-<Clickable>Клікабельне :</Clickable>
-<NavigationControls>Елементи керування навігацією</NavigationControls>
-<ListTargetPageFormInputSet>Сторінка для списку:</ListTargetPageFormInputSet>
-<ListShowCLVByStringInput>Ім'я параметра:</ListShowCLVByStringInput>
-<DetailTargetPageInputSet>Сторінка для деталей:</DetailTargetPageInputSet>
-<DetailShowCLVByStringInput>Ім'я параметра:</DetailShowCLVByStringInput>
-<List>Список</List>
-<Detail>Детально</Detail>
+<Node>Parent's Folder:</Node>
+<Visible>Visible :</Visible>
+<NavigationNodeInputSet>Target Parent Navigation:</NavigationNodeInputSet>
+<Index>Display Order:</Index>
+<Clickable>Clickable :</Clickable>
+<NavigationControls>Navigation Controls</NavigationControls>
+<ListTargetPageFormInputSet>Page for List:</ListTargetPageFormInputSet>
+<ListShowCLVByStringInput>Parameter Name:</ListShowCLVByStringInput>
+<DetailTargetPageInputSet>Page for Detail:</DetailTargetPageInputSet>
+<DetailShowCLVByStringInput>Parameter Name:</DetailShowCLVByStringInput>
+<List>List</List>
+<Detail>Detail</Detail>
 </label>
 <action>
 <Save>#{word.save}</Save>
@@ -55,47 +55,47 @@
 </UINavigationForm>
 <Visible>
 <label>
-<VisibleEnable>Так</VisibleEnable>
-<VisibleDisable>Ні</VisibleDisable>
+<VisibleEnable>Yes</VisibleEnable>
+<VisibleDisable>No</VisibleDisable>
 </label>
 </Visible>
 <Clickable>
 <label>
-<ClickableEnable>Так</ClickableEnable>
-<ClickableDisable>Ні</ClickableDisable>
+<ClickableEnable>Yes</ClickableEnable>
+<ClickableDisable>No</ClickableDisable>
 </label>
 </Clickable>
 <NavigationNodeInputSet>
 <title>
-<SelectNavigationNode>Виберіть вузол навігації</SelectNavigationNode>
-<RemoveNavigationNode>Скинути</RemoveNavigationNode>
+<SelectNavigationNode>Select Navigation Node</SelectNavigationNode>
+<RemoveNavigationNode>Reset</RemoveNavigationNode>
 </title>
 </NavigationNodeInputSet>
 <ListTargetPageFormInputSet>
 <title>
-<SelectListTargetPage>Виберіть цільову сторінку</SelectListTargetPage>
-<RemoveListTargetPage>Скинути</RemoveListTargetPage>
+<SelectListTargetPage>Select Target Page</SelectListTargetPage>
+<RemoveListTargetPage>Reset</RemoveListTargetPage>
 </title>
 </ListTargetPageFormInputSet>
 <DetailTargetPageInputSet>
 <title>
-<SelectDetailTargetPage>Виберіть дочірню цільову сторінку</SelectDetailTargetPage>
-<RemoveDetailTargetPage>Скинути</RemoveDetailTargetPage>
+<SelectDetailTargetPage>Select Children Target Page</SelectDetailTargetPage>
+<RemoveDetailTargetPage>Reset</RemoveDetailTargetPage>
 </title>
 </DetailTargetPageInputSet>
 <NavigationSelectorPopupWindow>
 <title>
-<UINavigationSelector>Вибір навігації</UINavigationSelector>
+<UINavigationSelector>Navigation Selector</UINavigationSelector>
 </title>
 </NavigationSelectorPopupWindow>
 <ListTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Селектор сторінок</UIPageSelector>
+<UIPageSelector>Page Selector</UIPageSelector>
 </title>
 </ListTargetPageSelectorPopupWindow>
 <DetailTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Селектор сторінок</UIPageSelector>
+<UIPageSelector>Page Selector</UIPageSelector>
 </title>
 </DetailTargetPageSelectorPopupWindow>
 </bundle>

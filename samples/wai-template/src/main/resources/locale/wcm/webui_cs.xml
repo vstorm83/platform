@@ -22,20 +22,20 @@
 <bundle>
   <UIPortalApplication>
     <title>
-      <abort>Přerušit</abort>
+      <abort>Abort</abort>
     </title>
   </UIPortalApplication>
   
   <CategoryNavigationTemplate>
   <label>
-  <home>Domovská stránka</home>
-  <Accessibility>Usnadnění přístupu</Accessibility>
+  <home>Home</home>
+  <Accessibility>Accessibility</Accessibility>
   </label>
   </CategoryNavigationTemplate>
   
   <Breadcrumb>
   <label>
-  <home>Domovská stránka</home>
+  <home>Home</home>
   </label>  
   </Breadcrumb>
 </bundle>

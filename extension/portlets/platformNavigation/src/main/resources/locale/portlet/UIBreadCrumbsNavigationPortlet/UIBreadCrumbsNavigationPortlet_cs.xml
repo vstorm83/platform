@@ -2,13 +2,13 @@
 <bundle>
 <UIBreadCrumbsNavigationPortlet>
     <label>
-        <ChangePicture>Změna avatara</ChangePicture>
+        <ChangePicture>Change Avatar</ChangePicture>
     </label>
 </UIBreadCrumbsNavigationPortlet>
  <UIBreadCrumbPopupAvatarUploader>
       <title>
-         <UIAvatarUploader>Nahrát avatara</UIAvatarUploader>
-         <UIAvatarUploadContent>Náhled avatara</UIAvatarUploadContent>
+         <UIAvatarUploader>Upload an Avatar</UIAvatarUploader>
+         <UIAvatarUploadContent>Avatar Preview</UIAvatarUploadContent>
       </title>
  </UIBreadCrumbPopupAvatarUploader>
 </bundle>

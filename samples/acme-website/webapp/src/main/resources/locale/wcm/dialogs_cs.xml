@@ -23,12 +23,12 @@
 <Product>
 <dialog>
 <label>
-<name>Název</name>
-<title>Nadpis</title>
-<illustrationImage>Ilustrační obrázek</illustrationImage>
-<summary>Shrnutí</summary>
-<benefits>Výhody</benefits>
-<features>Funkce</features>
+<name>Name</name>
+<title>Title</title>
+<illustrationImage>Illustration Image</illustrationImage>
+<summary>Summary</summary>
+<benefits>Benefits</benefits>
+<features>Features</features>
 </label>
 </dialog>
 </Product>

@@ -2,13 +2,13 @@
 <bundle>
 <UIBreadCrumbsNavigationPortlet>
     <label>
-        <ChangePicture>تغيير الصورة الرمزية</ChangePicture>
+        <ChangePicture>Change Avatar</ChangePicture>
     </label>
 </UIBreadCrumbsNavigationPortlet>
  <UIBreadCrumbPopupAvatarUploader>
       <title>
-         <UIAvatarUploader>تحميل الصورة الرمزية</UIAvatarUploader>
-         <UIAvatarUploadContent>استعراض مُـسبق للصورة الرّمزية</UIAvatarUploadContent>
+         <UIAvatarUploader>Upload an Avatar</UIAvatarUploader>
+         <UIAvatarUploadContent>Avatar Preview</UIAvatarUploadContent>
       </title>
  </UIBreadCrumbPopupAvatarUploader>
 </bundle>

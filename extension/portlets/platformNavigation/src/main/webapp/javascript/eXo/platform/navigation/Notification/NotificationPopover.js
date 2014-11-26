@@ -44,7 +44,7 @@
         NotificationPopover.portlet.find('.dropdown-toggle:first').on('click', function() { console.log('Show menu')});
       },
       appendMessage : function(message) {
-        var newItem = NotificationPopover.applyAction($('<li></li>').html(message));
+        var newItem = NotificationPopover.applyAction($($('<ul></ul>').html(message).html()));
         
         //
         var target = $('<ul></ul>').append(NotificationPopover.popupItem.find('li'));
@@ -80,10 +80,13 @@
           }
         }).find('a').click(function(evt) {
           evt.stopPropagation();
-          window.location.href= $(this).attr('href');
+          var href = $(this).attr('href');
+          if(href && href.indexOf('javascript') !== 0) {
+            window.location.href= href;
+          }
         });
         //
-        item.find('.remove-item').on('click', function(evt){
+        item.find('.remove-item').off('click').on('click', function(evt){
           evt.stopPropagation();
           //
           var elm = $(this);

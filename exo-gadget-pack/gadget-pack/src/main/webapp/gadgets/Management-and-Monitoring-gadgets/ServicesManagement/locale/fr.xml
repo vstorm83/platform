@@ -20,19 +20,19 @@
 
 -->
 <messagebundle>  
-  <msg name="title">Services Management</msg>
+  <msg name="title">La gestion des services</msg>
   <msg name="services">Services</msg>
-  <msg name="name">Name</msg>
+  <msg name="name">Nom</msg>
   <msg name="description">Description</msg>
-  <msg name="noDescription">No Description</msg>
-  <msg name="method">Method</msg>
-  <msg name="parameters">Parameters</msg>
+  <msg name="noDescription">Aucune Description</msg>
+  <msg name="method">Méthode</msg>
+  <msg name="parameters">Paramètres</msg>
   <msg name="action">Action</msg>
-  <msg name="value">Value</msg>
-  <msg name="services_url">Services URL</msg>
-  <msg name="failManage">Temporarily cannot manage services from other hosts until we support OAuth</msg>
-  <msg name="noServices">Either no service is available or you do not have sufficient permission</msg>
-  <msg name="noMethod">No Method</msg>
-  <msg name="noProperty">No Property</msg>
-  <msg name="badURL">There was an error while retrieving data. Please check your URL preference</msg>
+  <msg name="value">Valeur</msg>
+  <msg name="services_url">URL de services</msg>
+  <msg name="failManage">Il nous est impossible de gérer les services de l'hôte distant car il requiert le support de oAuth</msg>
+  <msg name="noServices">Le service n'est pas disponible ou vous n'avez pas assez de droits</msg>
+  <msg name="noMethod">Aucune méthode</msg>
+  <msg name="noProperty">Aucune propriété</msg>
+  <msg name="badURL">Erreur lors de la récupération des données, veuillez vérifier l'URL de Service</msg>
 </messagebundle>

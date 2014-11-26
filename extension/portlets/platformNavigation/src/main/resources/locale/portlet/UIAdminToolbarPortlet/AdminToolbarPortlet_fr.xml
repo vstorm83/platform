@@ -2,44 +2,44 @@
 <bundle>
    <UIAdminToolbarPortlet>
 		<action>
-         <AddPage>Add Page</AddPage>
+         <AddPage>Ajouter</AddPage>
 			<EditNavigation>Navigation</EditNavigation>
-         <Content>Content</Content>
-         <Editor>Edit</Editor>
+         <Content>Contenu</Content>
+         <Editor>Modifier</Editor>
 			<Page>Page</Page>
 			<Site>Site</Site>
-         <Layout>Edit Layout</Layout>
-         <siteLayout>Layout</siteLayout>
-         <ManagePages>Manage Pages</ManagePages>
-         <GroupSite>Group Site</GroupSite>
+         <Layout>Mise en Page</Layout>
+         <siteLayout>Mise en Page</siteLayout>
+         <ManagePages>Pages</ManagePages>
+         <GroupSite>Site de Groupe</GroupSite>
          <Properties>#{UISEOToolbarForm.label.seo}</Properties>
-         <AddSite>Add Site</AddSite>
+         <AddSite>Ajouter un Site</AddSite>
 		</action>
-<ManageSites>Manage Sites</ManageSites>
-<ManageGroupSites>Manage Group Sites</ManageGroupSites>
+<ManageSites>Gestion des Sites</ManageSites>
+<ManageGroupSites>Gestion des Sites de Groupe</ManageGroupSites>
    </UIAdminToolbarPortlet>
   
   <UISEOForm>
     <label>
-      <title>Title:</title>  
+      <title>Titre:</title>  
       <description>Description: </description>
-      <keywords>Keywords:</keywords>
-      <language>Language:</language>
+      <keywords>Mots clés:</keywords>
+      <language>Langue:</language>
       <robots>Robots: </robots>
       <sitemap>Sitemap: </sitemap>
-      <sitemapvisible>Visible in sitemap</sitemapvisible>
-  <isInherited>Inherited from parent page</isInherited>
-      <priority>Priority:</priority>
-      <frequency>Frequency:</frequency>
-      <select-language>Select Language</select-language>
+      <sitemapvisible>Visible dans le sitemap</sitemapvisible>
+  <isInherited>Hérité de la page parent</isInherited>
+      <priority>Priorité:</priority>
+      <frequency>Fréquence:</frequency>
+      <select-language>Sélectionnez une langue</select-language>
       <option>
-        <Always>Always</Always>
-        <Hourly>Hourly</Hourly>
-        <Daily>Daily</Daily>
-        <Weekly>Weekly</Weekly>
-        <Monthly>Monthly</Monthly>
-        <Yearly>Yearly</Yearly>
-        <Never>Never</Never>
+        <Always>Toujours</Always>
+        <Hourly>Toutes les heures</Hourly>
+        <Daily>Quotidien</Daily>
+        <Weekly>Hebdomadaire</Weekly>
+        <Monthly>Mensuel</Monthly>
+        <Yearly>Annuel</Yearly>
+        <Never>Jamais</Never>
       </option> 
     </label>    	  
  
@@ -48,16 +48,16 @@
       <Cancel>#{word.cancel}</Cancel>
     </action>
     <msg>
-      <repository-exception>An unexpected error occurred. Cannot save page metadata.</repository-exception>
-      <confirm-delete>Are you sure you want to delete these SEO data?</confirm-delete>
+      <repository-exception>Une erreur inattendue est apparue lors de l'enregistrement des métadonnées.</repository-exception>
+      <confirm-delete>Êtes-vous sûr de vouloir supprimer les données SEO?</confirm-delete>
     </msg>
     <title>
-    <seo-delete>Delete</seo-delete>
+    <seo-delete>Supprimer</seo-delete>
     </title>
 	<help> 
-  <priority>Valid values range from 0.0 to 1.0.</priority>
-  <description>Help searchers: let them know that the following page has a link with what they are looking for.</description>
-  <keywords>Most important terms in the page must be separated by a comma.</keywords>  
+  <priority>Valeurs valides de 0.0 à 1.0.</priority>
+  <description>Aidez les utilisateurs a savoir en quoi cette page a un lien avec ce qu'ils recherchent.</description>
+  <keywords>Les termes les plus importants de la page doivent être séparés par une virgule.</keywords>  
     </help>	 	  
   </UISEOForm>
   <UISEOPopupWindow>
@@ -67,7 +67,7 @@
   </UISEOPopupWindow>    
   <UISEOToolbarForm>
   	<title>
-      <seo>SEO Management</seo>
+      <seo>Gestion SEO</seo>
   	</title>
   	<label>
   	  <seo>SEO</seo>
@@ -75,15 +75,15 @@
   </UISEOToolbarForm>  
   <FloatNumberValidator>
     <msg>
-      <Invalid-number>Priority field has an invalid value. Please enter a number between 0.0 and 1.0.</Invalid-number>
+      <Invalid-number>Le champ Priorité a une valeur invalide. Veuillez saisir un nombre compris entre 0.0 et 1.0.</Invalid-number>
     </msg>
   </FloatNumberValidator>
   
   <Locale>
     <label>      
-      <it>Italian</it>      
-      <fr>French</fr>
-      <en>English</en>      
+      <it>Italien</it>      
+      <fr>Français</fr>
+      <en>Anglais</en>      
     </label>
   </Locale>
   

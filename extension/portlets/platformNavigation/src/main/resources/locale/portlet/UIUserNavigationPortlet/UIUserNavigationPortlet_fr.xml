@@ -2,16 +2,16 @@
 <bundle>
     <UIUserNavigationPortlet>
         <label>
-         <activities>Activities</activities>
-         <profile>Profile</profile>
-         <connections>Connections</connections>
+         <activities>Activités</activities>
+         <profile>Profil</profile>
+         <connections>Connexions</connections>
             <wiki>Wiki</wiki>
-         <Myactivities>My Activities</Myactivities>
-         <Myprofile>My Profile</Myprofile>
-         <Myconnections>My Connections</Myconnections>
-         <Mywiki>My Wiki</Mywiki>
-         <Mydashboard>My Dashboard</Mydashboard>
-         <NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
+         <Myactivities>Mes Activités</Myactivities>
+         <Myprofile>Mon Profil</Myprofile>
+         <Myconnections>Mes Connexions</Myconnections>
+         <Mywiki>Mon Wiki</Mywiki>
+         <Mydashboard>Mon Tableau de Bord</Mydashboard>
+         <NotificationSettingsPortlet>Mes Notifications</NotificationSettingsPortlet>
         </label>
     </UIUserNavigationPortlet>
 </bundle>

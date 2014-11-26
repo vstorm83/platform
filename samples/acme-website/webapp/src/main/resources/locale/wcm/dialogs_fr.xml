@@ -23,12 +23,12 @@
 	<Product>
 		<dialog>
 			<label>
-<name>Name</name>
-<title>Title</title>
-<illustrationImage>Illustration Image</illustrationImage>
-<summary>Summary</summary>
-<benefits>Benefits</benefits>
-<features>Features</features>
+<name>Nom</name>
+<title>Titre</title>
+<illustrationImage>Vignette</illustrationImage>
+<summary>Résumé</summary>
+<benefits>Avantages</benefits>
+<features>Caractéristiques</features>
 			</label>
 		</dialog>
 	</Product>

@@ -27,14 +27,17 @@
 	.template {
 		display: none;
 	}
-	.remove-item {
+	li > a.remove-item {
 		padding: 0px;
+		margin: 0px;
 		position: absolute;
 		right: 12px;
-		margin: 0px;
 		> i {
 			margin: 0px;
 		}
+	}
+	li > a.remove-item:HOVER {
+		background: none;
 	}
 	.actionLink {
 		vertical-align: middle;

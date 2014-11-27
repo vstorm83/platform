@@ -2,13 +2,13 @@
 <bundle>
  <UISpaceNavigationPortlet>
      <label>
-         <Spaces>My Spaces</Spaces>
-         <Join>Join a space</Join>
+         <Spaces>我的空间</Spaces>
+         <Join>加入空间</Join>
          <see>Show {0} More Spaces</see>
      </label>
      <msg>
-         <filter-spaces>Search Spaces</filter-spaces>
-         <no-space>No space found</no-space>
+         <filter-spaces>搜索空间</filter-spaces>
+         <no-space>末找到空间</no-space>
      </msg>
 
 </UISpaceNavigationPortlet>

@@ -2,21 +2,21 @@
 <bundle>
   <portal>
     <acme>
-      <overview>Overview</overview>
-      <products>Products</products>
-      <news>News</news>
-      <contactus>Questions?</contactus>
-      <newsletters>Newsletters</newsletters>
-      <confirmation>Contact Form Confirmation</confirmation>
-      <detail>Details</detail>
-  <catalog>Catalog</catalog>
-      <printviewer>Print page</printviewer>
-      <searchResult>Search</searchResult>
-      <newAccount>New Account</newAccount>
-      <groupnavigation>Group Navigation</groupnavigation>
-      <portalnavigation>Portal Navigation</portalnavigation>
-      <documents>Documents</documents>
-      <unifiedSearch>Search</unifiedSearch>
+      <overview>Огляд</overview>
+      <products>Продукція</products>
+      <news>Новини</news>
+      <contactus>Питання?</contactus>
+      <newsletters>Інформаційні бюлетені</newsletters>
+      <confirmation>Підтвердження форми зворотнього зв'язку</confirmation>
+      <detail>Подробиці</detail>
+  <catalog>Каталог</catalog>
+      <printviewer>Друк сторінки</printviewer>
+      <searchResult>Пошук</searchResult>
+      <newAccount>Новий обліковий запис</newAccount>
+      <groupnavigation>Навігація групи</groupnavigation>
+      <portalnavigation>Навігація порталу</portalnavigation>
+      <documents>Документи</documents>
+      <unifiedSearch>Пошук</unifiedSearch>
     </acme>
   </portal>
 </bundle>

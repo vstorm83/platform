@@ -23,11 +23,11 @@
 <Product>
 <view>
 <label>
-<benefits>Benefits</benefits>
-<features>Features</features>
-<seeItInAction>See it in action</seeItInAction>
-<resources>Resources</resources>
-<videos>Videos</videos>
+<benefits>Переваги</benefits>
+<features>Можливості</features>
+<seeItInAction>Побачити її в дії</seeItInAction>
+<resources>Ресурси</resources>
+<videos>Відео</videos>
 </label>
 </view>
 </Product>

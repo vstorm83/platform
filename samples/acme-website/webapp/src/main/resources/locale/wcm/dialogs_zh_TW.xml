@@ -23,12 +23,12 @@
 <Product>
 <dialog>
 <label>
-<name>Name</name>
-<title>Title</title>
-<illustrationImage>Illustration Image</illustrationImage>
-<summary>Summary</summary>
-<benefits>Benefits</benefits>
-<features>Features</features>
+<name>名稱</name>
+<title>標題</title>
+<illustrationImage>插圖圖片</illustrationImage>
+<summary>總結</summary>
+<benefits>好處</benefits>
+<features>功能</features>
 </label>
 </dialog>
 </Product>

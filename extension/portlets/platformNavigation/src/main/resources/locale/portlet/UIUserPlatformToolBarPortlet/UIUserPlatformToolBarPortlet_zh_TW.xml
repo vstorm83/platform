@@ -2,15 +2,15 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
-<activities>My Activities</activities>
-<profile>My Profile</profile>
-<network>My Connections</network>
-<wiki>My Wiki</wiki>
-<account>Settings</account>
-<language>Change Language</language>
-<logout>Logout</logout>
-        <dashboard>My Dashboard</dashboard>
+<NotificationSettingsPortlet>我的通知</NotificationSettingsPortlet>
+<activities>我的活動</activities>
+<profile>我的設定檔</profile>
+<network>我的聯繫</network>
+<wiki>我的 Wiki</wiki>
+<account>設定</account>
+<language>更改語言</language>
+<logout>登出</logout>
+        <dashboard>我的儀表板</dashboard>
 </label>
 </UIUserPlatformToolBarPortlet>
 </bundle>

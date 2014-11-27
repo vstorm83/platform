@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <administration>
-    <siteExplorer>Content Explorer</siteExplorer>
-    <wcmAdmin>Content Administration</wcmAdmin>
+    <siteExplorer>資源管理器中的內容</siteExplorer>
+    <wcmAdmin>內容管理員</wcmAdmin>
   </administration>
 </bundle>

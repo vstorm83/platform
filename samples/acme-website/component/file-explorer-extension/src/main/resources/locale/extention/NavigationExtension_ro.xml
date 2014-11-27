@@ -2,51 +2,51 @@
 <bundle>
 <UIActionBar>
 <tooltip>
-<ContentNavigation>Content Navigation</ContentNavigation>
+<ContentNavigation>Navigare în conținut</ContentNavigation>
 </tooltip>
 </UIActionBar>
 <UIViewFormTabPane>
 <label>
-<contentNavigation>Navigation by Content</contentNavigation>
+<contentNavigation>Navigare după conținut</contentNavigation>
 </label>
 </UIViewFormTabPane>
 <UIPopupWindow>
 <title>
-<UINavigationForm>Navigation Form</UINavigationForm>
+<UINavigationForm>Formular de navigare</UINavigationForm>
 </title>
 </UIPopupWindow>
 <PopulateToMenu>
 <dialog>
 <label>
 <id>ID:</id>
-<name>Name:</name>
-<lifecycle>Lifecycle:</lifecycle>
-<isDeep>Is Deep:</isDeep>
-<nodetypes>Node Types:</nodetypes>
-<description>Description:</description>
-<affectedNodeTypeNames>Affected Node Types:</affectedNodeTypeNames>
-<navigationNode>Navigation Node:</navigationNode>
+<name>Nume:</name>
+<lifecycle>Ciclul de viaţă:</lifecycle>
+<isDeep>Recursiv:</isDeep>
+<nodetypes>Tipuri de module:</nodetypes>
+<description>Descriere:</description>
+<affectedNodeTypeNames>Tipuri de module afectate:</affectedNodeTypeNames>
+<navigationNode>Modul de navigare:</navigationNode>
 <index>Index:</index>
-<clickable>Clickable:</clickable>
-<page>Page:</page>
-<childrenPage>Children Page:</childrenPage>
+<clickable>Clic:</clickable>
+<page>Pagina:</page>
+<childrenPage>Sub-Pagină:</childrenPage>
 </label>
 </dialog>
 </PopulateToMenu>
 <UINavigationForm>
 <label>
-<Node>Parent's Folder:</Node>
-<Visible>Visible :</Visible>
-<NavigationNodeInputSet>Target Parent Navigation:</NavigationNodeInputSet>
-<Index>Display Order:</Index>
-<Clickable>Clickable :</Clickable>
-<NavigationControls>Navigation Controls</NavigationControls>
-<ListTargetPageFormInputSet>Page for List:</ListTargetPageFormInputSet>
-<ListShowCLVByStringInput>Parameter Name:</ListShowCLVByStringInput>
-<DetailTargetPageInputSet>Page for Detail:</DetailTargetPageInputSet>
-<DetailShowCLVByStringInput>Parameter Name:</DetailShowCLVByStringInput>
-<List>List</List>
-<Detail>Detail</Detail>
+<Node>Folder părinte:</Node>
+<Visible>Vizibil:</Visible>
+<NavigationNodeInputSet>Țintă navigare:</NavigationNodeInputSet>
+<Index>Ordinea de afişare:</Index>
+<Clickable>Clic:</Clickable>
+<NavigationControls>Comenzi de navigare</NavigationControls>
+<ListTargetPageFormInputSet>Pagina pentru lista:</ListTargetPageFormInputSet>
+<ListShowCLVByStringInput>Nume parametru:</ListShowCLVByStringInput>
+<DetailTargetPageInputSet>Pagina pentru detalii:</DetailTargetPageInputSet>
+<DetailShowCLVByStringInput>Nume parametru:</DetailShowCLVByStringInput>
+<List>Listă</List>
+<Detail>Detaliu</Detail>
 </label>
 <action>
 <Save>#{word.save}</Save>
@@ -55,47 +55,47 @@
 </UINavigationForm>
 <Visible>
 <label>
-<VisibleEnable>Yes</VisibleEnable>
-<VisibleDisable>No</VisibleDisable>
+<VisibleEnable>Da</VisibleEnable>
+<VisibleDisable>Nu</VisibleDisable>
 </label>
 </Visible>
 <Clickable>
 <label>
-<ClickableEnable>Yes</ClickableEnable>
-<ClickableDisable>No</ClickableDisable>
+<ClickableEnable>Da</ClickableEnable>
+<ClickableDisable>Nu</ClickableDisable>
 </label>
 </Clickable>
 <NavigationNodeInputSet>
 <title>
-<SelectNavigationNode>Select Navigation Node</SelectNavigationNode>
+<SelectNavigationNode>Selectați modulul de navigare</SelectNavigationNode>
 <RemoveNavigationNode>Reset</RemoveNavigationNode>
 </title>
 </NavigationNodeInputSet>
 <ListTargetPageFormInputSet>
 <title>
-<SelectListTargetPage>Select Target Page</SelectListTargetPage>
+<SelectListTargetPage>Selectaţi pagina ţintă</SelectListTargetPage>
 <RemoveListTargetPage>Reset</RemoveListTargetPage>
 </title>
 </ListTargetPageFormInputSet>
 <DetailTargetPageInputSet>
 <title>
-<SelectDetailTargetPage>Select Children Target Page</SelectDetailTargetPage>
+<SelectDetailTargetPage>Selectaţi subpagina ţintă</SelectDetailTargetPage>
 <RemoveDetailTargetPage>Reset</RemoveDetailTargetPage>
 </title>
 </DetailTargetPageInputSet>
 <NavigationSelectorPopupWindow>
 <title>
-<UINavigationSelector>Navigation Selector</UINavigationSelector>
+<UINavigationSelector>Selectorul de navigare</UINavigationSelector>
 </title>
 </NavigationSelectorPopupWindow>
 <ListTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Page Selector</UIPageSelector>
+<UIPageSelector>Selector de Pagini</UIPageSelector>
 </title>
 </ListTargetPageSelectorPopupWindow>
 <DetailTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Page Selector</UIPageSelector>
+<UIPageSelector>Selector de Pagini</UIPageSelector>
 </title>
 </DetailTargetPageSelectorPopupWindow>
 </bundle>

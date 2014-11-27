@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>Welcome</welcome>
-    <login>Login</login>
-    <logout>Logout</logout>
+    <welcome>Καλώς ήρθατε</welcome>
+    <login>Είσοδος</login>
+    <logout>Αποσύνδεση</logout>
     <language>
-      <en>Switch to English</en>
-      <fr>Switch to French</fr>
+      <en>Αλλαγή σε Αγγλικά</en>
+      <fr>Αλλαγή σε Γαλλικά</fr>
     </language>
-    <register>Register</register>
+    <register>Εγγραφή</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>Skip to content</SkipToContent>
-    <SiteMap>Site Map</SiteMap>
-    <Accessibility>Accessibility</Accessibility>
-    <NormalSize>Normal Size</NormalSize>
-    <MediumSize>Medium Size</MediumSize>
-    <LargeSize>Large Size</LargeSize>
-    <NormalContrast>Normal Contrast</NormalContrast>
-    <HighContrast>High Contrast</HighContrast>
-    <Search>Search</Search>
+    <SkipToContent>Μετάβαση στο περιεχόμενο</SkipToContent>
+    <SiteMap>Χάρτης ιστότοπου</SiteMap>
+    <Accessibility>Προσβασιμότητα</Accessibility>
+    <NormalSize>Κανονικό μέγεθος</NormalSize>
+    <MediumSize>Μεσαίο μέγεθος</MediumSize>
+    <LargeSize>Μεγάλο μέγεθος</LargeSize>
+    <NormalContrast>Κανονική αντίθεση</NormalContrast>
+    <HighContrast>Υψηλή αντίθεση</HighContrast>
+    <Search>Αναζήτηση</Search>
   </Toolbar>
   <Logo>
-    <GoHome>Go to Home</GoHome>
+    <GoHome>Μετάβαση στην Αρχική</GoHome>
   </Logo>
   <acme>
-    <label>ACME Template</label>
+    <label>Πρότυπο ACME</label>
   </acme>  
   <WAIPortal>
-    <label>Sample Accessible Website</label>
+    <label>Δείγμα προσβάσιμης ιστοσελίδας</label>
   </WAIPortal>
 </bundle>

@@ -2,21 +2,21 @@
 <bundle>
    <UIUserPlatformToolBarCreatePortlet>
       <label>
-         <topic>Topic</topic>
-         <poll>Poll</poll>
-         <eventtask>Event/Task</eventtask>
-         <upload>Upload a File</upload>
-         <wiki>Wiki Page</wiki>
+         <topic>Θέμα</topic>
+         <poll>Δημοσκόπηση</poll>
+         <eventtask>Γεγονός/Εργασία</eventtask>
+         <upload>Ανεβάστε ένα Αρχείο</upload>
+         <wiki>Συνεργατική Σελίδα (Wiki)</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
-         <topic>topic</topic>
-         <poll>poll</poll>
-         <CreateANew>Create a new {1}:</CreateANew>
-         <NoForum>Sorry, no forum is available yet to create a {1}. Start by creating your own space.</NoForum>
-         <RequireSelectForum>Please select a forum.</RequireSelectForum>
+         <topic>θέμα</topic>
+         <poll>δημοσκόπηση</poll>
+         <CreateANew>Δημιουργήστε {1}:</CreateANew>
+         <NoForum>Λυπάμαι, δεν υπάρχει κάποιο φόρουμ για να δημιουργηθεί εκεί ένα {1}. Ξεκινήστε με τη δημιουργία ενός δικού σας Χώρου.</NoForum>
+         <RequireSelectForum>Παρακαλώ επιλέξτε ένα φόρουμ.</RequireSelectForum>
       </label>
       <action>
          <Next>#{word.next}</Next>
@@ -25,47 +25,47 @@
    </UICreateList>
    <UICreateTopic>
       <label>
-         <SelectAForum>Select a Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>Επιλέξτε ένα φόρουμ</SelectAForum>
+         <location>Στην θέση</location>
+         <forumId>Και το φόρουμ</forumId>
+         <FilterForums>Φίλτρο φόρουμ</FilterForums>
       </label>
    </UICreateTopic>
    <UICreatePoll>
       <label>
-         <SelectAForum>Select Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>Επιλέξτε ένα φόρουμ</SelectAForum>
+         <location>Στην θέση</location>
+         <forumId>Και το φόρουμ</forumId>
+         <FilterForums>Φίλτρο φόρουμ</FilterForums>
       </label>
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Create a new Wiki Page:</title>
-         <location>In Location</location>
+         <title>Δημιουργία νέας συνεργατικής σελίδας (Wiki):</title>
+         <location>Στην θέση</location>
       </label>
    </UICreateWiki>
    <UICreateEvent>
       <label>
          <Title>#{word.title}</Title>
-         <Choix>Add New:</Choix>
-         <EndEvent>To</EndEvent>
-         <StartEvent>From</StartEvent>
-         <Calendar>Select Calendar</Calendar>
-         <all-day>All Day</all-day>
-         <defaultCalendarId>Default</defaultCalendarId>
+         <Choix>Προσθήκη νέου:</Choix>
+         <EndEvent>Έως</EndEvent>
+         <StartEvent>Από</StartEvent>
+         <Calendar>Επιλέξτε ημερολόγιο</Calendar>
+         <all-day>Όλη την ημέρα</all-day>
+         <defaultCalendarId>Προεπιλογή</defaultCalendarId>
       </label>
       <msg>
-         <summary-field-required>The field "Title" is required.</summary-field-required>
-         <fromDate-format>The "From" date format is incorrect.</fromDate-format>
-         <toDate-format>The "To" date format is incorrect.</toDate-format>
-         <logic-required>Sorry, you cannot create an event that ends before it starts.</logic-required>
-         <cant-add-event-on-remote-calendar>You cannot add event to remote calendar</cant-add-event-on-remote-calendar>
+         <summary-field-required>Απαιτείται το πεδίο "Τίτλος".</summary-field-required>
+         <fromDate-format>Η μορφή της ημερομηνίας έναρξης είναι λανθασμένη.</fromDate-format>
+         <toDate-format>Η μορφή της ημερομηνίας λήξης είναι λανθασμένη.</toDate-format>
+         <logic-required>Συγνώμη, δεν μπορείτε να δημιουργήσετε ένα γεγονός που τελειώνει πριν από την έναρξή του.</logic-required>
+         <cant-add-event-on-remote-calendar>Δεν μπορείτε να προσθέσετε γεγονός σε απομακρυσμένο ημερολόγιο</cant-add-event-on-remote-calendar>
          <add-successfully>
-            <Event>The Event was added to {1}</Event>
-            <Task>The Task was added to {1}</Task>
+            <Event>Το γεγονός προστέθηκε στο {1}</Event>
+            <Task>Η εργασία προστέθηκε στο {1}</Task>
          </add-successfully>
-         <add-unsuccessfully>{0} was not added.</add-unsuccessfully>
+         <add-unsuccessfully>{0} δεν προστέθηκε.</add-unsuccessfully>
       </msg>
       <action>
          <Next>#{word.save}</Next>
@@ -73,15 +73,15 @@
       </action>
    </UICreateEvent>
     <UIUploadFile>
-        <Select>Select File</Select>
+        <Select>Επιλέξτε αρχείο</Select>
         <action>
           <close>#{word.close}</close>
         </action>
     </UIUploadFile>
    <Choix>
       <label>
-         <Event>Event</Event>
-         <Task>Task</Task>
+         <Event>Γεγονός</Event>
+         <Task>Εργασία</Task>
       </label>
    </Choix>
 </bundle>

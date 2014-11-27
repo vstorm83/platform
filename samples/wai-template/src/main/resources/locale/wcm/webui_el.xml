@@ -22,20 +22,20 @@
 <bundle>
   <UIPortalApplication>
     <title>
-      <abort>Abort</abort>
+      <abort>Ματαίωση</abort>
     </title>
   </UIPortalApplication>
   
   <CategoryNavigationTemplate>
   <label>
-  <home>Home</home>
-  <Accessibility>Accessibility</Accessibility>
+  <home>Αρχική</home>
+  <Accessibility>Προσβασιμότητα</Accessibility>
   </label>
   </CategoryNavigationTemplate>
   
   <Breadcrumb>
   <label>
-  <home>Home</home>
+  <home>Αρχική σελίδα</home>
   </label>  
   </Breadcrumb>
 </bundle>

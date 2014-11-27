@@ -2,25 +2,25 @@
 <bundle>
 <UISetupPlatformToolBarPortlet>
 <label>
-<applications>Applications</applications>
-<content>Content</content>
-<siteExplorer>Sites Explorer</siteExplorer>
-<wcmAdmin>Content Administration</wcmAdmin>
-<users>Users</users>
-<newStaff>Add Users</newStaff>
-<org-management>Groups and Roles</org-management>
-<portal>Portal</portal>
-<administration>Administration</administration>
-<groupnavigation>Group Sites</groupnavigation>
-<pageManagement>Pages</pageManagement>
-<portalnavigation>Sites</portalnavigation>
-<servicesManagement>Management</servicesManagement>
-<monitoring>Monitoring</monitoring>
-<spaces>Spaces</spaces>
-<Branding>Branding</Branding>
+<applications>Εφαρμογές</applications>
+<content>Περιεχόμενο</content>
+<siteExplorer>Περιηγητής Τοποθεσιών</siteExplorer>
+<wcmAdmin>Διαχείριση περιεχομένου</wcmAdmin>
+<users>Χρήστες</users>
+<newStaff>Προσθήκη χρηστών</newStaff>
+<org-management>Ομάδες και ρόλοι</org-management>
+<portal>Πύλη</portal>
+<administration>Διαχείριση</administration>
+<groupnavigation>Τοποθεσίας Ομάδας</groupnavigation>
+<pageManagement>Σελίδες</pageManagement>
+<portalnavigation>Τοποθεσίες</portalnavigation>
+<servicesManagement>Διαχείριση</servicesManagement>
+<monitoring>Παρακολούθηση</monitoring>
+<spaces>Χώροι</spaces>
+<Branding>Εταιρική ταυτότητα</Branding>
       <Notification>Email Notifications</Notification>
-<ide>IDE</ide>
-<search>Search</search>
+<ide>Περιβάλλον ολοκληρωμένης ανάπτυξης</ide>
+<search>Αναζήτηση</search>
 </label>
 </UISetupPlatformToolBarPortlet>
 </bundle>

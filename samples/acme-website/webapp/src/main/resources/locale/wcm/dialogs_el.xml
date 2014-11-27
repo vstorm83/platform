@@ -23,12 +23,12 @@
 <Product>
 <dialog>
 <label>
-<name>Name</name>
-<title>Title</title>
-<illustrationImage>Illustration Image</illustrationImage>
-<summary>Summary</summary>
-<benefits>Benefits</benefits>
-<features>Features</features>
+<name>Όνομα</name>
+<title>Τίτλος</title>
+<illustrationImage>Εικόνα απεικόνισης</illustrationImage>
+<summary>Σύνοψη</summary>
+<benefits>Οφέλη</benefits>
+<features>Χαρακτηριστικά</features>
 </label>
 </dialog>
 </Product>

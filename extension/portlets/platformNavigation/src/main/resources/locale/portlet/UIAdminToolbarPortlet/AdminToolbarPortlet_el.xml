@@ -2,44 +2,44 @@
 <bundle>
    <UIAdminToolbarPortlet>
       <action>
-         <AddPage>Add Page</AddPage>
-         <EditNavigation>Navigation</EditNavigation>
-         <Content>Content</Content>
-         <Editor>Edit</Editor>
-         <Page>Page</Page>
-         <Site>Site</Site>
-         <Layout>Edit Layout</Layout>
-         <siteLayout>Layout</siteLayout>
-         <ManagePages>Manage Pages</ManagePages>
-         <GroupSite>Group Site</GroupSite>
+         <AddPage>Προσθήκη σελίδας</AddPage>
+         <EditNavigation>Πλοήγηση</EditNavigation>
+         <Content>Περιεχόμενο</Content>
+         <Editor>Εργαλεία</Editor>
+         <Page>Σελίδα</Page>
+         <Site>Τοποθεσία</Site>
+         <Layout>Επεξεργασία διάταξης</Layout>
+         <siteLayout>Διάταξη</siteLayout>
+         <ManagePages>Διαχείριση σελίδων</ManagePages>
+         <GroupSite>Τοποθεσία Ομάδας</GroupSite>
          <Properties>#{UISEOToolbarForm.label.seo}</Properties>
-         <AddSite>Add Site</AddSite>
+         <AddSite>Προσθήκη Τοποθεσίας</AddSite>
       </action>
-<ManageSites>Manage Sites</ManageSites>
-<ManageGroupSites>Manage Group Sites</ManageGroupSites>
+<ManageSites>Διαχείριση τοποθεσιών</ManageSites>
+<ManageGroupSites>Διαχείριση Τοποθεσιών Ομάδων</ManageGroupSites>
    </UIAdminToolbarPortlet>
 
   <UISEOForm>
     <label>
-      <title>Title:</title>  
-      <description>Description:</description>
-      <keywords>Keywords:</keywords>
-      <language>Language:</language>
-      <robots>Robots:</robots>
-      <sitemap>Sitemap:</sitemap>
-      <sitemapvisible>Visible in sitemap</sitemapvisible>
-  <isInherited>Inherited from parent page</isInherited>
-      <priority>Priority:</priority>
-      <frequency>Frequency:</frequency>
-      <select-language>Select Language</select-language>
+      <title>Τίτλος:</title>  
+      <description>Περιγραφή:</description>
+      <keywords>Λέξεις-κλειδιά:</keywords>
+      <language>Γλώσσα:</language>
+      <robots>Ρομπότ ιστού:</robots>
+      <sitemap>Χάρτης ιστότοπου:</sitemap>
+      <sitemapvisible>Ορατό στο χάρτη του ιστότοπου</sitemapvisible>
+  <isInherited>Κληρονoμήθηκαν από τη γονική σελίδα</isInherited>
+      <priority>Προτεραιότητα:</priority>
+      <frequency>Συχνότητα:</frequency>
+      <select-language>Επιλέξτε μια γλώσσα</select-language>
       <option>
-        <Always>Always</Always>
-        <Hourly>Hourly</Hourly>
-        <Daily>Daily</Daily>
-        <Weekly>Weekly</Weekly>
-        <Monthly>Monthly</Monthly>
-        <Yearly>Yearly</Yearly>
-        <Never>Never</Never>
+        <Always>Πάντα</Always>
+        <Hourly>Ωριαία</Hourly>
+        <Daily>Καθημερινά</Daily>
+        <Weekly>Εβδομαδιαία</Weekly>
+        <Monthly>Μηνιαία</Monthly>
+        <Yearly>Ετήσια</Yearly>
+        <Never>Ποτέ</Never>
       </option> 
     </label>
  
@@ -48,16 +48,16 @@
       <Cancel>#{word.cancel}</Cancel>
     </action>
     <msg>
-      <repository-exception>An unexpected error occurred. Cannot save page metadata.</repository-exception>
-      <confirm-delete>Are you sure you want to delete these SEO data?</confirm-delete>
+      <repository-exception>Παρουσιάστηκε μη αναμενόμενο σφάλμα. Δεν μπορούν να σωθούν τα μεταδεδομένα της σελίδας.</repository-exception>
+      <confirm-delete>Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτά τα δεδομένα που αφορούν τις βελτιστοποιήσεις για τις μηχανές αναζήτησης (SEO);</confirm-delete>
     </msg>
     <title>
-    <seo-delete>Delete</seo-delete>
+    <seo-delete>Διαγραφή</seo-delete>
     </title>
 <help> 
-  <priority>Valid values range from 0.0 to 1.0.</priority>
-  <description>Help searchers: let them know that the following page has a link with what they are looking for.</description>
-  <keywords>Most important terms in the page must be separated by a comma.</keywords>  
+  <priority>Έγκυρες τιμές από 0.0 έως 1.0.</priority>
+  <description>Βοηθήστε τις αναζητήσεις: Κάντε γνωστό ότι στη σελίδα υπάρχει ένας σύνδεσμος που ψάχνουν.</description>
+  <keywords>Οι πιο σημαντικοί όροι που χαρακτηρίζουν τη σελίδα. Χρησιμοποιήστε το κόμμα ως διαχωριστικό.</keywords>  
     </help>  
   </UISEOForm>
   <UISEOPopupWindow>
@@ -67,23 +67,23 @@
   </UISEOPopupWindow>    
   <UISEOToolbarForm>
   <title>
-      <seo>SEO Management</seo>
+      <seo>Διαχείριση βελτιστοποιήσεων για τις μηχανές αναζήτησης</seo>
   </title>
   <label>
-    <seo>SEO</seo>
+    <seo>Βελτιστοποίηση για μηχανή αναζήτησης</seo>
   </label>
   </UISEOToolbarForm>  
   <FloatNumberValidator>
     <msg>
-      <Invalid-number>Priority field has an invalid value. Please enter a number between 0.0 and 1.0.</Invalid-number>
+      <Invalid-number>Το πεδίο προτεραιότητα έχει μια μη έγκυρη τιμή. Πληκτρολογήστε έναν αριθμό μεταξύ 0.0 και 1.0.</Invalid-number>
     </msg>
   </FloatNumberValidator>
   
   <Locale>
     <label>      
-      <it>Italian</it>      
-      <fr>French</fr>
-      <en>English</en>      
+      <it>Ιταλικά</it>      
+      <fr>Γαλλικά</fr>
+      <en>Αγγλικά</en>      
     </label>
   </Locale>
   

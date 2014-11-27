@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.exoplatform.commons.api.notification.service.setting.UserSettingService;
 import org.exoplatform.portal.application.PortalRequestContext;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
+import org.exoplatform.web.application.RequestContext;
 import org.exoplatform.webui.config.annotation.ComponentConfig;
 import org.exoplatform.webui.config.annotation.EventConfig;
 import org.exoplatform.webui.core.UIPortletApplication;
@@ -46,6 +48,11 @@ public class UINotificationPopoverToolbarPortlet extends UIPortletApplication {
     return event(actionName).replace("javascript:ajaxGet('", "").replace("')", "&" + OBJECTID + "=");
   }
 
+  protected boolean isIntranetActive() {
+    return getApplicationComponent(UserSettingService.class)
+        .get(RequestContext.getCurrentInstance().getRemoteUser()).isIntranetActive();
+  }
+  
   public static class MarkAllReadActionListener extends EventListener<UINotificationPopoverToolbarPortlet> {
     public void execute(Event<UINotificationPopoverToolbarPortlet> event) throws Exception {
       UINotificationPopoverToolbarPortlet portlet = event.getSource();

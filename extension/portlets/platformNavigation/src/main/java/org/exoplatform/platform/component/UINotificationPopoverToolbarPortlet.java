@@ -8,6 +8,7 @@ import org.exoplatform.commons.api.notification.service.storage.IntranetNotifica
 import org.exoplatform.portal.application.PortalRequestContext;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
+import org.exoplatform.webui.application.WebuiApplication;
 import org.exoplatform.webui.application.WebuiRequestContext;
 import org.exoplatform.webui.config.annotation.ComponentConfig;
 import org.exoplatform.webui.config.annotation.EventConfig;
@@ -41,9 +42,9 @@ public class UINotificationPopoverToolbarPortlet extends UIPortletApplication {
   }
   
   @Override
-  public void processRender(WebuiRequestContext context) throws Exception {
+  public void processRender(WebuiApplication app, WebuiRequestContext context) throws Exception {
     this.currentUser = context.getRemoteUser();
-    super.processRender(context);
+    super.processRender(app, context);
   }
 
   protected List<String> getNotifications() throws Exception {
@@ -59,6 +60,9 @@ public class UINotificationPopoverToolbarPortlet extends UIPortletApplication {
   }
 
   protected boolean isIntranetActive() {
+    if (currentUser == null || currentUser.isEmpty()) {
+      currentUser = WebuiRequestContext.getCurrentInstance().getRemoteUser();
+    }
     return userSettingService.get(currentUser).isIntranetActive();
   }
   

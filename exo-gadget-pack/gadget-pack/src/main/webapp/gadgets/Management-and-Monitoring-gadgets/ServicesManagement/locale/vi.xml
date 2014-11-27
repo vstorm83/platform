@@ -20,19 +20,19 @@
 
 -->
 <messagebundle>  
-  <msg name="title">Services Management</msg>
-  <msg name="services">Services</msg>
-  <msg name="name">Name</msg>
-  <msg name="description">Description</msg>
-  <msg name="noDescription">No Description</msg>
-  <msg name="method">Method</msg>
-  <msg name="parameters">Parameters</msg>
-  <msg name="action">Action</msg>
-  <msg name="value">Value</msg>
-  <msg name="services_url">Services URL</msg>
-  <msg name="failManage">Temporarily cannot manage services from other hosts until we support OAuth</msg>
-  <msg name="noServices">Either no service is available or you do not have sufficient permission</msg>
-  <msg name="noMethod">No Method</msg>
-  <msg name="noProperty">No Property</msg>
-  <msg name="badURL">There was an error while retrieving data. Please check your URL preference</msg>
+  <msg name="title">Quản lý Dịch vụ</msg>
+  <msg name="services">Dịch vụ</msg>
+  <msg name="name">Tên</msg>
+  <msg name="description">Mô tả</msg>
+  <msg name="noDescription">Không có Mô tả</msg>
+  <msg name="method">Hàm</msg>
+  <msg name="parameters">Tham số</msg>
+  <msg name="action">Tác vụ</msg>
+  <msg name="value">Giá trị</msg>
+  <msg name="services_url">URL của Dịch vụ</msg>
+  <msg name="failManage">Tạm thời không thể quản lý dịch vụ từ máy chủ khác cho đến khi chúng tôi hỗ trợ OAuth</msg>
+  <msg name="noServices">Dịch vụ không hoạt động hoặc bạn không có đủ quyền</msg>
+  <msg name="noMethod">Không có Hàm</msg>
+  <msg name="noProperty">Không có Thuộc tính</msg>
+  <msg name="badURL">Đã có lỗi trong khi lấy dữ liệu. Xin vui lòng kiểm tra giá trị URL.</msg>
 </messagebundle>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>Welcome</welcome>
-    <login>Login</login>
-    <logout>Logout</logout>
-    <language>Change Language</language>
-    <register>Register</register>
+    <welcome>Chào mừng</welcome>
+    <login>Đăng nhập</login>
+    <logout>Thoát</logout>
+    <language>Thay đổi Ngôn ngữ</language>
+    <register>Đăng ký</register>
   </Signin>
 
   <ACMEPortal>
-    <label>ACME Template</label>
+    <label>Mẫu website ACME</label>
   </ACMEPortal>
 </bundle>

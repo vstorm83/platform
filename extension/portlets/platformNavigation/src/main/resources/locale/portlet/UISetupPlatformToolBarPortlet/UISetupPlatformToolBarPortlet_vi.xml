@@ -2,25 +2,25 @@
 <bundle>
 <UISetupPlatformToolBarPortlet>
 <label>
-<applications>Applications</applications>
-<content>Content</content>
-<siteExplorer>Sites Explorer</siteExplorer>
-<wcmAdmin>Content Administration</wcmAdmin>
-<users>Users</users>
-<newStaff>Add Users</newStaff>
-<org-management>Groups and Roles</org-management>
-<portal>Portal</portal>
-<administration>Administration</administration>
-<groupnavigation>Group Sites</groupnavigation>
-<pageManagement>Pages</pageManagement>
-<portalnavigation>Sites</portalnavigation>
-<servicesManagement>Management</servicesManagement>
-<monitoring>Monitoring</monitoring>
-<spaces>Spaces</spaces>
-<Branding>Branding</Branding>
-      <Notification>Email Notifications</Notification>
+<applications>Ứng dụng</applications>
+<content>Nội dung</content>
+<siteExplorer>Trình duyệt Nội dung</siteExplorer>
+<wcmAdmin>Quản trị Nội dung</wcmAdmin>
+<users>Người dùng</users>
+<newStaff>Thêm Người dùng</newStaff>
+<org-management>Nhóm và Vai trò</org-management>
+<portal>Cổng thông tin</portal>
+<administration>Quản trị</administration>
+<groupnavigation>Site của Nhóm</groupnavigation>
+<pageManagement>Trang</pageManagement>
+<portalnavigation>Site</portalnavigation>
+<servicesManagement>Quản lý</servicesManagement>
+<monitoring>Giám sát</monitoring>
+<spaces>Nhóm</spaces>
+<Branding>Thương hiệu</Branding>
+      <Notification>Thông báo bằng email</Notification>
 <ide>IDE</ide>
-<search>Search</search>
+<search>Tìm kiếm</search>
 </label>
 </UISetupPlatformToolBarPortlet>
 </bundle>

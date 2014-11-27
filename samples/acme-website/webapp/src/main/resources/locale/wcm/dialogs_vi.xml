@@ -23,12 +23,12 @@
 <Product>
 <dialog>
 <label>
-<name>Name</name>
-<title>Title</title>
-<illustrationImage>Illustration Image</illustrationImage>
-<summary>Summary</summary>
-<benefits>Benefits</benefits>
-<features>Features</features>
+<name>Tên</name>
+<title>Tiêu đề</title>
+<illustrationImage>Ảnh Minh họa</illustrationImage>
+<summary>Tóm tắt</summary>
+<benefits>Lợi ích</benefits>
+<features>Đặc điểm</features>
 </label>
 </dialog>
 </Product>

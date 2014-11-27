@@ -2,21 +2,21 @@
 <bundle>
   <portal>
     <acme>
-      <overview>Overview</overview>
-      <products>Products</products>
-      <news>News</news>
-      <contactus>Questions?</contactus>
-      <newsletters>Newsletters</newsletters>
-      <confirmation>Contact Form Confirmation</confirmation>
-      <detail>Details</detail>
-  <catalog>Catalog</catalog>
-      <printviewer>Print page</printviewer>
-      <searchResult>Search</searchResult>
-      <newAccount>New Account</newAccount>
-      <groupnavigation>Group Navigation</groupnavigation>
-      <portalnavigation>Portal Navigation</portalnavigation>
-      <documents>Documents</documents>
-      <unifiedSearch>Search</unifiedSearch>
+      <overview>Giới thiệu</overview>
+      <products>Sản phẩm</products>
+      <news>Tin tức</news>
+      <contactus>Câu hỏi?</contactus>
+      <newsletters>Quản lý Tin thư</newsletters>
+      <confirmation>Xác nhận Thông Tin Liên hệ</confirmation>
+      <detail>Chi tiết</detail>
+  <catalog>Danh mục</catalog>
+      <printviewer>Trang in</printviewer>
+      <searchResult>Tìm kiếm</searchResult>
+      <newAccount>Tài khoản Mới</newAccount>
+      <groupnavigation>Điều hướng Nhóm</groupnavigation>
+      <portalnavigation>Điều hướng Cống thông tin</portalnavigation>
+      <documents>Tài liệu</documents>
+      <unifiedSearch>Tìm kiếm</unifiedSearch>
     </acme>
   </portal>
 </bundle>

@@ -2,21 +2,21 @@
 <bundle>
    <UIUserPlatformToolBarCreatePortlet>
       <label>
-         <topic>Topic</topic>
-         <poll>Poll</poll>
-         <eventtask>Event/Task</eventtask>
-         <upload>Upload a File</upload>
-         <wiki>Wiki Page</wiki>
+         <topic>Chủ đề</topic>
+         <poll>Thăm dò ý kiến</poll>
+         <eventtask>Sự kiện/Nhiệm vụ</eventtask>
+         <upload>Tải Tệp lên</upload>
+         <wiki>Trang Wiki</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
-         <topic>topic</topic>
-         <poll>poll</poll>
-         <CreateANew>Create a new {1}:</CreateANew>
-         <NoForum>Sorry, no forum is available yet to create a {1}. Start by creating your own space.</NoForum>
-         <RequireSelectForum>Please select a forum.</RequireSelectForum>
+         <topic>chủ đề</topic>
+         <poll>thăm dò</poll>
+         <CreateANew>Tạo mới {1}:</CreateANew>
+         <NoForum>Rất tiếc là không có sẵn diễn đàn để tạo một {1}. Hãy bắt đầu bằng cách tạo nhóm riêng của bạn.</NoForum>
+         <RequireSelectForum>Vui lòng chọn một diễn đàn.</RequireSelectForum>
       </label>
       <action>
          <Next>#{word.next}</Next>
@@ -25,47 +25,47 @@
    </UICreateList>
    <UICreateTopic>
       <label>
-         <SelectAForum>Select a Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>Chọn một Diễn đàn</SelectAForum>
+         <location>Ở Vị trí</location>
+         <forumId>Và Diễn đàn</forumId>
+         <FilterForums>Lọc Diễn đàn</FilterForums>
       </label>
    </UICreateTopic>
    <UICreatePoll>
       <label>
-         <SelectAForum>Select Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>Chọn Diễn đàn</SelectAForum>
+         <location>Ở Vị trí</location>
+         <forumId>Và Diễn đàn</forumId>
+         <FilterForums>Lọc Diễn đàn</FilterForums>
       </label>
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Create a new Wiki Page:</title>
-         <location>In Location</location>
+         <title>Tạo mới Trang Wiki:</title>
+         <location>Ở Vị trí</location>
       </label>
    </UICreateWiki>
    <UICreateEvent>
       <label>
          <Title>#{word.title}</Title>
-         <Choix>Add New:</Choix>
-         <EndEvent>To</EndEvent>
-         <StartEvent>From</StartEvent>
-         <Calendar>Select Calendar</Calendar>
-         <all-day>All Day</all-day>
-         <defaultCalendarId>Default</defaultCalendarId>
+         <Choix>Thêm Mới:</Choix>
+         <EndEvent>Đến</EndEvent>
+         <StartEvent>Từ</StartEvent>
+         <Calendar>Chọn Lịch</Calendar>
+         <all-day>Cả Ngày</all-day>
+         <defaultCalendarId>Mặc định</defaultCalendarId>
       </label>
       <msg>
-         <summary-field-required>The field "Title" is required.</summary-field-required>
-         <fromDate-format>The "From" date format is incorrect.</fromDate-format>
-         <toDate-format>The "To" date format is incorrect.</toDate-format>
-         <logic-required>Sorry, you cannot create an event that ends before it starts.</logic-required>
-         <cant-add-event-on-remote-calendar>You cannot add event to remote calendar</cant-add-event-on-remote-calendar>
+         <summary-field-required>Cần nhập trường "Tiều đề".</summary-field-required>
+         <fromDate-format>Định dạng Ngày bắt đầu không đúng.</fromDate-format>
+         <toDate-format>Định dạng Ngày kết thúc không đúng.</toDate-format>
+         <logic-required>Rất tiếc bạn không thể tạo ra một sự kiện Ngày kết thúc trước Ngày bắt đầu.</logic-required>
+         <cant-add-event-on-remote-calendar>Bạn không thể thêm sự kiện vào lịch từ xa</cant-add-event-on-remote-calendar>
          <add-successfully>
-            <Event>The Event was added to {1}</Event>
-            <Task>The Task was added to {1}</Task>
+            <Event>Sự kiện này đã được thêm vào {1}</Event>
+            <Task>Nhiệm vụ này đã được thêm vào {1}</Task>
          </add-successfully>
-         <add-unsuccessfully>{0} was not added.</add-unsuccessfully>
+         <add-unsuccessfully>{0} đã không được thêm vào.</add-unsuccessfully>
       </msg>
       <action>
          <Next>#{word.save}</Next>
@@ -73,15 +73,15 @@
       </action>
    </UICreateEvent>
     <UIUploadFile>
-        <Select>Select File</Select>
+        <Select>Chọn Tệp</Select>
         <action>
           <close>#{word.close}</close>
         </action>
     </UIUploadFile>
    <Choix>
       <label>
-         <Event>Event</Event>
-         <Task>Task</Task>
+         <Event>Sự kiện</Event>
+         <Task>Nhiệm vụ</Task>
       </label>
    </Choix>
 </bundle>

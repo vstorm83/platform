@@ -2,16 +2,16 @@
 <bundle>
    <UIUserNavigationPortlet>
       <label>
-         <activities>Activities</activities>
-         <profile>Profile</profile>
-         <connections>Connections</connections>
+         <activities>Hoạt động</activities>
+         <profile>Hồ sơ</profile>
+         <connections>Kết nối</connections>
          <wiki>Wiki</wiki>
-         <Myactivities>My Activities</Myactivities>
-         <Myprofile>My Profile</Myprofile>
-         <Myconnections>My Connections</Myconnections>
-         <Mywiki>My Wiki</Mywiki>
-         <Mydashboard>My Dashboard</Mydashboard>
-         <NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
+         <Myactivities>Hoạt động cá nhân</Myactivities>
+         <Myprofile>Hồ sơ</Myprofile>
+         <Myconnections>Kết nối</Myconnections>
+         <Mywiki>Wiki</Mywiki>
+         <Mydashboard>Bảng Ứng dụng</Mydashboard>
+         <NotificationSettingsPortlet>Thiết lập các thông báo</NotificationSettingsPortlet>
       </label>
    </UIUserNavigationPortlet>
 </bundle>

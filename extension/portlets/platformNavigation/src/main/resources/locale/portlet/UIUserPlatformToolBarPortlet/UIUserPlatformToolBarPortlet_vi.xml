@@ -2,15 +2,15 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
-<activities>My Activities</activities>
-<profile>My Profile</profile>
-<network>My Connections</network>
-<wiki>My Wiki</wiki>
-<account>Settings</account>
-<language>Change Language</language>
-<logout>Logout</logout>
-        <dashboard>My Dashboard</dashboard>
+<NotificationSettingsPortlet>Thiết lập các thông báo</NotificationSettingsPortlet>
+<activities>Hoạt động cá nhân</activities>
+<profile>Hồ sơ</profile>
+<network>Danh sách bạn bè</network>
+<wiki>Wiki</wiki>
+<account>Cài đặt</account>
+<language>Thay đổi Ngôn ngữ</language>
+<logout>Đăng xuất</logout>
+        <dashboard>Bảng ứng dụng</dashboard>
 </label>
 </UIUserPlatformToolBarPortlet>
 </bundle>

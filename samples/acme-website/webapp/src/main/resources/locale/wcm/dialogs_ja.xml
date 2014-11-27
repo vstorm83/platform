@@ -23,12 +23,12 @@
 <Product>
 <dialog>
 <label>
-<name>Name</name>
-<title>Title</title>
-<illustrationImage>Illustration Image</illustrationImage>
-<summary>Summary</summary>
-<benefits>Benefits</benefits>
-<features>Features</features>
+<name>名前</name>
+<title>タイトル</title>
+<illustrationImage>イラストレーション画像</illustrationImage>
+<summary>サマリ</summary>
+<benefits>利点</benefits>
+<features>機能</features>
 </label>
 </dialog>
 </Product>

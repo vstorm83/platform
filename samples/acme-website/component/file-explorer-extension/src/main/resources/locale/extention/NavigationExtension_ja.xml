@@ -2,51 +2,51 @@
 <bundle>
 <UIActionBar>
 <tooltip>
-<ContentNavigation>Content Navigation</ContentNavigation>
+<ContentNavigation>コンテンツ ナビゲーション</ContentNavigation>
 </tooltip>
 </UIActionBar>
 <UIViewFormTabPane>
 <label>
-<contentNavigation>Navigation by Content</contentNavigation>
+<contentNavigation>コンテンツ毎のナビゲーション</contentNavigation>
 </label>
 </UIViewFormTabPane>
 <UIPopupWindow>
 <title>
-<UINavigationForm>Navigation Form</UINavigationForm>
+<UINavigationForm>ナビゲーション フォーム</UINavigationForm>
 </title>
 </UIPopupWindow>
 <PopulateToMenu>
 <dialog>
 <label>
 <id>ID:</id>
-<name>Name:</name>
-<lifecycle>Lifecycle:</lifecycle>
-<isDeep>Is Deep:</isDeep>
-<nodetypes>Node Types:</nodetypes>
-<description>Description:</description>
-<affectedNodeTypeNames>Affected Node Types:</affectedNodeTypeNames>
-<navigationNode>Navigation Node:</navigationNode>
-<index>Index:</index>
-<clickable>Clickable:</clickable>
-<page>Page:</page>
-<childrenPage>Children Page:</childrenPage>
+<name>名前:</name>
+<lifecycle>ライフサイクル</lifecycle>
+<isDeep>深い</isDeep>
+<nodetypes>ノードタイプ：</nodetypes>
+<description>説明:</description>
+<affectedNodeTypeNames>影響を受けるノードタイプ</affectedNodeTypeNames>
+<navigationNode>ナビゲーション ノード:</navigationNode>
+<index>目次:</index>
+<clickable>クリック可能：</clickable>
+<page>ページ:</page>
+<childrenPage>下位ページ:</childrenPage>
 </label>
 </dialog>
 </PopulateToMenu>
 <UINavigationForm>
 <label>
-<Node>Parent's Folder:</Node>
-<Visible>Visible :</Visible>
-<NavigationNodeInputSet>Target Parent Navigation:</NavigationNodeInputSet>
-<Index>Display Order:</Index>
-<Clickable>Clickable :</Clickable>
-<NavigationControls>Navigation Controls</NavigationControls>
-<ListTargetPageFormInputSet>Page for List:</ListTargetPageFormInputSet>
-<ListShowCLVByStringInput>Parameter Name:</ListShowCLVByStringInput>
-<DetailTargetPageInputSet>Page for Detail:</DetailTargetPageInputSet>
-<DetailShowCLVByStringInput>Parameter Name:</DetailShowCLVByStringInput>
-<List>List</List>
-<Detail>Detail</Detail>
+<Node>上位フォルダー:</Node>
+<Visible>参照可能：</Visible>
+<NavigationNodeInputSet>ターゲット上位ナビゲーション：</NavigationNodeInputSet>
+<Index>表示の順序：</Index>
+<Clickable>クリック可能：</Clickable>
+<NavigationControls>ナビゲーション コントロール</NavigationControls>
+<ListTargetPageFormInputSet>一覧化ページ：</ListTargetPageFormInputSet>
+<ListShowCLVByStringInput>パラメーター名：</ListShowCLVByStringInput>
+<DetailTargetPageInputSet>詳細ページ：</DetailTargetPageInputSet>
+<DetailShowCLVByStringInput>パラメーター名：</DetailShowCLVByStringInput>
+<List>一覧</List>
+<Detail>詳細</Detail>
 </label>
 <action>
 <Save>#{word.save}</Save>
@@ -55,47 +55,47 @@
 </UINavigationForm>
 <Visible>
 <label>
-<VisibleEnable>Yes</VisibleEnable>
-<VisibleDisable>No</VisibleDisable>
+<VisibleEnable>はい</VisibleEnable>
+<VisibleDisable>いいえ</VisibleDisable>
 </label>
 </Visible>
 <Clickable>
 <label>
-<ClickableEnable>Yes</ClickableEnable>
-<ClickableDisable>No</ClickableDisable>
+<ClickableEnable>はい</ClickableEnable>
+<ClickableDisable>いいえ</ClickableDisable>
 </label>
 </Clickable>
 <NavigationNodeInputSet>
 <title>
-<SelectNavigationNode>Select Navigation Node</SelectNavigationNode>
-<RemoveNavigationNode>Reset</RemoveNavigationNode>
+<SelectNavigationNode>ナビゲーション ノードを選択</SelectNavigationNode>
+<RemoveNavigationNode>リセット</RemoveNavigationNode>
 </title>
 </NavigationNodeInputSet>
 <ListTargetPageFormInputSet>
 <title>
-<SelectListTargetPage>Select Target Page</SelectListTargetPage>
-<RemoveListTargetPage>Reset</RemoveListTargetPage>
+<SelectListTargetPage>ターゲットページの選択</SelectListTargetPage>
+<RemoveListTargetPage>リセット</RemoveListTargetPage>
 </title>
 </ListTargetPageFormInputSet>
 <DetailTargetPageInputSet>
 <title>
-<SelectDetailTargetPage>Select Children Target Page</SelectDetailTargetPage>
-<RemoveDetailTargetPage>Reset</RemoveDetailTargetPage>
+<SelectDetailTargetPage>下位ページを選択</SelectDetailTargetPage>
+<RemoveDetailTargetPage>リセット</RemoveDetailTargetPage>
 </title>
 </DetailTargetPageInputSet>
 <NavigationSelectorPopupWindow>
 <title>
-<UINavigationSelector>Navigation Selector</UINavigationSelector>
+<UINavigationSelector>ナビゲーション セレクター</UINavigationSelector>
 </title>
 </NavigationSelectorPopupWindow>
 <ListTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Page Selector</UIPageSelector>
+<UIPageSelector>ページ選択</UIPageSelector>
 </title>
 </ListTargetPageSelectorPopupWindow>
 <DetailTargetPageSelectorPopupWindow>
 <title>
-<UIPageSelector>Page Selector</UIPageSelector>
+<UIPageSelector>ページ選択</UIPageSelector>
 </title>
 </DetailTargetPageSelectorPopupWindow>
 </bundle>

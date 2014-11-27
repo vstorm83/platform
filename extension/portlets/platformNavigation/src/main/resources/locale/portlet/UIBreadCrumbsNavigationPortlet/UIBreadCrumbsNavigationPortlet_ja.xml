@@ -2,13 +2,13 @@
 <bundle>
 <UIBreadCrumbsNavigationPortlet>
     <label>
-        <ChangePicture>Change Avatar</ChangePicture>
+        <ChangePicture>アバターの変更</ChangePicture>
     </label>
 </UIBreadCrumbsNavigationPortlet>
  <UIBreadCrumbPopupAvatarUploader>
       <title>
-         <UIAvatarUploader>Upload an Avatar</UIAvatarUploader>
-         <UIAvatarUploadContent>Avatar Preview</UIAvatarUploadContent>
+         <UIAvatarUploader>アバターのアップロード</UIAvatarUploader>
+         <UIAvatarUploadContent>アバターのプレビュー</UIAvatarUploadContent>
       </title>
  </UIBreadCrumbPopupAvatarUploader>
 </bundle>

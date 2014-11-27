@@ -2,25 +2,25 @@
 <bundle>
 <UISetupPlatformToolBarPortlet>
 <label>
-<applications>Applications</applications>
-<content>Content</content>
-<siteExplorer>Sites Explorer</siteExplorer>
-<wcmAdmin>Content Administration</wcmAdmin>
-<users>Users</users>
-<newStaff>Add Users</newStaff>
-<org-management>Groups and Roles</org-management>
-<portal>Portal</portal>
-<administration>Administration</administration>
-<groupnavigation>Group Sites</groupnavigation>
-<pageManagement>Pages</pageManagement>
-<portalnavigation>Sites</portalnavigation>
-<servicesManagement>Management</servicesManagement>
-<monitoring>Monitoring</monitoring>
-<spaces>Spaces</spaces>
-<Branding>Branding</Branding>
+<applications>アプリケーション</applications>
+<content>コンテンツ</content>
+<siteExplorer>サイト エクスプ ローラー</siteExplorer>
+<wcmAdmin>コンテンツ管理</wcmAdmin>
+<users>ユーザ</users>
+<newStaff>ユーザーを追加</newStaff>
+<org-management>グループとロール</org-management>
+<portal>ポータル</portal>
+<administration>アドミニストレーション</administration>
+<groupnavigation>グループ サイト</groupnavigation>
+<pageManagement>ページ</pageManagement>
+<portalnavigation>サイト</portalnavigation>
+<servicesManagement>管理</servicesManagement>
+<monitoring>モニタリング</monitoring>
+<spaces>スペース</spaces>
+<Branding>ブランディング</Branding>
       <Notification>Email Notifications</Notification>
 <ide>IDE</ide>
-<search>Search</search>
+<search>検索</search>
 </label>
 </UISetupPlatformToolBarPortlet>
 </bundle>

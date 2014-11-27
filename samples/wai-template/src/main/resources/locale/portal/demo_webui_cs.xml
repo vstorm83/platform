@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>Welcome</welcome>
-    <login>Login</login>
-    <logout>Logout</logout>
+    <welcome>Vítejte</welcome>
+    <login>Přihlášení</login>
+    <logout>Odhlásit</logout>
     <language>
-      <en>Switch to English</en>
-      <fr>Switch to French</fr>
+      <en>Přepnout do angličtiny</en>
+      <fr>Přepnout do francouzštiny</fr>
     </language>
-    <register>Register</register>
+    <register>Registrace</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>Skip to content</SkipToContent>
-    <SiteMap>Site Map</SiteMap>
-    <Accessibility>Accessibility</Accessibility>
-    <NormalSize>Normal Size</NormalSize>
-    <MediumSize>Medium Size</MediumSize>
-    <LargeSize>Large Size</LargeSize>
-    <NormalContrast>Normal Contrast</NormalContrast>
-    <HighContrast>High Contrast</HighContrast>
-    <Search>Search</Search>
+    <SkipToContent>Přeskočit na obsah</SkipToContent>
+    <SiteMap>Mapa stránek</SiteMap>
+    <Accessibility>Usnadnění přístupu</Accessibility>
+    <NormalSize>Normání velikost</NormalSize>
+    <MediumSize>Střední velikost</MediumSize>
+    <LargeSize>Velká velikost</LargeSize>
+    <NormalContrast>Normální kontrast</NormalContrast>
+    <HighContrast>Vysoký kontrast</HighContrast>
+    <Search>Hledat</Search>
   </Toolbar>
   <Logo>
-    <GoHome>Go to Home</GoHome>
+    <GoHome>Přejít na domovskou stránku</GoHome>
   </Logo>
   <acme>
-    <label>ACME Template</label>
+    <label>ACME šablona</label>
   </acme>  
   <WAIPortal>
-    <label>Sample Accessible Website</label>
+    <label>Vzorová webová stránka</label>
   </WAIPortal>
 </bundle>

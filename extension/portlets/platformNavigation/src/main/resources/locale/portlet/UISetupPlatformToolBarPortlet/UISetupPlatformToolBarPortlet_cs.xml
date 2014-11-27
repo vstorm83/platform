@@ -2,25 +2,25 @@
 <bundle>
 <UISetupPlatformToolBarPortlet>
 <label>
-<applications>Applications</applications>
-<content>Content</content>
-<siteExplorer>Sites Explorer</siteExplorer>
-<wcmAdmin>Content Administration</wcmAdmin>
-<users>Users</users>
-<newStaff>Add Users</newStaff>
-<org-management>Groups and Roles</org-management>
-<portal>Portal</portal>
-<administration>Administration</administration>
-<groupnavigation>Group Sites</groupnavigation>
-<pageManagement>Pages</pageManagement>
-<portalnavigation>Sites</portalnavigation>
-<servicesManagement>Management</servicesManagement>
-<monitoring>Monitoring</monitoring>
-<spaces>Spaces</spaces>
-<Branding>Branding</Branding>
-      <Notification>Email Notifications</Notification>
+<applications>Aplikace</applications>
+<content>Obsah</content>
+<siteExplorer>Průzkumník webů</siteExplorer>
+<wcmAdmin>Správa obsahu</wcmAdmin>
+<users>Uživatelé</users>
+<newStaff>Přidat uživatele</newStaff>
+<org-management>Skupiny a role</org-management>
+<portal>Portál</portal>
+<administration>Administrace</administration>
+<groupnavigation>Stránky skupiny</groupnavigation>
+<pageManagement>Stránky</pageManagement>
+<portalnavigation>Weby</portalnavigation>
+<servicesManagement>Správa</servicesManagement>
+<monitoring>Monitorování</monitoring>
+<spaces>Skupiny</spaces>
+<Branding>Logo</Branding>
+      <Notification>E-mailová upozornění</Notification>
 <ide>IDE</ide>
-<search>Search</search>
+<search>Hledat</search>
 </label>
 </UISetupPlatformToolBarPortlet>
 </bundle>

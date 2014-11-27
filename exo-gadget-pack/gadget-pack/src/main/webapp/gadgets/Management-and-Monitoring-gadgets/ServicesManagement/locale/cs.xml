@@ -20,19 +20,19 @@
 
 -->
 <messagebundle>  
-  <msg name="title">Services Management</msg>
-  <msg name="services">Services</msg>
-  <msg name="name">Name</msg>
-  <msg name="description">Description</msg>
-  <msg name="noDescription">No Description</msg>
-  <msg name="method">Method</msg>
-  <msg name="parameters">Parameters</msg>
-  <msg name="action">Action</msg>
-  <msg name="value">Value</msg>
-  <msg name="services_url">Services URL</msg>
-  <msg name="failManage">Temporarily cannot manage services from other hosts until we support OAuth</msg>
-  <msg name="noServices">Either no service is available or you do not have sufficient permission</msg>
-  <msg name="noMethod">No Method</msg>
-  <msg name="noProperty">No Property</msg>
-  <msg name="badURL">There was an error while retrieving data. Please check your URL preference</msg>
+  <msg name="title">Správa služeb</msg>
+  <msg name="services">Služby</msg>
+  <msg name="name">Název</msg>
+  <msg name="description">Popis</msg>
+  <msg name="noDescription">Žádný popis</msg>
+  <msg name="method">Metoda</msg>
+  <msg name="parameters">Parametry</msg>
+  <msg name="action">Akce</msg>
+  <msg name="value">Hodnota</msg>
+  <msg name="services_url">URL služby</msg>
+  <msg name="failManage">Dočasně nelze spravovat služby od jiných hostitelů, dokud budeme podporovat OAuth</msg>
+  <msg name="noServices">Buď není k dispozici žádná služba, nebo nemáte dostatečná oprávnění</msg>
+  <msg name="noMethod">Žádná metoda</msg>
+  <msg name="noProperty">Žádná vlastnost</msg>
+  <msg name="badURL">Při načítání dat došlo k chybě. Zkontrolujte prosím předvolby URL</msg>
 </messagebundle>

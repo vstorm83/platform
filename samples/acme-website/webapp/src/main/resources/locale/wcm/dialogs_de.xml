@@ -24,11 +24,11 @@
 <dialog>
 <label>
 <name>Name</name>
-<title>Title</title>
-<illustrationImage>Illustration Image</illustrationImage>
-<summary>Summary</summary>
-<benefits>Benefits</benefits>
-<features>Features</features>
+<title>Titel</title>
+<illustrationImage>Illustrationsbild</illustrationImage>
+<summary>Zusammenfassung</summary>
+<benefits>Vorteile</benefits>
+<features>Merkmale</features>
 </label>
 </dialog>
 </Product>

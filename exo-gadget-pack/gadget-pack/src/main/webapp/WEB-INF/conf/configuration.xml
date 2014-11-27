@@ -118,7 +118,17 @@
     </component-plugin>
   </external-component-plugins>
 
-   
+  <!-- LISTENERS JIPT -->
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.listener.ListenerService</target-component>
+    <component-plugin>
+      <name>exo.core.security.ConversationRegistry.register</name>
+      <set-method>addListener</set-method>
+      <type>org.exoplatform.platform.gadget.services.Crowdin.LoginCrowdinJIPTListener</type>
+      <description>Listener for user login and change default language to pseudo-language</description>
+    </component-plugin>
+  </external-component-plugins>
+
   <!-- JOBS --> 
   <external-component-plugins>
     <target-component>org.exoplatform.services.scheduler.JobSchedulerService</target-component>

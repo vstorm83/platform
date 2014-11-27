@@ -2,15 +2,15 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
-<activities>My Activities</activities>
-<profile>My Profile</profile>
-<network>My Connections</network>
-<wiki>My Wiki</wiki>
-<account>Settings</account>
-<language>Change Language</language>
-<logout>Logout</logout>
-        <dashboard>My Dashboard</dashboard>
+<NotificationSettingsPortlet>Les Meves Notificacions</NotificationSettingsPortlet>
+<activities>Les Meves Activitats</activities>
+<profile>El Meu Perfil</profile>
+<network>Les Meves Connexions</network>
+<wiki>El Meu Wiki</wiki>
+<account>Configuració</account>
+<language>Canvia d'idioma</language>
+<logout>Tanca la sessió</logout>
+        <dashboard>Tauler de Control</dashboard>
 </label>
 </UIUserPlatformToolBarPortlet>
 </bundle>

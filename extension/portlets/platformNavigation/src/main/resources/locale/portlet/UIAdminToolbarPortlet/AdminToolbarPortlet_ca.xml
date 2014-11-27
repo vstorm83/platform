@@ -2,44 +2,44 @@
 <bundle>
    <UIAdminToolbarPortlet>
       <action>
-         <AddPage>Add Page</AddPage>
-         <EditNavigation>Navigation</EditNavigation>
-         <Content>Content</Content>
-         <Editor>Edit</Editor>
-         <Page>Page</Page>
-         <Site>Site</Site>
-         <Layout>Edit Layout</Layout>
-         <siteLayout>Layout</siteLayout>
-         <ManagePages>Manage Pages</ManagePages>
-         <GroupSite>Group Site</GroupSite>
+         <AddPage>Afegeix una pàgina</AddPage>
+         <EditNavigation>Navegació</EditNavigation>
+         <Content>Contingut</Content>
+         <Editor>Edita</Editor>
+         <Page>Pàgina</Page>
+         <Site>Lloc</Site>
+         <Layout>Edita la Disposició</Layout>
+         <siteLayout>Disseny</siteLayout>
+         <ManagePages>Gestiona les Pàgines</ManagePages>
+         <GroupSite>Grup del Lloc</GroupSite>
          <Properties>#{UISEOToolbarForm.label.seo}</Properties>
-         <AddSite>Add Site</AddSite>
+         <AddSite>Afegeix Lloc</AddSite>
       </action>
-<ManageSites>Manage Sites</ManageSites>
-<ManageGroupSites>Manage Group Sites</ManageGroupSites>
+<ManageSites>Gestiona Llocs</ManageSites>
+<ManageGroupSites>Gestiona el Grup dels Llocs</ManageGroupSites>
    </UIAdminToolbarPortlet>
 
   <UISEOForm>
     <label>
-      <title>Title:</title>  
-      <description>Description:</description>
-      <keywords>Keywords:</keywords>
-      <language>Language:</language>
+      <title>Títol:</title>  
+      <description>Descripció:</description>
+      <keywords>Paraules clau:</keywords>
+      <language>Idioma:</language>
       <robots>Robots:</robots>
-      <sitemap>Sitemap:</sitemap>
-      <sitemapvisible>Visible in sitemap</sitemapvisible>
-  <isInherited>Inherited from parent page</isInherited>
-      <priority>Priority:</priority>
-      <frequency>Frequency:</frequency>
-      <select-language>Select Language</select-language>
+      <sitemap>Mapa del lloc:</sitemap>
+      <sitemapvisible>Visible al Mapa del Lloc</sitemapvisible>
+  <isInherited>Heretat de la pàgina principal</isInherited>
+      <priority>Prioritat:</priority>
+      <frequency>Freqüència:</frequency>
+      <select-language>Selecciona un Idioma</select-language>
       <option>
-        <Always>Always</Always>
-        <Hourly>Hourly</Hourly>
-        <Daily>Daily</Daily>
-        <Weekly>Weekly</Weekly>
-        <Monthly>Monthly</Monthly>
-        <Yearly>Yearly</Yearly>
-        <Never>Never</Never>
+        <Always>Sempre</Always>
+        <Hourly>Per hora</Hourly>
+        <Daily>Diàriament</Daily>
+        <Weekly>Setmanalment</Weekly>
+        <Monthly>Mensualment</Monthly>
+        <Yearly>Anualment</Yearly>
+        <Never>Mai</Never>
       </option> 
     </label>
  
@@ -48,16 +48,16 @@
       <Cancel>#{word.cancel}</Cancel>
     </action>
     <msg>
-      <repository-exception>An unexpected error occurred. Cannot save page metadata.</repository-exception>
-      <confirm-delete>Are you sure you want to delete these SEO data?</confirm-delete>
+      <repository-exception>S'ha produït un error inesperat. No es pot desar les metadades de la pàgina.</repository-exception>
+      <confirm-delete>Està segur que vol suprimir aquestes dades SEO?</confirm-delete>
     </msg>
     <title>
-    <seo-delete>Delete</seo-delete>
+    <seo-delete>Suprimeix</seo-delete>
     </title>
 <help> 
-  <priority>Valid values range from 0.0 to 1.0.</priority>
-  <description>Help searchers: let them know that the following page has a link with what they are looking for.</description>
-  <keywords>Most important terms in the page must be separated by a comma.</keywords>  
+  <priority>Gamma de valors vàlids de 0.0 a 1.0.</priority>
+  <description>Ajuda als usuaris de motors de recerca mostrant-los que aquesta pàgina té un enllaç al que estan buscant.</description>
+  <keywords>Els termes més importants de la pàgina han d'estar separats per una coma.</keywords>  
     </help>  
   </UISEOForm>
   <UISEOPopupWindow>
@@ -67,7 +67,7 @@
   </UISEOPopupWindow>    
   <UISEOToolbarForm>
   <title>
-      <seo>SEO Management</seo>
+      <seo>Gestió de SEO</seo>
   </title>
   <label>
     <seo>SEO</seo>
@@ -75,15 +75,15 @@
   </UISEOToolbarForm>  
   <FloatNumberValidator>
     <msg>
-      <Invalid-number>Priority field has an invalid value. Please enter a number between 0.0 and 1.0.</Invalid-number>
+      <Invalid-number>El camp Prioritat té un valor invàlid. Introdueix un número entre 0.0 i 1.0.</Invalid-number>
     </msg>
   </FloatNumberValidator>
   
   <Locale>
     <label>      
-      <it>Italian</it>      
-      <fr>French</fr>
-      <en>English</en>      
+      <it>Italià</it>      
+      <fr>Francès</fr>
+      <en>Anglès</en>      
     </label>
   </Locale>
   

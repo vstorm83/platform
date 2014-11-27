@@ -2,25 +2,25 @@
 <bundle>
 <UISetupPlatformToolBarPortlet>
 <label>
-<applications>Applications</applications>
-<content>Content</content>
-<siteExplorer>Sites Explorer</siteExplorer>
-<wcmAdmin>Content Administration</wcmAdmin>
-<users>Users</users>
-<newStaff>Add Users</newStaff>
-<org-management>Groups and Roles</org-management>
+<applications>Aplicacions</applications>
+<content>Contingut</content>
+<siteExplorer>Explorador de Llocs</siteExplorer>
+<wcmAdmin>Gestió de continguts</wcmAdmin>
+<users>Usuaris</users>
+<newStaff>Afegeix Usuaris/es</newStaff>
+<org-management>Rols i Grups</org-management>
 <portal>Portal</portal>
-<administration>Administration</administration>
-<groupnavigation>Group Sites</groupnavigation>
-<pageManagement>Pages</pageManagement>
-<portalnavigation>Sites</portalnavigation>
-<servicesManagement>Management</servicesManagement>
-<monitoring>Monitoring</monitoring>
-<spaces>Spaces</spaces>
-<Branding>Branding</Branding>
-      <Notification>Email Notifications</Notification>
+<administration>Adminstració</administration>
+<groupnavigation>Llocs dels Grups</groupnavigation>
+<pageManagement>Pàgines</pageManagement>
+<portalnavigation>Llocs</portalnavigation>
+<servicesManagement>Gestió</servicesManagement>
+<monitoring>Monitorització</monitoring>
+<spaces>Espais</spaces>
+<Branding>Logotips</Branding>
+      <Notification>Notificacions per correu electrònic</Notification>
 <ide>IDE</ide>
-<search>Search</search>
+<search>Cerca</search>
 </label>
 </UISetupPlatformToolBarPortlet>
 </bundle>

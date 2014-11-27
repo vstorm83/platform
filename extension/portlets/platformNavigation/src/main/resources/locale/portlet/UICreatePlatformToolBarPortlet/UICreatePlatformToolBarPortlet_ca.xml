@@ -2,21 +2,21 @@
 <bundle>
    <UIUserPlatformToolBarCreatePortlet>
       <label>
-         <topic>Topic</topic>
-         <poll>Poll</poll>
-         <eventtask>Event/Task</eventtask>
-         <upload>Upload a File</upload>
-         <wiki>Wiki Page</wiki>
+         <topic>Tema</topic>
+         <poll>Enquesta</poll>
+         <eventtask>Esdeveniment/Tasca</eventtask>
+         <upload>Puja un Fitxer</upload>
+         <wiki>Pàgina Wiki</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
-         <topic>topic</topic>
-         <poll>poll</poll>
-         <CreateANew>Create a new {1}:</CreateANew>
-         <NoForum>Sorry, no forum is available yet to create a {1}. Start by creating your own space.</NoForum>
-         <RequireSelectForum>Please select a forum.</RequireSelectForum>
+         <topic>tema</topic>
+         <poll>enquesta</poll>
+         <CreateANew>Crear {1}:</CreateANew>
+         <NoForum>Ho sentim, encara no hi ha cap Fòrum disponible per crear una {1}. Comença per crear el teu propi espai.</NoForum>
+         <RequireSelectForum>Si us plau, selecciona un fòrum.</RequireSelectForum>
       </label>
       <action>
          <Next>#{word.next}</Next>
@@ -25,47 +25,47 @@
    </UICreateList>
    <UICreateTopic>
       <label>
-         <SelectAForum>Select a Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>Selecciona un fòrum</SelectAForum>
+         <location>Ubicació</location>
+         <forumId>I Fòrum</forumId>
+         <FilterForums>Filtra Fòrums</FilterForums>
       </label>
    </UICreateTopic>
    <UICreatePoll>
       <label>
-         <SelectAForum>Select Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>Selecciona un Fòrum</SelectAForum>
+         <location>Ubicació</location>
+         <forumId>I Fòrum</forumId>
+         <FilterForums>Filtra Fòrums</FilterForums>
       </label>
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Create a new Wiki Page:</title>
-         <location>In Location</location>
+         <title>Crea una nova pàgina Wiki:</title>
+         <location>Ubicació</location>
       </label>
    </UICreateWiki>
    <UICreateEvent>
       <label>
          <Title>#{word.title}</Title>
-         <Choix>Add New:</Choix>
-         <EndEvent>To</EndEvent>
-         <StartEvent>From</StartEvent>
-         <Calendar>Select Calendar</Calendar>
-         <all-day>All Day</all-day>
-         <defaultCalendarId>Default</defaultCalendarId>
+         <Choix>Afegeix un nou:</Choix>
+         <EndEvent>A</EndEvent>
+         <StartEvent>Des de</StartEvent>
+         <Calendar>Selecciona el Calendari</Calendar>
+         <all-day>Tot el dia</all-day>
+         <defaultCalendarId>Per defecte</defaultCalendarId>
       </label>
       <msg>
-         <summary-field-required>The field "Title" is required.</summary-field-required>
-         <fromDate-format>The "From" date format is incorrect.</fromDate-format>
-         <toDate-format>The "To" date format is incorrect.</toDate-format>
-         <logic-required>Sorry, you cannot create an event that ends before it starts.</logic-required>
-         <cant-add-event-on-remote-calendar>You cannot add event to remote calendar</cant-add-event-on-remote-calendar>
+         <summary-field-required>El camp "Títol" s'exigeix.</summary-field-required>
+         <fromDate-format>El format de data "Des de" és incorrecta.</fromDate-format>
+         <toDate-format>La data inicial té un format incorrecte.</toDate-format>
+         <logic-required>Ho sentim, no pot crear un esdeveniment que acaba abans que comença.</logic-required>
+         <cant-add-event-on-remote-calendar>No pot afegir esdeveniments al calendari remot</cant-add-event-on-remote-calendar>
          <add-successfully>
-            <Event>The Event was added to {1}</Event>
-            <Task>The Task was added to {1}</Task>
+            <Event>L'esdeveniment es va afegir a {1}</Event>
+            <Task>La tasca es va afegir a {1}</Task>
          </add-successfully>
-         <add-unsuccessfully>{0} was not added.</add-unsuccessfully>
+         <add-unsuccessfully>{0} no s'ha afegit.</add-unsuccessfully>
       </msg>
       <action>
          <Next>#{word.save}</Next>
@@ -73,15 +73,15 @@
       </action>
    </UICreateEvent>
     <UIUploadFile>
-        <Select>Select File</Select>
+        <Select>Selecciona el Fitxer</Select>
         <action>
           <close>#{word.close}</close>
         </action>
     </UIUploadFile>
    <Choix>
       <label>
-         <Event>Event</Event>
-         <Task>Task</Task>
+         <Event>Esdeveniment</Event>
+         <Task>Tasca</Task>
       </label>
    </Choix>
 </bundle>

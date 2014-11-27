@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
   <Signin>
-    <welcome>Welcome</welcome>
-    <login>Login</login>
-    <logout>Logout</logout>
+    <welcome>Benvingut/da</welcome>
+    <login>Inicia la sessió</login>
+    <logout>Tanca la sessió</logout>
     <language>
-      <en>Switch to English</en>
-      <fr>Switch to French</fr>
+      <en>Canviar al Anglès</en>
+      <fr>Canvia al Francès</fr>
     </language>
-    <register>Register</register>
+    <register>Registrar-se</register>
   </Signin>
   <Toolbar>
-    <SkipToContent>Skip to content</SkipToContent>
-    <SiteMap>Site Map</SiteMap>
-    <Accessibility>Accessibility</Accessibility>
-    <NormalSize>Normal Size</NormalSize>
-    <MediumSize>Medium Size</MediumSize>
-    <LargeSize>Large Size</LargeSize>
-    <NormalContrast>Normal Contrast</NormalContrast>
-    <HighContrast>High Contrast</HighContrast>
-    <Search>Search</Search>
+    <SkipToContent>Passa al contingut</SkipToContent>
+    <SiteMap>Mapa del Lloc</SiteMap>
+    <Accessibility>Accessibilitat</Accessibility>
+    <NormalSize>Mida normal</NormalSize>
+    <MediumSize>Mida mitjana</MediumSize>
+    <LargeSize>Mida gran</LargeSize>
+    <NormalContrast>Contrast normal</NormalContrast>
+    <HighContrast>Contrast alt</HighContrast>
+    <Search>Cerca</Search>
   </Toolbar>
   <Logo>
-    <GoHome>Go to Home</GoHome>
+    <GoHome>Anar a l'Inici</GoHome>
   </Logo>
   <acme>
-    <label>ACME Template</label>
+    <label>Plantilla ACME</label>
   </acme>  
   <WAIPortal>
-    <label>Sample Accessible Website</label>
+    <label>Lloc Accessible (Exemple)</label>
   </WAIPortal>
 </bundle>

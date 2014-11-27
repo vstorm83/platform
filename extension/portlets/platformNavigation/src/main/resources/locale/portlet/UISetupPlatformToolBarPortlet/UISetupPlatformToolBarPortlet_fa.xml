@@ -2,25 +2,25 @@
 <bundle>
 <UISetupPlatformToolBarPortlet>
 <label>
-<applications>Applications</applications>
-<content>Content</content>
-<siteExplorer>Sites Explorer</siteExplorer>
-<wcmAdmin>Content Administration</wcmAdmin>
-<users>Users</users>
-<newStaff>Add Users</newStaff>
-<org-management>Groups and Roles</org-management>
-<portal>Portal</portal>
-<administration>Administration</administration>
-<groupnavigation>Group Sites</groupnavigation>
-<pageManagement>Pages</pageManagement>
-<portalnavigation>Sites</portalnavigation>
-<servicesManagement>Management</servicesManagement>
-<monitoring>Monitoring</monitoring>
-<spaces>Spaces</spaces>
-<Branding>Branding</Branding>
+<applications>برنامه های کاربردی</applications>
+<content>محتوا</content>
+<siteExplorer>مرورگر سایت</siteExplorer>
+<wcmAdmin>مدیریت محتوا</wcmAdmin>
+<users>کاربران</users>
+<newStaff>افزودن کاربرها</newStaff>
+<org-management>گروه ها و نقش ها</org-management>
+<portal>پرتال</portal>
+<administration>مدیریت</administration>
+<groupnavigation>سایت گروه ها</groupnavigation>
+<pageManagement>صفحات</pageManagement>
+<portalnavigation>سایت ها</portalnavigation>
+<servicesManagement>مدیریت</servicesManagement>
+<monitoring>نظارت کردن</monitoring>
+<spaces>فضاها</spaces>
+<Branding>علامت گذاری</Branding>
       <Notification>Email Notifications</Notification>
-<ide>IDE</ide>
-<search>Search</search>
+<ide>محیط نرم افزاری</ide>
+<search>جستجو</search>
 </label>
 </UISetupPlatformToolBarPortlet>
 </bundle>

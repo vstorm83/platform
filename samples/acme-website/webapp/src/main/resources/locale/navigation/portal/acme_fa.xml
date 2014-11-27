@@ -2,21 +2,21 @@
 <bundle>
   <portal>
     <acme>
-      <overview>Overview</overview>
-      <products>Products</products>
-      <news>News</news>
-      <contactus>Questions?</contactus>
-      <newsletters>Newsletters</newsletters>
-      <confirmation>Contact Form Confirmation</confirmation>
-      <detail>Details</detail>
-  <catalog>Catalog</catalog>
-      <printviewer>Print page</printviewer>
-      <searchResult>Search</searchResult>
-      <newAccount>New Account</newAccount>
-      <groupnavigation>Group Navigation</groupnavigation>
-      <portalnavigation>Portal Navigation</portalnavigation>
-      <documents>Documents</documents>
-      <unifiedSearch>Search</unifiedSearch>
+      <overview>نمای کلی</overview>
+      <products>محصولات</products>
+      <news>اخبار</news>
+      <contactus>سوالی دارید؟</contactus>
+      <newsletters>خبرنامه</newsletters>
+      <confirmation>تایید فرم تماس</confirmation>
+      <detail>جزئیات</detail>
+  <catalog>کاتالوگ</catalog>
+      <printviewer>چاپ صفحه</printviewer>
+      <searchResult>جستجو</searchResult>
+      <newAccount>حساب کاربری جدید</newAccount>
+      <groupnavigation>ناوبری گروه</groupnavigation>
+      <portalnavigation>ناوبری پورتال</portalnavigation>
+      <documents>اسناد</documents>
+      <unifiedSearch>جستجو</unifiedSearch>
     </acme>
   </portal>
 </bundle>

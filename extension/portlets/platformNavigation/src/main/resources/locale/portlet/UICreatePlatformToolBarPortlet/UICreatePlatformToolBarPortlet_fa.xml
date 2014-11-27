@@ -2,21 +2,21 @@
 <bundle>
    <UIUserPlatformToolBarCreatePortlet>
       <label>
-         <topic>Topic</topic>
-         <poll>Poll</poll>
-         <eventtask>Event/Task</eventtask>
-         <upload>Upload a File</upload>
-         <wiki>Wiki Page</wiki>
+         <topic>موضوع ها</topic>
+         <poll>نظرسنجی</poll>
+         <eventtask>رویداد/وظیفه</eventtask>
+         <upload>آپلود فایل</upload>
+         <wiki>صفحه ویکی</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
-         <topic>topic</topic>
-         <poll>poll</poll>
-         <CreateANew>Create a new {1}:</CreateANew>
-         <NoForum>Sorry, no forum is available yet to create a {1}. Start by creating your own space.</NoForum>
-         <RequireSelectForum>Please select a forum.</RequireSelectForum>
+         <topic>موضوع</topic>
+         <poll>نظرسنجی</poll>
+         <CreateANew>یک {1} جدید ایجاد کنید:</CreateANew>
+         <NoForum>متاسفانه، هنوز هیچ فرومی برای ایجاد {1} در دسترس نیست. برای شروع یک فضا برای خود ایجاد کنید.</NoForum>
+         <RequireSelectForum>لطفاً یک فروم انتخاب کنید.</RequireSelectForum>
       </label>
       <action>
          <Next>#{word.next}</Next>
@@ -25,47 +25,47 @@
    </UICreateList>
    <UICreateTopic>
       <label>
-         <SelectAForum>Select a Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>یک فروم انتخاب کنید</SelectAForum>
+         <location>در محل</location>
+         <forumId>و فروم</forumId>
+         <FilterForums>فیلتر فروم ها</FilterForums>
       </label>
    </UICreateTopic>
    <UICreatePoll>
       <label>
-         <SelectAForum>Select Forum</SelectAForum>
-         <location>In Location</location>
-         <forumId>And Forum</forumId>
-         <FilterForums>Filter Forums</FilterForums>
+         <SelectAForum>انتخاب فروم</SelectAForum>
+         <location>در محل</location>
+         <forumId>و فروم</forumId>
+         <FilterForums>فیلتر فروم ها</FilterForums>
       </label>
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Create a new Wiki Page:</title>
-         <location>In Location</location>
+         <title>ایجاد یک صفحه جدید ویکی:</title>
+         <location>در محل</location>
       </label>
    </UICreateWiki>
    <UICreateEvent>
       <label>
          <Title>#{word.title}</Title>
-         <Choix>Add New:</Choix>
-         <EndEvent>To</EndEvent>
-         <StartEvent>From</StartEvent>
-         <Calendar>Select Calendar</Calendar>
-         <all-day>All Day</all-day>
-         <defaultCalendarId>Default</defaultCalendarId>
+         <Choix>افزودن جدید:</Choix>
+         <EndEvent>به</EndEvent>
+         <StartEvent>از</StartEvent>
+         <Calendar>انتخاب تقویم</Calendar>
+         <all-day>هر روز</all-day>
+         <defaultCalendarId>پیش فرض</defaultCalendarId>
       </label>
       <msg>
-         <summary-field-required>The field "Title" is required.</summary-field-required>
-         <fromDate-format>The "From" date format is incorrect.</fromDate-format>
-         <toDate-format>The "To" date format is incorrect.</toDate-format>
-         <logic-required>Sorry, you cannot create an event that ends before it starts.</logic-required>
-         <cant-add-event-on-remote-calendar>You cannot add event to remote calendar</cant-add-event-on-remote-calendar>
+         <summary-field-required>فیلد "عنوان" مورد نیاز است.</summary-field-required>
+         <fromDate-format>فرمت تاریخ "از" نامعتبر است.</fromDate-format>
+         <toDate-format>فرمت تاریخ "تا" نامعتبر است.</toDate-format>
+         <logic-required>رویدادی که تاریخ اتمام آن قبل از تاریخ شروع آن باشد قابل اضافه شدن نیست.</logic-required>
+         <cant-add-event-on-remote-calendar>شما نمی توانید رویدادی در تقویم غیر محلی ایجاد کنید</cant-add-event-on-remote-calendar>
          <add-successfully>
-            <Event>The Event was added to {1}</Event>
-            <Task>The Task was added to {1}</Task>
+            <Event>این رویداد به {1} اضافه شد</Event>
+            <Task>وظیفه به {1} اضافه شد</Task>
          </add-successfully>
-         <add-unsuccessfully>{0} was not added.</add-unsuccessfully>
+         <add-unsuccessfully>{0} اضافه نشد.</add-unsuccessfully>
       </msg>
       <action>
          <Next>#{word.save}</Next>
@@ -73,15 +73,15 @@
       </action>
    </UICreateEvent>
     <UIUploadFile>
-        <Select>Select File</Select>
+        <Select>انتخاب فایل</Select>
         <action>
           <close>#{word.close}</close>
         </action>
     </UIUploadFile>
    <Choix>
       <label>
-         <Event>Event</Event>
-         <Task>Task</Task>
+         <Event>رویداد</Event>
+         <Task>وظیفه</Task>
       </label>
    </Choix>
 </bundle>

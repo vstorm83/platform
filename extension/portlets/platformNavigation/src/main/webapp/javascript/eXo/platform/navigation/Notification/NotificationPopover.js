@@ -108,6 +108,20 @@
         //
         return item;
       },
+      removeElm : function(elm) {
+        elm.css('overflow', 'hidden').animate({
+          height : '0px'
+        }, 300, function() {
+          $(this).remove();
+        });
+      },
+      showElm : function(elm) {
+        elm.animate({
+          height : '0px'
+        }, 300, function() {
+          $(this).remove();
+        });
+      },
       downBadge : function() {
         //
         var badge = NotificationPopover.portlet.find('span.badgeDefault:first');

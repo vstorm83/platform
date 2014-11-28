@@ -45,18 +45,17 @@
       },
       appendMessage : function(message) {
         var newItem = NotificationPopover.applyAction($($('<ul></ul>').html(message).html()));
-        
         //
         var target = $('<ul></ul>').append(NotificationPopover.popupItem.find('li'));
-        //
-        NotificationPopover.popupItem.append(newItem);
-        //
         target.find('li').each(function(i){
           if((i + 1) < NotificationPopover.maxItem) {
             NotificationPopover.popupItem.append($(this));
           }
         });
         target.remove();
+        //
+        NotificationPopover.popupItem.prepend(newItem.hide());
+        NotificationPopover.showElm(newItem)
         //
         var badge = NotificationPopover.portlet.find('span.badgeDefault:first');
         var current = parseInt(badge.text());
@@ -102,8 +101,7 @@
             window.location.href = link;
           }
           //
-          elm.parents('li:first').remove();
-          
+          NotificationPopover.removeElm(elm.parents('li:first'));
         });
         //
         return item;
@@ -116,11 +114,12 @@
         });
       },
       showElm : function(elm) {
-        elm.animate({
-          height : '0px'
-        }, 300, function() {
-          $(this).remove();
-        });
+        elm.css({'visibility':'hidden', 'overflow':'hidden'}).show();
+        var h = elm.height();
+        elm.css({'height' : '0px', 'visibility':'visible'}).animate({ 'height' : h + 'px' }, 300, function() {
+             $(this).css({'height':'', 'overflow':'hidden'});
+           });
+        return elm;
       },
       downBadge : function() {
         //
@@ -137,8 +136,10 @@
         NotificationPopover.portlet.find('span.badgeDefault:first').text('0').hide();
         NotificationPopover.portlet.find('.actionMark:first').hide();
         //
-        var action = $(this).data('action').replace('javascript', '');
-        $.globalEval(action);
+        var action = $(this).data('action');
+        if(action && action.length > 0) {
+          $.globalEval(action.replace('javascript', ''));
+        }
       },
       markItemRead : function(item) {
         var action = NotificationPopover.markReadLink + item.data('id');

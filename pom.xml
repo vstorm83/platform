@@ -9,7 +9,7 @@
   </parent>
   <groupId>org.exoplatform.platform</groupId>
   <artifactId>platform</artifactId>
-  <version>4.2.x-SNAPSHOT</version>
+  <version>4.2.x-plf-open-doc-in-office-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Platform</name>
   <description>Parent POM for platform projects.</description>
@@ -53,14 +53,14 @@
     <org.gatein.portal.version>4.2.x-PLF-SNAPSHOT</org.gatein.portal.version>
 
     <!-- Platform Project Dependencies -->
-    <org.exoplatform.commons.version>4.2.x-SNAPSHOT</org.exoplatform.commons.version>
-    <org.exoplatform.ecms.version>4.2.x-SNAPSHOT</org.exoplatform.ecms.version>
-    <org.exoplatform.social.version>4.2.x-SNAPSHOT</org.exoplatform.social.version>
-    <org.exoplatform.forum.version>4.2.x-SNAPSHOT</org.exoplatform.forum.version>
-    <org.exoplatform.wiki.version>4.2.x-SNAPSHOT</org.exoplatform.wiki.version>
-    <org.exoplatform.calendar.version>4.2.x-SNAPSHOT</org.exoplatform.calendar.version>
-    <org.exoplatform.integ.version>4.2.x-SNAPSHOT</org.exoplatform.integ.version>
-    <org.exoplatform.platform-ui.version>4.2.x-SNAPSHOT</org.exoplatform.platform-ui.version>
+    <org.exoplatform.commons.version>4.2.x-commons-open-doc-in-office-SNAPSHOT</org.exoplatform.commons.version>
+    <org.exoplatform.ecms.version>4.2.x-ecms-open-doc-in-office-SNAPSHOT</org.exoplatform.ecms.version>
+    <org.exoplatform.social.version>4.2.x-soc-open-doc-in-office-SNAPSHOT</org.exoplatform.social.version>
+    <org.exoplatform.forum.version>4.2.x-forum-open-doc-in-office-SNAPSHOT</org.exoplatform.forum.version>
+    <org.exoplatform.wiki.version>4.2.x-wiki-open-doc-in-office-SNAPSHOT</org.exoplatform.wiki.version>
+    <org.exoplatform.calendar.version>4.2.x-cal-open-doc-in-office-SNAPSHOT</org.exoplatform.calendar.version>
+    <org.exoplatform.integ.version>4.2.x-integ-open-doc-in-office-SNAPSHOT</org.exoplatform.integ.version>
+    <org.exoplatform.platform-ui.version>4.2.x-plfui-open-doc-in-office-SNAPSHOT</org.exoplatform.platform-ui.version>
 
   </properties>
   <dependencyManagement>

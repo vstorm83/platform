@@ -6,11 +6,11 @@
 <activities>Activităţile mele</activities>
 <profile>Profilul meu</profile>
 <network>Colaboratori</network>
-<wiki>Wiki</wiki>
+<wiki>Pagini Wiki</wiki>
 <account>Setări</account>
 <language>Schimbă limba</language>
 <logout>Deconectare</logout>
-        <dashboard>Tablou de bord</dashboard>
+        <dashboard>Tabloul de bord</dashboard>
 </label>
 </UIUserPlatformToolBarPortlet>
 </bundle>

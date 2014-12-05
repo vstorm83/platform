@@ -61,7 +61,7 @@
 		}
 		> li {
 			display: block;
-			padding: 6px 25px 6px 10px;
+			padding: 6px 25px 10px 10px;
 			border-top: 1px solid @borderColor;
 			border-top: none;
 			position: relative;
@@ -87,28 +87,21 @@
 			}
 			.content {
 				font-weight: bold;
-				padding-bottom: 20px;
 				.text-overflow;
 				.confirm {
 					margin: 3px 0;
 				}
 			}
-			.avatarSmall {
+			.avatarXSmall {
 				margin-top: 4px;
 			}
 			.lastUpdatedTime {
 				color: @textLightColor;
 				font-size: 12px;
-				bottom: 6px;
-				left: 45px;
-				position: absolute;
 			}
 			[class^="uiIcon"] {
 				vertical-align: -3px;
 				margin-right: 7px;
-			}
-			+ li {
-				border-top: 1px solid @borderColor;
 			}
 			&.unread {
 				background-color: @quoteSecondBackground;
@@ -134,8 +127,11 @@
 				.lastUpdatedTime {
 					color: @white;
 				}
-				[class^="uiIcon"] {
+				.uiIconLightGray {
 					background-image: url("@{images-path}/Icons/uiIconsWhite.png");
+				}
+				.uiIconSocLightGray	{
+					background-image: url("/social-resources/skin/images/Icons/uiIconsSocWhite.png");
 				}
 			}
 			&:first-child {

@@ -2,9 +2,8 @@
 @import "../mixins.less";
 // -------------------------
 .uiNotificationPopoverToolbarPortlet {
-	.badgeRed {
-		background-color: red;
-		color: #ffffff;
+	.badgeNotification {
+		font-style: normal;
 	}
 	.badgeNotification {
 		position: absolute;
@@ -54,20 +53,21 @@
 		}
 	}
 	.displayItems {
-		min-width: 350px;
-		max-width: 400px;
+		min-width: 300px;
+		max-width: 300px;
+		max-height: 500px;
 		.text-bold {
 			font-weight: bold;
 		}
 		> li {
 			display: block;
-			padding: 6px 25px 10px 10px;
+			padding: 6px 25px 6px 10px;
 			border-top: 1px solid @borderColor;
 			border-top: none;
 			position: relative;
 			> .remove-item {
 				position: absolute;
-				top: 0;
+				top: 7px;
 				right: 5px;
 				padding: 0px;
 				margin: 0px;
@@ -88,6 +88,7 @@
 			.content {
 				font-weight: bold;
 				.text-overflow;
+				font-size: 12px;
 				.confirm {
 					margin: 3px 0;
 				}

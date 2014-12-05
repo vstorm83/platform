@@ -18,7 +18,7 @@
 		  String display = (notifications.size() == 0) ? "block" : "none";
 		%>
 		<ul class="dropdown-menu" id="NotificationPopup">
-		  <li class="no-items" style="display:${display}">There is no notification</li>
+		  <li class="no-items" style="display:${display}">No notifications</li>
 			<li class="actionMark right"><a href="javascript:void(0)" data-action="<%=uicomponent.event("MarkAllRead")%>">Mark all as read</a></li>
 			<li>
 				<ul class="displayItems">
@@ -29,7 +29,7 @@
 				  %>
 				</ul>
 			</li>
-			<li class="actionLink"><div><a class="btn btn-primary btn-small" href="/portal/intranet/allNotifications/">View All</a></div></li>
+			<li class="actionLink"><div><a class="btn" href="/portal/intranet/allNotifications/">View All</a></div></li>
 		</ul>
 	</div>
 </div>

@@ -43,6 +43,16 @@
 		border-top: 1px solid @borderColor;
 		padding: 10px;
 	}
+	.dropdown-menu {
+		> li {
+			&.no-items {
+				padding: 25px 10px 25px;
+				text-align: center;
+				color: @textLightColor;
+				background: url("/platformNavigation/skin/images/UINotificationPopoverToolbarPortlet/iconBell.png") no-repeat center center transparent;
+			}
+		}
+	}
 	.displayItems {
 		min-width: 350px;
 		max-width: 400px;
@@ -64,6 +74,10 @@
 				cursor: pointer;
 				> .uiIconClose {
 					margin: 0px;
+					.opacity(80);
+					&:hover {
+						.opacity(100);
+					}
 				}
 			}
 			.status {
@@ -72,6 +86,7 @@
 				overflow: hidden;
 			}
 			.content {
+				font-weight: bold;
 				padding-bottom: 20px;
 				.text-overflow;
 				.confirm {
@@ -84,12 +99,13 @@
 			.lastUpdatedTime {
 				color: @textLightColor;
 				font-size: 12px;
-				font-style: italic;
 				bottom: 6px;
-				font-size: 12px;
-				font-style: italic;
 				left: 45px;
 				position: absolute;
+			}
+			[class^="uiIcon"] {
+				vertical-align: -3px;
+				margin-right: 7px;
 			}
 			+ li {
 				border-top: 1px solid @borderColor;
@@ -100,6 +116,7 @@
 			&:hover {
 				#gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 15%));
 				color: @white;
+				cursor: pointer;
 				> .remove-item {
 					> .uiIconClose, > .uiIconClose:hover {
 						background-image: url("@{images-path}/Icons/uiIconsWhite.png")!important;
@@ -116,6 +133,9 @@
 				}
 				.lastUpdatedTime {
 					color: @white;
+				}
+				[class^="uiIcon"] {
+					background-image: url("@{images-path}/Icons/uiIconsWhite.png");
 				}
 			}
 			&:first-child {

@@ -139,11 +139,6 @@
         NotificationPopover.portlet.find('ul.displayItems:first').find('li.unread').removeClass('unread');
         NotificationPopover.portlet.find('span.badgeDefault:first').text('0').hide();
         NotificationPopover.portlet.find('.actionMark:first').hide();
-        //
-        var action = $(this).data('action');
-        if(action && action.length > 0) {
-          $.globalEval(action.replace('javascript', ''));
-        }
       },
       markItemRead : function(item) {
         var action = NotificationPopover.markReadLink + item.data('id');

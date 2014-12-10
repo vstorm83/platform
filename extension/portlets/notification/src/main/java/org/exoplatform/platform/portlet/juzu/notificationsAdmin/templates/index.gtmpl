@@ -28,18 +28,18 @@
 	    <tr>
 	       <td class="group-title"><strong>${_ctx.pluginRes(group.getResourceBundleKey(), group.getGroupId())}</strong></td>
 	       <td></td>
-	       <td></td> 
-	    </tr>  
-	    
+	       <td></td>
+	    </tr>
+
 	    <% for (def pluginInfo : pluginInfos) {
 	      	 String pluginId = pluginInfo.getType();
-	    %>      
-      <tr>       
+	    %>
+      <tr>
         <td class="left">
           <label for="${pluginId}">${_ctx.pluginRes(pluginInfo.getResourceBundleKey(), pluginId)}</label>
         </td>
         <td class="left">
-          ${_ctx.pluginRes("UINotification.title." + pluginId, pluginId)}                    
+          ${_ctx.pluginRes("UINotification.title." + pluginId, pluginId)}
         </td>
         <td class="left">
           <div id="${pluginId}" class="plugin-container clearfix view">
@@ -70,33 +70,33 @@
 		              String checkboxName = channelId + pluginId;
 		          %>
 			          <div>
-			            <span class="uiCheckbox">
+			            <label class="uiCheckbox">
 			          <% if (pluginInfo.isChannelActive(channelId))  { %>
 			              <input type="checkbox" class="checkbox" data-channel="${channelId}" checked="checked" name="${checkboxName}" id="${checkboxName}"/>
 			          <% } else { %>
 			              <input type="checkbox" class="checkbox" data-channel="${channelId}" name="${checkboxName}" id="${checkboxName}"/>
 			          <% } %>
 			              <span>${_ctx.appRes("NotificationAdmin.label." + channelId)}</span>
-			            </span>
+			            </label>
 			          </div>
 		          <%
 		          }
 		          %>
 		          </div>
 		        </div>
-		        
+
 		        <div class="right-view pull-right">
 						  <button id="btAction${pluginId}" data-plugin="${pluginId}" class="btn btn-primary save-setting">${_ctx.appRes('NotificationAdmin.label.save')}</button>
 						  <a href="javascript:void(0);" class="edit-setting"><i class="uiIconEdit uiIconLightGray"></i></a>
 						</div>
 				  </div>
 				</td>
-      </tr>      
-	    <% } %>    
+      </tr>
+	    <% } %>
 	  <% } %>
 	  </tbody>
 	</table>
-	
+
 	<form id="senderForm" class="senderForm">
     <h4 class="titleWithBorder mgB20">${_ctx.appRes("NotificationAdmin.label.notificationsSender")}</h4>
     <div class="control-groups clearfix">
@@ -111,7 +111,7 @@
       <input id="btSetSender" class="btn btn-primary" type="button" value="${_ctx.appRes('NotificationAdmin.label.save')}"/>
     </div>
   </form>
-  
+
 	<div style="display:none;" id="labelBundle">
 		<span id="labelEnable">${_ctx.appRes("NotificationAdmin.label.Enable")}</span>
 		<span id="labelDisable">${_ctx.appRes("NotificationAdmin.label.Disable")}</span>
@@ -123,5 +123,5 @@
 		<span id="msgSaveOK">${_ctx.appRes("NotificationAdmin.msg.saveOK")}</span>
 		<span id="msgSaveKO">${_ctx.appRes("NotificationAdmin.msg.saveKO")}</span>
 	</div>
-  
+
 </div>

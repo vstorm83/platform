@@ -24,8 +24,6 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 import javax.inject.Inject;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
 import javax.servlet.http.HttpServletRequest;
 
 import juzu.Path;
@@ -36,7 +34,6 @@ import juzu.impl.common.JSON;
 import juzu.request.RenderContext;
 import juzu.template.Template;
 
-import org.apache.commons.lang.StringUtils;
 import org.exoplatform.commons.api.notification.model.GroupProvider;
 import org.exoplatform.commons.api.notification.plugin.NotificationPluginUtils;
 import org.exoplatform.commons.api.notification.plugin.config.PluginConfig;
@@ -116,22 +113,30 @@ public class NotificationsAdministration {
     jsManager.addJavascript("try { window.location.href='" + sb.toString() + "' } catch(e) {" +
             "window.location.href('" + sb.toString() + "') }");
   }
-  
+
   @Ajax
   @Resource
   public Response saveActivePlugin(String pluginId, String enable) {
-    try{
-      if (enable.equals("true") || enable.equals("false"))
-        providerSettingService.savePlugin(pluginId, Boolean.valueOf(enable));
-      else throw new Exception("Bad input exception: need to set true/false value to enable or disable the provider");
-    }catch(Exception e){
-      return new Response.Error("Exception in switching stat of provider "+pluginId+". " + e.toString());
-    }
-    Boolean isEnable = new Boolean(enable);    
     JSON data = new JSON();
-    data.set("pluginId", pluginId);
-    data.set("isEnable", (isEnable)); // current status
-   
+    try {
+      if (enable.equals("true") || enable.equals("false")) {
+        if(pluginId.indexOf("intranet") == 0) {
+          providerSettingService.saveInetanetPlugin(pluginId.replace("intranet", ""), Boolean.valueOf(enable));
+        } else {
+          providerSettingService.savePlugin(pluginId, Boolean.valueOf(enable));
+        }
+        Boolean isEnable = new Boolean(enable);
+        data.set("status", "ok");
+        data.set("pluginId", pluginId);
+        data.set("isEnable", (isEnable)); // current status
+      } else {
+        data.set("status", "false");
+        data.set("error", "Bad input: need to set true/false value to enable or disable send intranet notification the plugin");
+      }
+    } catch (Exception e) {
+      data.set("status", "false");
+      data.set("error", "Exception: " + e.getMessage());
+    }
     return Response.ok(data.toString()).withMimeType("application/json");
   }
   

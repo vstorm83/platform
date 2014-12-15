@@ -20,8 +20,8 @@
 
 -->
 <messagebundle>
-  <msg name="title_templates">Template Statistics</msg>
-  <msg name="ten_slowest_templates">10 slowest templates</msg>
+  <msg name="title_templates">Estadísticas de plantilla</msg>
+  <msg name="ten_slowest_templates">Las 10 plantillas más lentas</msg>
   <msg name="all_templates">Todas las plantillas</msg>
   <msg name="title_apps">Estadísticas de la Aplicación</msg>
   <msg name="ten_slowest_apps">las 10 aplicaciones más lentas</msg>

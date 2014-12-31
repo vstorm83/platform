@@ -188,10 +188,9 @@
           <module>jquery</module>
           <as>jQuery</as>
         </depends>
-		    <depends>
-		      <module>commons-cometd</module>
-		      <as>cometd</as>
-		    </depends>
+		<depends>
+          <module>jquery_cometd</module>
+        </depends>
       </module>
     </portlet>
 

@@ -25,6 +25,7 @@
 <%@ page import="org.exoplatform.services.resources.ResourceBundleService"%>
 <%@ page import="java.util.ResourceBundle"%>
 <%@ page import="org.gatein.common.text.EntityEncoder"%>
+<%@ page import="java.util.Locale"%>
 <%@ page language="java" %>
 <%
   String contextPath = request.getContextPath() ;
@@ -39,7 +40,8 @@
 
   ResourceBundleService service = (ResourceBundleService) PortalContainer.getCurrentInstance(session.getServletContext())
   														.getComponentInstanceOfType(ResourceBundleService.class);
-  ResourceBundle res = service.getResourceBundle(service.getSharedResourceBundleNames(), request.getLocale()) ;
+  Locale localAl = new Locale( "sq", "AL" );
+  ResourceBundle res = service.getResourceBundle(service.getSharedResourceBundleNames(), localAl) ;
   
   Cookie cookie = new Cookie(org.exoplatform.web.login.LoginServlet.COOKIE_NAME, "");
 	cookie.setPath(request.getContextPath());
@@ -54,7 +56,7 @@
   response.setContentType("text/html; charset=UTF-8");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sq">
   <head>
     <title>Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>   

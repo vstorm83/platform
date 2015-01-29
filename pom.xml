@@ -59,7 +59,7 @@
     <org.exoplatform.wiki.version>4.2.x-wiki-pdf-js-SNAPSHOT</org.exoplatform.wiki.version>
     <org.exoplatform.calendar.version>4.2.x-cal-pdf-js-SNAPSHOT</org.exoplatform.calendar.version>
     <org.exoplatform.integ.version>4.2.x-integ-pdf-js-SNAPSHOT</org.exoplatform.integ.version>
-    <org.exoplatform.platform-ui.version>4.2.x-SNAPSHOT</org.exoplatform.platform-ui.version>
+    <org.exoplatform.platform-ui.version>4.2.x-platform-ui-pdf-js-SNAPSHOT</org.exoplatform.platform-ui.version>
   </properties>
   <dependencyManagement>
     <!-- ### NEVER CHANGE THIS ORDER OF DEPMGT ### -->

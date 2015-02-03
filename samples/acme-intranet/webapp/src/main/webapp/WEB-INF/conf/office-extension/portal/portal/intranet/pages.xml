@@ -1093,19 +1093,6 @@
         <title>answers</title>
         <access-permissions>*:/platform/users</access-permissions>
         <edit-permission>*:/platform/administrators</edit-permission>
-        <container id="UIUserNavigationPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
-            <access-permissions>*:/platform/users</access-permissions>
-            <portlet-application>
-                <portlet>
-                    <application-ref>platformNavigation</application-ref>
-                    <portlet-ref>UIUserNavigationPortlet</portlet-ref>
-                </portlet>
-                <title>User Navigation Portlet</title>
-                <access-permissions>*:/platform/users</access-permissions>
-                <show-info-bar>false</show-info-bar>
-                <show-application-state>true</show-application-state>
-            </portlet-application>
-        </container>
         <container id="AnswerPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
             <access-permissions>*:/platform/users</access-permissions>
             <portlet-application>
@@ -1126,19 +1113,6 @@
         <title>faq</title>
         <access-permissions>*:/platform/users</access-permissions>
         <edit-permission>*:/platform/administrators</edit-permission>
-        <container id="UIUserNavigationPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
-            <access-permissions>*:/platform/users</access-permissions>
-            <portlet-application>
-                <portlet>
-                    <application-ref>platformNavigation</application-ref>
-                    <portlet-ref>UIUserNavigationPortlet</portlet-ref>
-                </portlet>
-                <title>User Navigation Portlet</title>
-                <access-permissions>*:/platform/users</access-permissions>
-                <show-info-bar>false</show-info-bar>
-                <show-application-state>true</show-application-state>
-            </portlet-application>
-        </container>
         <container id="FAQPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
             <access-permissions>*:/platform/users</access-permissions>
             <portlet-application>
